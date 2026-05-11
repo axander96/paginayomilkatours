@@ -1,0 +1,29 @@
+{
+  "title": "Empresas que confían en nosotros",
+  "items": [
+    {
+      "name": "Ministerio de Turismo",
+      "logo": "images/partner1.png"
+    },
+    {
+      "name": "Air Europa",
+      "logo": "images/partner2.png"
+    },
+    {
+      "name": "Copa Airlines",
+      "logo": "images/partner3.png"
+    },
+    {
+      "name": "Marriott",
+      "logo": "images/partner4.png"
+    },
+    {
+      "name": "Carnival Cruise",
+      "logo": "images/partner5.png"
+    },
+    {
+      "name": "Booking.com",
+      "logo": "images/partner6.png"
+    }
+  ]
+}

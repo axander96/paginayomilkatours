@@ -1,0 +1,36 @@
+{
+  "title": "Síguenos en Instagram",
+  "subtitle": "@yomilkatours",
+  "items": [
+    {
+      "embed_url": "https://www.instagram.com/p/EJEMPLO1/",
+      "image": "images/insta1.jpg",
+      "caption": "Nuestro último tour a Punta Cana fue increíble 🌴"
+    },
+    {
+      "embed_url": "https://www.instagram.com/p/EJEMPLO2/",
+      "image": "images/insta2.jpg",
+      "caption": "Clientes felices en Nueva York 🗽"
+    },
+    {
+      "embed_url": "https://www.instagram.com/p/EJEMPLO3/",
+      "image": "images/insta3.jpg",
+      "caption": "Atardeceres que solo el Caribe puede ofrecer 🌅"
+    },
+    {
+      "embed_url": "https://www.instagram.com/p/EJEMPLO4/",
+      "image": "images/insta4.jpg",
+      "caption": "Listos para nuestra próxima aventura ✈️"
+    },
+    {
+      "embed_url": "https://www.instagram.com/p/EJEMPLO5/",
+      "image": "images/insta5.jpg",
+      "caption": "Excursión a las ballenas en Samaná 🐋"
+    },
+    {
+      "embed_url": "https://www.instagram.com/p/EJEMPLO6/",
+      "image": "images/insta6.jpg",
+      "caption": "Gracias por confiar en Yomilka Tours 💙"
+    }
+  ]
+}

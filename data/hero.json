@@ -1,0 +1,24 @@
+{
+  "slides": [
+    {
+      "image": "images/slide1.jpg",
+      "title": "Descubre el mundo con Yomilka Tours",
+      "subtitle": "Viajes inolvidables a los mejores destinos"
+    },
+    {
+      "image": "images/slide2.jpg",
+      "title": "Excursiones únicas",
+      "subtitle": "Aventuras que cambiarán tu perspectiva"
+    },
+    {
+      "image": "images/slide3.jpg",
+      "title": "Tours nacionales e internacionales",
+      "subtitle": "Explora nuevos horizontes con nosotros"
+    },
+    {
+      "image": "images/slide4.jpg",
+      "title": "Tu próxima aventura te espera",
+      "subtitle": "Cotiza hoy mismo y empieza a viajar"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Nuestros Servicios",
+  "subtitle": "Todo lo que necesitas para tu viaje perfecto",
+  "items": [
+    {
+      "icon": "visa",
+      "title": "Visados",
+      "description": "Asesoría y trámite de visas para todos los destinos."
+    },
+    {
+      "icon": "hotel",
+      "title": "Hoteles",
+      "description": "Reservas en los mejores hoteles del mundo."
+    },
+    {
+      "icon": "tour",
+      "title": "Tours",
+      "description": "Paquetes turísticos nacionales e internacionales."
+    },
+    {
+      "icon": "excursion",
+      "title": "Excursiones",
+      "description": "Aventuras y excursiones en los destinos más populares."
+    }
+  ]
+}

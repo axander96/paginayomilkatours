@@ -1,0 +1,48 @@
+{
+  "title": "Próximos Viajes y Excursiones",
+  "subtitle": "No te pierdas nuestras próximas aventuras",
+  "items": [
+    {
+      "image": "images/tour1.jpg",
+      "title": "Punta Cana Todo Incluido",
+      "date": "15-22 de Junio, 2026",
+      "price": "$1,299",
+      "description": "7 días de playa paradisíaca en los mejores resorts."
+    },
+    {
+      "image": "images/tour2.jpg",
+      "title": "Cancún Express",
+      "date": "10-14 de Julio, 2026",
+      "price": "$899",
+      "description": "4 días explorando las playas y ruinas mayas."
+    },
+    {
+      "image": "images/tour3.jpg",
+      "title": "New York City",
+      "date": "5-12 de Agosto, 2026",
+      "price": "$1,599",
+      "description": "La ciudad que nunca duerme te espera."
+    },
+    {
+      "image": "images/tour4.jpg",
+      "title": "Europa Mágica",
+      "date": "15-25 de Septiembre, 2026",
+      "price": "$2,499",
+      "description": "10 días recorriendo París, Roma y Madrid."
+    },
+    {
+      "image": "images/tour5.jpg",
+      "title": "Cruero por el Caribe",
+      "date": "1-8 de Octubre, 2026",
+      "price": "$1,199",
+      "description": "Navega por las aguas cristalinas del Caribe."
+    },
+    {
+      "image": "images/tour6.jpg",
+      "title": "Santo Domingo Colonial",
+      "date": "Todos los fines de semana",
+      "price": "$99",
+      "description": "Tour guiado por la zona colonial."
+    }
+  ]
+}

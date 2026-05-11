@@ -1,0 +1,42 @@
+{
+  "title": "Tours Nacionales e Internacionales",
+  "subtitle": "Experiencias que nuestros clientes ya han disfrutado",
+  "items": [
+    {
+      "image": "images/done1.jpg",
+      "title": "Samana Whales",
+      "location": "Samaná, RD",
+      "description": "Avistamiento de ballenas jorobadas en su hábitat natural."
+    },
+    {
+      "image": "images/done2.jpg",
+      "title": "Santiago Cultural",
+      "location": "Santiago, RD",
+      "description": "Recorrido histórico por la ciudad corazón."
+    },
+    {
+      "image": "images/done3.jpg",
+      "title": "Miami Shopping",
+      "location": "Miami, USA",
+      "description": "La mejor experiencia de compras en Florida."
+    },
+    {
+      "image": "images/done4.jpg",
+      "title": "Pico Duarte",
+      "location": "Jarabacoa, RD",
+      "description": "Excursión al punto más alto del Caribe."
+    },
+    {
+      "image": "images/done5.jpg",
+      "title": "Bocas del Toro",
+      "location": "Panamá",
+      "description": "Playas paradisíacas y cultura caribeña."
+    },
+    {
+      "image": "images/done6.jpg",
+      "title": "Cartagena Mágica",
+      "location": "Cartagena, Colombia",
+      "description": "Ciudad amurallada y playas del Caribe colombiano."
+    }
+  ]
+}
