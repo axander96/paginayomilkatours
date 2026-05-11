@@ -2,28 +2,28 @@
   "title": "Empresas que confían en nosotros",
   "items": [
     {
-      "name": "Ministerio de Turismo",
-      "logo": ""
+      "name": "Europa mundo",
+      "logo": "/images/uploads/images.png"
+    },
+    {
+      "name": "Royal Caribbean",
+      "logo": "/images/uploads/royal_caribbean_cruises_rand_weiß_logo.svg.png"
+    },
+    {
+      "name": "Celebrity Cruises",
+      "logo": "/images/uploads/502-5024177_logo-de-celebrity-cruises-hd-png-download.png"
+    },
+    {
+      "name": "Suplitur",
+      "logo": "/images/uploads/suplitur-nuevo-logo.jpg"
     },
     {
       "name": "Air Europa",
-      "logo": ""
+      "logo": "/images/uploads/air_europa_logo_-2015-.svg.png"
     },
     {
-      "name": "Copa Airlines",
-      "logo": ""
-    },
-    {
-      "name": "Marriott",
-      "logo": ""
-    },
-    {
-      "name": "Carnival Cruise",
-      "logo": ""
-    },
-    {
-      "name": "Booking.com",
-      "logo": ""
+      "name": "Princess Cruises",
+      "logo": "/images/uploads/princess-cruises-vector-logo.png"
     }
   ]
 }
