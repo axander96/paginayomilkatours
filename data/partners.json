@@ -3,27 +3,27 @@
   "items": [
     {
       "name": "Ministerio de Turismo",
-      "logo": "images/partner1.png"
+      "logo": ""
     },
     {
       "name": "Air Europa",
-      "logo": "images/partner2.png"
+      "logo": ""
     },
     {
       "name": "Copa Airlines",
-      "logo": "images/partner3.png"
+      "logo": ""
     },
     {
       "name": "Marriott",
-      "logo": "images/partner4.png"
+      "logo": ""
     },
     {
       "name": "Carnival Cruise",
-      "logo": "images/partner5.png"
+      "logo": ""
     },
     {
       "name": "Booking.com",
-      "logo": "images/partner6.png"
+      "logo": ""
     }
   ]
 }
