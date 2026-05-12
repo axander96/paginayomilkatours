@@ -91,10 +91,27 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - { label: "Imagen", name: "image", widget: "image" }
+              - { label: "Imagen principal", name: "image", widget: "image" }
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Ubicación", name: "location", widget: "string" }
+              - { label: "Duración (ej: 5 días / 4 noches)", name: "duration", widget: "string" }
               - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Highlights (lugares que visitamos)"
+                name: "highlights"
+                widget: "list"
+                field: { label: "Lugar", name: "highlight", widget: "string" }
+              - label: "Qué incluye"
+                name: "included"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+              - label: "No incluye"
+                name: "not_included"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+              - label: "Galería de imágenes (6 fotos)"
+                name: "gallery"
+                widget: "list"
+                field: { label: "Imagen", name: "image", widget: "image" }
 
   - name: "instagram"
     label: "Instagram"

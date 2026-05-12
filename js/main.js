@@ -135,14 +135,14 @@ function renderTours(data) {
 
   const grid = document.getElementById('toursGrid');
   grid.innerHTML = data.items.map(item => `
-    <div class="card" onclick="openQuote('${escapeHtml(item.title)}')">
+    <a href="tour-detail.html?id=${index}" class="card" style="text-decoration:none;color:inherit">
       <img src="${item.image}" alt="${escapeHtml(item.title)}" class="card-image" loading="lazy">
       <div class="card-body">
         <h3>${escapeHtml(item.title)}</h3>
         <div class="location">📍 ${escapeHtml(item.location)}</div>
         <p>${escapeHtml(item.description)}</p>
       </div>
-    </div>
+    </a>
   `).join('');
 }
 

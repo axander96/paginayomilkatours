@@ -6,37 +6,157 @@
       "image": "",
       "title": "Samana Whales",
       "location": "Samaná, RD",
-      "description": "Avistamiento de ballenas jorobadas en su hábitat natural."
+      "duration": "3 días / 2 noches",
+      "description": "Avistamiento de ballenas jorobadas en su hábitat natural. Una experiencia única en el Caribe donde podrás observar de cerca a estas majestuosas criaturas durante su temporada migratoria.",
+      "highlights": [
+        "Avistamiento de ballenas jorobadas",
+        "Paseo en barco por la Bahía de Samaná",
+        "Visita a Cayo Levantado",
+        "Almuerzo típico en la playa"
+      ],
+      "included": [
+        "Transporte ida y vuelta",
+        "Alojamiento 2 noches",
+        "Desayunos incluidos",
+        "Guía turístico especializado",
+        "Paseo en barco"
+      ],
+      "not_included": [
+        "Almuerzos y cenas (excepto los especificados)",
+        "Propinas",
+        "Gastos personales"
+      ],
+      "gallery": ["", "", "", "", "", ""]
     },
     {
       "image": "",
       "title": "Santiago Cultural",
       "location": "Santiago, RD",
-      "description": "Recorrido histórico por la ciudad corazón."
+      "duration": "1 día",
+      "description": "Recorrido histórico por la ciudad corazón de la República Dominicana. Descubre su rica cultura, monumentos emblemáticos y la calidez de su gente.",
+      "highlights": [
+        "Monumento a los Héroes de la Restauración",
+        "Centro León",
+        "Calle El Sol",
+        "Mercado Modelo"
+      ],
+      "included": [
+        "Transporte desde Santo Domingo",
+        "Entradas a museos",
+        "Almuerzo típico",
+        "Guía turístico"
+      ],
+      "not_included": [
+        "Bebidas alcohólicas",
+        "Propinas",
+        "Compras personales"
+      ],
+      "gallery": ["", "", "", "", "", ""]
     },
     {
       "image": "",
       "title": "Miami Shopping",
       "location": "Miami, USA",
-      "description": "La mejor experiencia de compras en Florida."
+      "duration": "5 días / 4 noches",
+      "description": "La mejor experiencia de compras en Florida. Visita los outlets más grandes, disfruta de las playas de Miami y vive la vibrante vida nocturna de la ciudad.",
+      "highlights": [
+        "Sawgrass Mills Outlet",
+        "Miami Beach",
+        "Wynwood Walls",
+        "Bayside Marketplace"
+      ],
+      "included": [
+        "Vuelo ida y vuelta",
+        "Alojamiento 4 noches",
+        "Traslados aeropuerto-hotel",
+        "Tour de compras guiado"
+      ],
+      "not_included": [
+        "Comidas",
+        "Compras personales",
+        "Seguro de viaje",
+        "Visa ESTA"
+      ],
+      "gallery": ["", "", "", "", "", ""]
     },
     {
       "image": "",
       "title": "Pico Duarte",
       "location": "Jarabacoa, RD",
-      "description": "Excursión al punto más alto del Caribe."
+      "duration": "3 días / 2 noches",
+      "description": "Excursión al punto más alto del Caribe. Una aventura inolvidable rodeado de paisajes montañosos, pinos y una naturaleza exuberante.",
+      "highlights": [
+        "Ascenso al Pico Duarte (3,087 m)",
+        "Camping en la montaña",
+        "Valle de Tetero",
+        "Cascadas de Aguas Blancas"
+      ],
+      "included": [
+        "Transporte",
+        "Alojamiento en refugio",
+        "Comidas durante la excursión",
+        "Guía especializado",
+        "Mulas para equipaje"
+      ],
+      "not_included": [
+        "Equipo personal de camping",
+        "Ropa térmica",
+        "Gastos personales"
+      ],
+      "gallery": ["", "", "", "", "", ""]
     },
     {
       "image": "",
       "title": "Bocas del Toro",
       "location": "Panamá",
-      "description": "Playas paradisíacas y cultura caribeña."
+      "duration": "6 días / 5 noches",
+      "description": "Playas paradisíacas y cultura caribeña en Panamá. Explora islas vírgenes, snorkel en aguas cristalinas y disfruta de la gastronomía local.",
+      "highlights": [
+        "Isla Zapatilla",
+        "Bocas Town",
+        "Playa Estrella",
+        "Snorkel en Coral Cay"
+      ],
+      "included": [
+        "Vuelo ida y vuelta",
+        "Alojamiento 5 noches",
+        "Desayunos",
+        "Tour en lancha por las islas",
+        "Traslados"
+      ],
+      "not_included": [
+        "Almuerzos y cenas",
+        "Actividades acuáticas adicionales",
+        "Seguro de viaje"
+      ],
+      "gallery": ["", "", "", "", "", ""]
     },
     {
       "image": "",
       "title": "Cartagena Mágica",
       "location": "Cartagena, Colombia",
-      "description": "Ciudad amurallada y playas del Caribe colombiano."
+      "duration": "5 días / 4 noches",
+      "description": "Ciudad amurallada y playas del Caribe colombiano. Recorre las calles coloniales, disfruta de la gastronomía caribeña y relájate en las islas del Rosario.",
+      "highlights": [
+        "Ciudad Amurallada",
+        "Castillo de San Felipe",
+        "Islas del Rosario",
+        "Getsemaní",
+        "Volcán de Lodo El Totumo"
+      ],
+      "included": [
+        "Vuelo ida y vuelta",
+        "Alojamiento 4 noches",
+        "City tour histórico",
+        "Tour Islas del Rosario",
+        "Traslados aeropuerto-hotel"
+      ],
+      "not_included": [
+        "Almuerzos y cenas",
+        "Entrada al Castillo de San Felipe",
+        "Gastos personales"
+      ],
+      "gallery": ["", "", "", "", "", ""]
     }
   ]
 }
