@@ -95,7 +95,7 @@ function renderUpcoming(data) {
   document.getElementById('upcomingSubtitle').textContent = data.subtitle;
 
   const grid = document.getElementById('upcomingGrid');
-  grid.innerHTML = data.items.map(item => `
+  grid.innerHTML = data.items.map((item, index) => `
     <a href="upcoming-detail.html?id=${index}" class="card" style="text-decoration:none;color:inherit">
       <img src="${item.image}" alt="${escapeHtml(item.title)}" class="card-image" loading="lazy">
       <div class="card-body">
@@ -134,7 +134,7 @@ function renderTours(data) {
   document.getElementById('toursSubtitle').textContent = data.subtitle;
 
   const grid = document.getElementById('toursGrid');
-  grid.innerHTML = data.items.map(item => `
+  grid.innerHTML = data.items.map((item, index) => `
     <a href="tour-detail.html?id=${index}" class="card" style="text-decoration:none;color:inherit">
       <img src="${item.image}" alt="${escapeHtml(item.title)}" class="card-image" loading="lazy">
       <div class="card-body">
