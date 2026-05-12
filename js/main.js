@@ -96,7 +96,7 @@ function renderUpcoming(data) {
 
   const grid = document.getElementById('upcomingGrid');
   grid.innerHTML = data.items.map(item => `
-    <div class="card" onclick="openQuote('${escapeHtml(item.title)}')">
+    <a href="upcoming-detail.html?id=${index}" class="card" style="text-decoration:none;color:inherit">
       <img src="${item.image}" alt="${escapeHtml(item.title)}" class="card-image" loading="lazy">
       <div class="card-body">
         <h3>${escapeHtml(item.title)}</h3>
@@ -104,7 +104,7 @@ function renderUpcoming(data) {
         <div class="price">${escapeHtml(item.price)}</div>
         <p>${escapeHtml(item.description)}</p>
       </div>
-    </div>
+    </a>
   `).join('');
 }
 
