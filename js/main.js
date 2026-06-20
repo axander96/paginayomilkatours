@@ -72,8 +72,7 @@ function renderSettings(data) {
     const username = data.instagram.replace(/.*instagram\.com\//, '').replace(/\/$/, '');
     document.getElementById('instagramSubtitle').textContent = '@' + username;
   }
-
-
+}
 
 function renderHero(slides) {
   heroSlides = slides;
