@@ -144,9 +144,7 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - { label: "Enlace de Instagram", name: "embed_url", widget: "string" }
-              - { label: "Imagen", name: "image", widget: "image" }
-              - { label: "Pie de foto", name: "caption", widget: "text" }
+              - { label: "Enlace de la publicación de Instagram", name: "embed_url", widget: "string", hint: "Copia y pega aquí el enlace de la publicación. Ejemplo: https://www.instagram.com/p/ABC123/" }
 
   - name: "partners"
     label: "Aliados"
