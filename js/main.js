@@ -72,6 +72,30 @@ function renderSettings(data) {
     const username = data.instagram.replace(/.*instagram\.com\//, '').replace(/\/$/, '');
     document.getElementById('instagramSubtitle').textContent = '@' + username;
   }
+
+  // Update contact section
+  const contactAddress = document.getElementById('contactAddress');
+  const contactPhone = document.getElementById('contactPhone');
+  const contactEmail = document.getElementById('contactEmail');
+  const contactHours = document.getElementById('contactHours');
+  const contactRnc = document.getElementById('contactRnc');
+  const contactMap = document.getElementById('contactMap');
+
+  if (contactAddress) contactAddress.textContent = data.address;
+  if (contactPhone) contactPhone.textContent = data.phone + (data.phone2 ? ' / ' + data.phone2 : '');
+  if (contactEmail) contactEmail.textContent = data.email;
+  if (contactHours) contactHours.innerHTML = data.hours ? data.hours.replace(/\n/g, '<br>') : '';
+  if (contactRnc) contactRnc.textContent = data.rnc || '';
+  if (contactMap && data.map_url) contactMap.src = data.map_url;
+
+  // Update contact social links
+  const contactSocial = document.getElementById('contactSocial');
+  if (contactSocial) {
+    contactSocial.querySelectorAll('a').forEach(link => {
+      const network = link.dataset.network;
+      if (data[network]) link.href = data[network];
+    });
+  }
 }
 
 function renderHero(slides) {
@@ -300,6 +324,39 @@ function submitQuote(e) {
       alert('Formulario enviado. Nos pondremos en contacto contigo pronto.');
       form.reset();
       closeQuote();
+    });
+}
+
+function submitContact(e) {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+
+  const name = formData.get('contactName');
+  const email = formData.get('contactEmail');
+  const phone = formData.get('contactPhone');
+  const subject = formData.get('contactSubject');
+  const message = formData.get('contactMessage');
+
+  const whatsappMessage = `*Nuevo Mensaje de Contacto - Yomilka Tours*%0A%0A` +
+    `*Nombre:* ${name}%0A` +
+    `*Correo:* ${email}%0A` +
+    `*Celular:* ${phone}%0A` +
+    `*Asunto:* ${subject}%0A` +
+    `*Mensaje:* ${message}%0A`;
+
+  fetch('data/settings.json')
+    .then(r => r.json())
+    .then(settings => {
+      const phone = settings.whatsapp || settings.phone;
+      const cleanPhone = phone.replace(/\D/g, '');
+      window.open(`https://wa.me/${cleanPhone}?text=${whatsappMessage}`, '_blank');
+      form.reset();
+      alert('Mensaje enviado. Nos pondremos en contacto contigo pronto.');
+    })
+    .catch(() => {
+      alert('Mensaje enviado. Nos pondremos en contacto contigo pronto.');
+      form.reset();
     });
 }
 

@@ -21,6 +21,9 @@ collections:
           - { label: "Teléfono 2", name: "phone2", widget: "string", required: false }
           - { label: "Correo Electrónico", name: "email", widget: "string" }
           - { label: "Dirección", name: "address", widget: "text" }
+          - { label: "Horario", name: "hours", widget: "text", hint: "Usa Enter para separar líneas" }
+          - { label: "RNC", name: "rnc", widget: "string" }
+          - { label: "URL del mapa de Google", name: "map_url", widget: "string", required: false }
           - { label: "Facebook", name: "facebook", widget: "string", required: false }
           - { label: "Instagram", name: "instagram", widget: "string", required: false }
           - { label: "TikTok", name: "tiktok", widget: "string", required: false }
