@@ -707,6 +707,26 @@ body {
   width: 100%;
 }
 
+.contact-map-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 18px;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.contact-map-button:hover {
+  background: var(--blue-dark);
+}
+
 @media (max-width: 992px) {
   .contact-page-grid {
     grid-template-columns: 1fr;

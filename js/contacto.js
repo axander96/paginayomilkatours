@@ -41,7 +41,19 @@ function renderSettings(data) {
   if (contactEmail) contactEmail.textContent = data.email;
   if (contactHours) contactHours.innerHTML = data.hours ? data.hours.replace(/\n/g, '<br>') : '';
   if (contactRnc) contactRnc.textContent = data.rnc || '';
-  if (contactMap && data.map_url) contactMap.src = data.map_url;
+  if (contactMap && data.map_url) {
+    const isEmbed = data.map_url.includes('/maps/embed');
+    if (isEmbed) {
+      contactMap.src = data.map_url;
+      contactMap.style.display = 'block';
+      document.getElementById('contactMapLink').style.display = 'none';
+    } else {
+      contactMap.style.display = 'none';
+      const mapLink = document.getElementById('contactMapLink');
+      mapLink.href = data.map_url;
+      mapLink.style.display = 'inline-flex';
+    }
+  }
 
   // Update social links
   const socialContainer = document.getElementById('socialLinks');
