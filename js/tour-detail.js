@@ -139,6 +139,7 @@ function submitQuote(e) {
   const firstName = formData.get('firstName');
   const lastName = formData.get('lastName');
   const email = formData.get('email');
+  const phone = formData.get('phone');
   const checkIn = formData.get('checkIn');
   const checkOut = formData.get('checkOut');
   const notes = formData.get('notes');
@@ -147,6 +148,7 @@ function submitQuote(e) {
     `*Viaje:* ${trip}%0A` +
     `*Nombre:* ${firstName} ${lastName}%0A` +
     `*Correo:* ${email}%0A` +
+    `*Celular:* ${phone}%0A` +
     `*Adultos:* ${adults}%0A` +
     `*Niños (2-12):* ${children}%0A` +
     `*Entrada:* ${checkIn}%0A` +
