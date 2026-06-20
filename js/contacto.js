@@ -30,15 +30,15 @@ function renderSettings(data) {
 
   // Update contact page info
   const contactAddress = document.getElementById('contactAddress');
-  const contactPhone = document.getElementById('contactPhone');
-  const contactEmail = document.getElementById('contactEmail');
+  const contactInfoPhone = document.getElementById('contactInfoPhone');
+  const contactInfoEmail = document.getElementById('contactInfoEmail');
   const contactHours = document.getElementById('contactHours');
   const contactRnc = document.getElementById('contactRnc');
   const contactMap = document.getElementById('contactMap');
 
   if (contactAddress) contactAddress.textContent = data.address;
-  if (contactPhone) contactPhone.textContent = data.phone + (data.phone2 ? ' / ' + data.phone2 : '');
-  if (contactEmail) contactEmail.textContent = data.email;
+  if (contactInfoPhone) contactInfoPhone.textContent = data.phone + (data.phone2 ? ' / ' + data.phone2 : '');
+  if (contactInfoEmail) contactInfoEmail.textContent = data.email;
   if (contactHours) contactHours.innerHTML = data.hours ? data.hours.replace(/\n/g, '<br>') : '';
   if (contactRnc) contactRnc.textContent = data.rnc || '';
   if (contactMap && data.map_url) {
