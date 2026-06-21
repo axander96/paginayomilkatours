@@ -56,14 +56,28 @@ function renderSettings(data) {
   }
 }
 
+function getTripDatesLabel(trip) {
+  if (Array.isArray(trip.dates) && trip.dates.length > 0) {
+    return trip.dates.join(' | ');
+  }
+  if (trip.date && trip.date.trim()) {
+    return trip.date;
+  }
+  return '0 Fechas';
+}
+
 function renderTrip(trip, settings) {
   const heroBg = document.getElementById('tourHeroBg');
-  if (trip.image) {
+  if (trip.image && trip.image.trim()) {
     heroBg.style.backgroundImage = `url('${trip.image}')`;
+  } else {
+    const colors = ['1DA1F2', 'F26522', '0d8bd9', 'd9541a'];
+    const color = colors[trip.title.length % colors.length];
+    heroBg.style.background = `linear-gradient(135deg, #${color}, #0a1628)`;
   }
 
   document.getElementById('tourTitle').textContent = trip.title;
-  document.getElementById('tourDate').textContent = `📅 ${trip.date || 'Consultar'}`;
+  document.getElementById('tourDate').textContent = `📅 ${getTripDatesLabel(trip)}`;
   document.getElementById('tourDuration').textContent = `⏱ ${trip.duration || 'Consultar'}`;
   document.getElementById('tourLocation').textContent = `📍 ${trip.location}`;
   document.getElementById('tourPrice').textContent = `💰 ${trip.price || 'Consultar'}`;

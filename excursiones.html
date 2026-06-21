@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Próximo Viaje - Yomilka Tours</title>
+  <title>Excursiones - Yomilka Tours</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
         <nav class="main-nav">
           <a href="index.html">Inicio</a>
           <a href="index.html#vuelos">Vuelos</a>
-          <a href="excursiones.html">Excursiones</a>
+          <a href="excursiones.html" class="active">Excursiones</a>
           <a href="index.html#visas">Visas</a>
           <a href="contacto.html">Contacto</a>
           <a href="#" class="btn-cotizar" onclick="openQuote()">Cotizar</a>
@@ -59,74 +59,29 @@
     <a href="admin/">Entrar al panel</a>
   </div>
 
-  <!-- Tour Hero -->
-  <section class="tour-hero" id="tourHero">
-    <div class="tour-hero-bg" id="tourHeroBg"></div>
-    <div class="tour-hero-overlay"></div>
-    <div class="container">
-      <a href="excursiones.html" class="back-link">← Volver a Excursiones</a>
-      <div class="tour-hero-content">
-        <h1 id="tourTitle">Cargando...</h1>
-        <div class="tour-meta">
-          <span id="tourDate">📅 --</span>
-          <span id="tourDuration">⏱ --</span>
-          <span id="tourLocation">📍 --</span>
-          <span id="tourPrice" style="color:var(--orange);font-weight:700;">💰 --</span>
-        </div>
+  <!-- Excursions Page -->
+  <section class="excursions-page">
+    <div class="excursions-hero">
+      <div class="excursions-hero-bg"></div>
+      <div class="container">
+        <span class="page-label">Excursiones</span>
+        <h1>Descubre tu próxima aventura</h1>
+        <p>Explora todos nuestros viajes y excursiones diseñados para crear recuerdos inolvidables.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Tour Content -->
-  <section class="tour-content">
     <div class="container">
-      <div class="tour-layout">
-        <div class="tour-main">
-          <h2 id="tourSubtitle">Descripción</h2>
-          <p id="tourDescription" class="tour-desc">Cargando descripción...</p>
-
-          <h3>Highlights - Lugares que visitamos</h3>
-          <ul class="highlights-list" id="tourHighlights">
-            <!-- JS -->
-          </ul>
-
-          <div class="included-grid">
-            <div>
-              <h3>✅ Qué incluye</h3>
-              <ul class="included-list" id="tourIncluded">
-                <!-- JS -->
-              </ul>
-            </div>
-            <div>
-              <h3>❌ No incluye</h3>
-              <ul class="not-included-list" id="tourNotIncluded">
-                <!-- JS -->
-              </ul>
-            </div>
-          </div>
-
-          <h3>Galería de fotos</h3>
-          <div class="tour-gallery" id="tourGallery">
-            <!-- JS -->
-          </div>
-        </div>
-
-        <aside class="tour-sidebar">
-          <div class="sidebar-card">
-            <h3>¿Te interesa este viaje?</h3>
-            <p>Cotiza ahora y uno de nuestros agentes te contactará con la mejor oferta.</p>
-            <button class="btn-cotizar-sidebar" onclick="openQuoteFromDetail()">Cotizar este viaje</button>
-            <a href="https://wa.me/+18095551234" class="btn-whatsapp" id="whatsappBtn" target="_blank">
-              <span>💬</span> Consultar por WhatsApp
-            </a>
-          </div>
-        </aside>
+      <div class="excursions-header">
+        <p class="excursions-count" id="excursionsCount">Cargando experiencias...</p>
+      </div>
+      <div class="grid-6" id="excursionsGrid">
+        <!-- Loaded via JS -->
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer" id="contacto">
+  <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -215,6 +170,6 @@
     </div>
   </div>
 
-  <script src="js/upcoming-detail.js"></script>
+  <script src="js/excursiones.js"></script>
 </body>
 </html>

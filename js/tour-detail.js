@@ -61,8 +61,12 @@ function renderSettings(data) {
 function renderTour(tour, settings) {
   // Hero
   const heroBg = document.getElementById('tourHeroBg');
-  if (tour.image) {
+  if (tour.image && tour.image.trim()) {
     heroBg.style.backgroundImage = `url('${tour.image}')`;
+  } else {
+    const colors = ['1DA1F2', 'F26522', '0d8bd9', 'd9541a'];
+    const color = colors[tour.title.length % colors.length];
+    heroBg.style.background = `linear-gradient(135deg, #${color}, #0a1628)`;
   }
 
   document.getElementById('tourTitle').textContent = tour.title;

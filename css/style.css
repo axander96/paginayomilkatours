@@ -1350,3 +1350,327 @@ body {
     font-size: 26px;
   }
 }
+
+
+/* =============================
+   New Trip Cards
+   ============================= */
+
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  background: #0a1628;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  transition: var(--transition);
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+.trip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+}
+
+.trip-card:hover .trip-card-image {
+  transform: scale(1.06);
+}
+
+.trip-card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.trip-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.trip-card-duration {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(10,22,40,0.75);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.trip-card-guide {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange);
+  color: #fff;
+  padding: 6px 12px 6px 6px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 600;
+  max-width: calc(100% - 100px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.trip-card-guide-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+}
+
+.trip-card-guide-text {
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trip-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 18px;
+}
+
+.trip-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+.trip-card-locations {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255,255,255,0.75);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trip-card-category {
+  display: inline-block;
+  background: rgba(29,161,242,0.15);
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.trip-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+
+.trip-card-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 18px;
+}
+
+.trip-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.trip-card-price {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.trip-card-price small {
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.trip-card-price span {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.trip-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.trip-card:hover .trip-card-btn {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+
+/* View All Button */
+.view-all-trips {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.btn-view-all {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 6px 18px rgba(29,161,242,0.25);
+}
+
+.btn-view-all:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(29,161,242,0.35);
+}
+
+/* =============================
+   Excursions Page
+   ============================= */
+
+.excursions-page {
+  background: #0a1628;
+  color: #fff;
+  padding-bottom: 80px;
+}
+
+.excursions-hero {
+  position: relative;
+  padding: 150px 0 100px;
+  margin-top: 96px;
+  background: linear-gradient(135deg, rgba(10,22,40,0.95), rgba(10,22,40,0.85)), url('../images/excursions-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.excursions-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,22,40,0.6), rgba(10,22,40,0.95));
+}
+
+.excursions-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-label {
+  display: inline-block;
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.excursions-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 600px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.excursions-hero p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  max-width: 500px;
+}
+
+.excursions-header {
+  text-align: center;
+  padding: 50px 0 30px;
+}
+
+.excursions-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 22px;
+  border-radius: 30px;
+}
+
+@media (max-width: 992px) {
+  .excursions-hero h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .excursions-hero {
+    padding: 120px 0 80px;
+  }
+  .excursions-hero h1 {
+    font-size: 30px;
+  }
+  .trip-card-title {
+    font-size: 18px;
+  }
+  .trip-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .trip-card-btn {
+    width: 100%;
+  }
+}

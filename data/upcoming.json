@@ -28,7 +28,19 @@
         "Propinas",
         "Gastos personales"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Caribe",
+      "dates": [
+        "15-22 de Junio, 2026"
+      ],
+      "guide": null
     },
     {
       "image": "",
@@ -56,7 +68,19 @@
         "Bebidas alcohólicas",
         "Entradas adicionales"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Norteamérica",
+      "dates": [
+        "10-14 de Julio, 2026"
+      ],
+      "guide": null
     },
     {
       "image": "",
@@ -86,7 +110,19 @@
         "Seguro de viaje",
         "Entradas a Broadway"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Europa",
+      "dates": [
+        "5-12 de Agosto, 2026"
+      ],
+      "guide": null
     },
     {
       "image": "",
@@ -115,7 +151,19 @@
         "Visa Schengen",
         "Seguro de viaje"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Europa",
+      "dates": [
+        "15-25 de Septiembre, 2026"
+      ],
+      "guide": null
     },
     {
       "image": "",
@@ -145,7 +193,19 @@
         "Servicio de spa",
         "Bebidas premium"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Caribe",
+      "dates": [
+        "1-8 de Octubre, 2026"
+      ],
+      "guide": null
     },
     {
       "image": "",
@@ -174,7 +234,19 @@
         "Propinas",
         "Souvenirs"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Nacional",
+      "dates": [
+        "Todos los fines de semana"
+      ],
+      "guide": null
     }
   ]
 }

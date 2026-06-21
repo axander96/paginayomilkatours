@@ -26,7 +26,18 @@
         "Propinas",
         "Gastos personales"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Nacional",
+      "dates": [],
+      "price": "$450",
+      "guide": null
     },
     {
       "image": "",
@@ -51,7 +62,18 @@
         "Propinas",
         "Compras personales"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Nacional",
+      "dates": [],
+      "price": "$120",
+      "guide": null
     },
     {
       "image": "",
@@ -77,7 +99,18 @@
         "Seguro de viaje",
         "Visa ESTA"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Norteamérica",
+      "dates": [],
+      "price": "$899",
+      "guide": null
     },
     {
       "image": "",
@@ -103,7 +136,18 @@
         "Ropa térmica",
         "Gastos personales"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Nacional",
+      "dates": [],
+      "price": "$350",
+      "guide": null
     },
     {
       "image": "",
@@ -129,7 +173,18 @@
         "Actividades acuáticas adicionales",
         "Seguro de viaje"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Centroamérica",
+      "dates": [],
+      "price": "$1,150",
+      "guide": null
     },
     {
       "image": "",
@@ -156,7 +211,18 @@
         "Entrada al Castillo de San Felipe",
         "Gastos personales"
       ],
-      "gallery": ["", "", "", "", "", ""]
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "Suramérica",
+      "dates": [],
+      "price": "$1,050",
+      "guide": null
     }
   ]
 }

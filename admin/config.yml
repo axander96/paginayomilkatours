@@ -64,6 +64,20 @@ collections:
               - { label: "Ubicación", name: "location", widget: "string" }
               - { label: "Duración (ej: 7 días / 6 noches)", name: "duration", widget: "string" }
               - { label: "Precio", name: "price", widget: "string" }
+              - { label: "Categoría", name: "category", widget: "string", hint: "Ej: América, Europa, Caribe, Nacional" }
+              - label: "Fechas disponibles"
+                name: "dates"
+                widget: "list"
+                field: { label: "Fecha", name: "date", widget: "string" }
+                required: false
+              - label: "Guía acompañante (opcional)"
+                name: "guide"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Nombre del guía", name: "name", widget: "string", required: false }
+                  - { label: "Foto del guía", name: "image", widget: "image", required: false }
+                  - { label: "Texto del badge", name: "badge_text", widget: "string", required: false, hint: "Ej: Acompañados del padre Juan" }
               - { label: "Descripción", name: "description", widget: "text" }
               - label: "Highlights (lugares que visitamos)"
                 name: "highlights"
@@ -116,6 +130,21 @@ collections:
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Ubicación", name: "location", widget: "string" }
               - { label: "Duración (ej: 5 días / 4 noches)", name: "duration", widget: "string" }
+              - { label: "Precio", name: "price", widget: "string", required: false }
+              - { label: "Categoría", name: "category", widget: "string", hint: "Ej: América, Europa, Caribe, Nacional" }
+              - label: "Fechas disponibles"
+                name: "dates"
+                widget: "list"
+                field: { label: "Fecha", name: "date", widget: "string" }
+                required: false
+              - label: "Guía acompañante (opcional)"
+                name: "guide"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Nombre del guía", name: "name", widget: "string", required: false }
+                  - { label: "Foto del guía", name: "image", widget: "image", required: false }
+                  - { label: "Texto del badge", name: "badge_text", widget: "string", required: false, hint: "Ej: Acompañados del padre Juan" }
               - { label: "Descripción", name: "description", widget: "text" }
               - label: "Highlights (lugares que visitamos)"
                 name: "highlights"

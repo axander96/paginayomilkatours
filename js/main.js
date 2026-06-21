@@ -94,22 +94,106 @@ function renderHero(slides) {
   startSlider();
 }
 
+// =============================
+// Trip Card Helpers
+// =============================
+
+function getTripImage(item) {
+  if (item.image && item.image.trim()) return item.image;
+  // Fallback: colored placeholder with first letter
+  const colors = ['1DA1F2', 'F26522', '0d8bd9', 'd9541a', '2a9d8f', 'e9c46a'];
+  const color = colors[item.title.length % colors.length];
+  const letter = encodeURIComponent(item.title.charAt(0).toUpperCase());
+  return `https://placehold.co/600x400/${color}/ffffff?text=${letter}`;
+}
+
+function getFirstDate(item) {
+  if (Array.isArray(item.dates) && item.dates.length > 0) {
+    return item.dates[0];
+  }
+  if (item.date && item.date.trim()) {
+    return item.date;
+  }
+  return '0 Fechas';
+}
+
+function formatPrice(item) {
+  if (item.price && item.price.trim()) return item.price;
+  return 'Consultar';
+}
+
+function buildTripCard(item, index, type) {
+  const detailUrl = type === 'upcoming' ? 'upcoming-detail.html' : 'tour-detail.html';
+  const image = getTripImage(item);
+  const title = escapeHtml(item.title || '');
+  const location = escapeHtml(item.location || '');
+  const category = escapeHtml(item.category || 'Excursión');
+  const duration = escapeHtml(item.duration || '');
+  const firstDate = escapeHtml(getFirstDate(item));
+  const price = escapeHtml(formatPrice(item));
+
+  const guide = item.guide;
+  const guideBadge = guide && guide.image && guide.badge_text ? `
+    <div class="trip-card-guide">
+      <img src="${guide.image}" alt="${escapeHtml(guide.name || '')}" class="trip-card-guide-img" loading="lazy">
+      <span class="trip-card-guide-text">${escapeHtml(guide.badge_text)}</span>
+    </div>
+  ` : '';
+
+  return `
+    <a href="${detailUrl}?id=${index}" class="trip-card" aria-label="${title}">
+      <div class="trip-card-image-wrap">
+        <img src="${image}" alt="${title}" class="trip-card-image" loading="lazy">
+        ${guideBadge}
+        <span class="trip-card-duration">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          ${duration}
+        </span>
+      </div>
+      <div class="trip-card-body">
+        <div class="trip-card-meta">
+          <span class="trip-card-locations">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            ${location}
+          </span>
+          <span class="trip-card-category">${category}</span>
+        </div>
+        <h3 class="trip-card-title">${title}</h3>
+        <div class="trip-card-date">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+          ${firstDate}
+        </div>
+        <div class="trip-card-footer">
+          <div class="trip-card-price">
+            <small>DESDE</small>
+            <span>${price}</span>
+          </div>
+          <span class="trip-card-btn">Ver detalles</span>
+        </div>
+      </div>
+    </a>
+  `;
+}
+
 function renderUpcoming(data) {
   document.getElementById('upcomingTitle').textContent = data.title;
   document.getElementById('upcomingSubtitle').textContent = data.subtitle;
 
   const grid = document.getElementById('upcomingGrid');
-  grid.innerHTML = data.items.map((item, index) => `
-    <a href="upcoming-detail.html?id=${index}" class="card" style="text-decoration:none;color:inherit">
-      <img src="${item.image}" alt="${escapeHtml(item.title)}" class="card-image" loading="lazy">
-      <div class="card-body">
-        <h3>${escapeHtml(item.title)}</h3>
-        <div class="date">📅 ${escapeHtml(item.date)}</div>
-        <div class="price">${escapeHtml(item.price)}</div>
-        <p>${escapeHtml(item.description)}</p>
-      </div>
-    </a>
-  `).join('');
+  const itemsToShow = data.items.slice(0, 6);
+  grid.innerHTML = itemsToShow.map((item, index) => buildTripCard(item, index, 'upcoming')).join('');
+
+  // Add "View all" button if there are more than 6 items
+  const section = document.getElementById('excursiones');
+  let viewAllBtn = section.querySelector('.view-all-trips');
+  if (!viewAllBtn) {
+    viewAllBtn = document.createElement('div');
+    viewAllBtn.className = 'view-all-trips';
+    section.querySelector('.container').appendChild(viewAllBtn);
+  }
+  viewAllBtn.innerHTML = `
+    <a href="excursiones.html" class="btn-view-all">Ver todas las excursiones disponibles</a>
+  `;
 }
 
 function renderServices(data) {
@@ -138,16 +222,7 @@ function renderTours(data) {
   document.getElementById('toursSubtitle').textContent = data.subtitle;
 
   const grid = document.getElementById('toursGrid');
-  grid.innerHTML = data.items.map((item, index) => `
-    <a href="tour-detail.html?id=${index}" class="card" style="text-decoration:none;color:inherit">
-      <img src="${item.image}" alt="${escapeHtml(item.title)}" class="card-image" loading="lazy">
-      <div class="card-body">
-        <h3>${escapeHtml(item.title)}</h3>
-        <div class="location">📍 ${escapeHtml(item.location)}</div>
-        <p>${escapeHtml(item.description)}</p>
-      </div>
-    </a>
-  `).join('');
+  grid.innerHTML = data.items.map((item, index) => buildTripCard(item, index, 'tours')).join('');
 }
 
 function renderInstagram(data) {
