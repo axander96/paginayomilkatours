@@ -49,62 +49,6 @@ body {
   transition: var(--transition);
 }
 
-.header-top {
-  background: var(--blue);
-  padding: 3px 0;
-}
-
-.top-nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 24px;
-}
-
-.top-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
-  opacity: 0.95;
-  transition: var(--transition);
-}
-
-.top-nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.admin-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,0.15);
-  padding: 4px 12px;
-  border-radius: 20px;
-  transition: var(--transition);
-}
-
-.admin-link:hover {
-  background: rgba(255,255,255,0.25);
-  text-decoration: none !important;
-}
-
-.top-cotizar {
-  display: inline-flex;
-  align-items: center;
-  background: var(--orange);
-  color: #fff !important;
-  padding: 4px 14px;
-  border-radius: 20px;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(242,101,34,0.3);
-}
-
-.top-cotizar:hover {
-  background: var(--orange-dark);
-  text-decoration: none !important;
-}
-
 .header-main {
   padding: 12px 0;
 }
@@ -141,6 +85,50 @@ body {
 .main-nav a.active {
   color: var(--blue);
   background: var(--blue-light);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-cotizar-header {
+  display: inline-flex;
+  align-items: center;
+  background: var(--orange);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(242,101,34,0.3);
+}
+
+.btn-cotizar-header:hover {
+  background: var(--orange-dark);
+  transform: translateY(-1px);
+}
+
+.btn-admin-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-admin-header:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
 }
 
 .btn-cotizar {
@@ -768,7 +756,7 @@ body {
 
 /* Footer */
 .footer {
-  background: #111111;
+  background: #0a1628;
   color: #fff;
   padding: 60px 0 0;
 }
@@ -1041,9 +1029,12 @@ body {
 }
 
 @media (max-width: 576px) {
-  .top-nav {
-    justify-content: center;
-    gap: 16px;
+  .header-actions .btn-admin-header {
+    display: none;
+  }
+  .btn-cotizar-header {
+    padding: 8px 14px;
+    font-size: 13px;
   }
   .logo img {
     height: 44px;

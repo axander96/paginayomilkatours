@@ -13,19 +13,6 @@
 
   <!-- Header -->
   <header class="header" id="header">
-    <div class="header-top">
-      <div class="container">
-        <nav class="top-nav">
-          <a href="#" class="top-cotizar" onclick="openQuote()">Cotizar</a>
-          <a href="admin/" class="admin-link">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-            </svg>
-            Entrar
-          </a>
-        </nav>
-      </div>
-    </div>
     <div class="header-main">
       <div class="container">
         <a href="#" class="logo">
@@ -34,14 +21,23 @@
         <nav class="main-nav">
           <a href="#inicio" class="active">Inicio</a>
           <a href="#excursiones">Excursiones</a>
-          <a href="#visas">Visas</a>
+          <a href="#servicios">Servicios</a>
           <a href="contacto.html">Contacto</a>
         </nav>
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="header-actions">
+          <a href="#" class="btn-cotizar-header" onclick="openQuote()">Cotizar</a>
+          <a href="admin/" class="btn-admin-header">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            Entrar
+          </a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -50,8 +46,9 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#inicio">Inicio</a>
     <a href="#excursiones">Excursiones</a>
-    <a href="#visas">Visas</a>
+    <a href="#servicios">Servicios</a>
     <a href="#contacto">Contacto</a>
+    <a href="admin/">Entrar</a>
     <a href="#" onclick="openQuote(); closeMobileMenu();">Cotizar</a>
     <div class="mobile-divider"></div>
     <a href="admin/">Entrar al panel</a>
@@ -83,7 +80,7 @@
   </section>
 
   <!-- Servicios -->
-  <section class="section services" id="visas">
+  <section class="section services" id="servicios">
     <div class="container">
       <div class="section-header">
         <h2 id="servicesTitle">Nuestros Servicios</h2>
