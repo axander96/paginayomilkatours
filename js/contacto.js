@@ -42,15 +42,26 @@ function renderSettings(data) {
   if (contactHours) contactHours.innerHTML = data.hours ? data.hours.replace(/\n/g, '<br>') : '';
   if (contactRnc) contactRnc.textContent = data.rnc || '';
   if (contactMap && data.map_url) {
-    const isEmbed = data.map_url.includes('/maps/embed');
+    // Si el usuario pegó el código <iframe ...> completo, extraer solo el src
+    let mapUrl = data.map_url.trim();
+    if (mapUrl.includes('<iframe')) {
+      const srcMatch = mapUrl.match(/src=["']([^"']+)["']/);
+      if (srcMatch && srcMatch[1]) {
+        mapUrl = srcMatch[1];
+      }
+    }
+
+    // Validar que sea una URL de embed de Google Maps
+    const isEmbed = mapUrl.includes('google.com/maps/embed');
+
     if (isEmbed) {
-      contactMap.src = data.map_url;
+      contactMap.src = mapUrl;
       contactMap.style.display = 'block';
       document.getElementById('contactMapLink').style.display = 'none';
     } else {
       contactMap.style.display = 'none';
       const mapLink = document.getElementById('contactMapLink');
-      mapLink.href = data.map_url;
+      mapLink.href = mapUrl;
       mapLink.style.display = 'inline-flex';
     }
   }
