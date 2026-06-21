@@ -51,7 +51,7 @@ body {
 
 .header-top {
   background: var(--blue);
-  padding: 6px 0;
+  padding: 3px 0;
 }
 
 .top-nav {
@@ -86,6 +86,22 @@ body {
 
 .admin-link:hover {
   background: rgba(255,255,255,0.25);
+  text-decoration: none !important;
+}
+
+.top-cotizar {
+  display: inline-flex;
+  align-items: center;
+  background: var(--orange);
+  color: #fff !important;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(242,101,34,0.3);
+}
+
+.top-cotizar:hover {
+  background: var(--orange-dark);
   text-decoration: none !important;
 }
 

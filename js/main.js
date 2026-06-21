@@ -21,12 +21,11 @@ const modalTripName = document.getElementById('modalTripName');
 
 async function loadData() {
   try {
-    const [settings, hero, upcoming, services, tours, instagram, partners] = await Promise.all([
+    const [settings, hero, upcoming, services, instagram, partners] = await Promise.all([
       fetch('data/settings.json').then(r => r.json()),
       fetch('data/hero.json').then(r => r.json()),
       fetch('data/upcoming.json').then(r => r.json()),
       fetch('data/services.json').then(r => r.json()),
-      fetch('data/tours.json').then(r => r.json()),
       fetch('data/instagram.json').then(r => r.json()),
       fetch('data/partners.json').then(r => r.json())
     ]);
@@ -35,7 +34,6 @@ async function loadData() {
     renderHero(hero.slides);
     renderUpcoming(upcoming);
     renderServices(services);
-    renderTours(tours);
     renderInstagram(instagram);
     renderPartners(partners);
   } catch (err) {
@@ -100,8 +98,8 @@ function renderHero(slides) {
 
 function getTripImage(item) {
   if (item.image && item.image.trim()) return item.image;
-  // Fallback: colored placeholder with first letter
-  const colors = ['1DA1F2', 'F26522', '0d8bd9', 'd9541a', '2a9d8f', 'e9c46a'];
+  // Fallback: brand-colored placeholder with first letter
+  const colors = ['1DA1F2', 'F26522', '0d8bd9', 'd9541a', '1a3a5c', '2a6db5'];
   const color = colors[item.title.length % colors.length];
   const letter = encodeURIComponent(item.title.charAt(0).toUpperCase());
   return `https://placehold.co/600x400/${color}/ffffff?text=${letter}`;
@@ -215,14 +213,6 @@ function renderServices(data) {
       <p>${escapeHtml(item.description)}</p>
     </div>
   `).join('');
-}
-
-function renderTours(data) {
-  document.getElementById('toursTitle').textContent = data.title;
-  document.getElementById('toursSubtitle').textContent = data.subtitle;
-
-  const grid = document.getElementById('toursGrid');
-  grid.innerHTML = data.items.map((item, index) => buildTripCard(item, index, 'tours')).join('');
 }
 
 function renderInstagram(data) {
