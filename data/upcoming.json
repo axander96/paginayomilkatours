@@ -40,7 +40,19 @@
       "dates": [
         "15-22 de Junio, 2026"
       ],
-      "guide": null
+      "guide": null,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Llegada a Punta Cana",
+          "description": "Bienvenida a Punta Cana. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+        },
+        {
+          "day": 2,
+          "title": "Tour panorámico",
+          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+        }
+      ]
     },
     {
       "image": "",
@@ -80,7 +92,19 @@
       "dates": [
         "10-14 de Julio, 2026"
       ],
-      "guide": null
+      "guide": null,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Llegada a Cancún",
+          "description": "Bienvenida a Cancún. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+        },
+        {
+          "day": 2,
+          "title": "Tour panorámico",
+          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+        }
+      ]
     },
     {
       "image": "",
@@ -122,7 +146,19 @@
       "dates": [
         "5-12 de Agosto, 2026"
       ],
-      "guide": null
+      "guide": null,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Llegada a Nueva York",
+          "description": "Bienvenida a Nueva York. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+        },
+        {
+          "day": 2,
+          "title": "Tour panorámico",
+          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+        }
+      ]
     },
     {
       "image": "",
@@ -163,7 +199,19 @@
       "dates": [
         "15-25 de Septiembre, 2026"
       ],
-      "guide": null
+      "guide": null,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Llegada a París",
+          "description": "Bienvenida a París. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+        },
+        {
+          "day": 2,
+          "title": "Tour panorámico",
+          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+        }
+      ]
     },
     {
       "image": "",
@@ -205,7 +253,19 @@
       "dates": [
         "1-8 de Octubre, 2026"
       ],
-      "guide": null
+      "guide": null,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Llegada a Caribe",
+          "description": "Bienvenida a Caribe. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+        },
+        {
+          "day": 2,
+          "title": "Tour panorámico",
+          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+        }
+      ]
     },
     {
       "image": "",
@@ -246,7 +306,19 @@
       "dates": [
         "Todos los fines de semana"
       ],
-      "guide": null
+      "guide": null,
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Llegada a Santo Domingo",
+          "description": "Bienvenida a Santo Domingo. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+        },
+        {
+          "day": 2,
+          "title": "Tour panorámico",
+          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+        }
+      ]
     }
   ]
 }

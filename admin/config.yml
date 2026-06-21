@@ -79,7 +79,15 @@ collections:
                   - { label: "Foto del guía", name: "image", widget: "image", required: false }
                   - { label: "Texto del badge", name: "badge_text", widget: "string", required: false, hint: "Ej: Acompañados del padre Juan" }
               - { label: "Descripción", name: "description", widget: "text" }
-              - label: "Highlights (lugares que visitamos)"
+              - label: "Itinerario (día a día)"
+                name: "itinerary"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Día", name: "day", widget: "number" }
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+              - label: "Lugares que visitamos"
                 name: "highlights"
                 widget: "list"
                 field: { label: "Lugar", name: "highlight", widget: "string" }

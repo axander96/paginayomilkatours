@@ -73,27 +73,76 @@ function renderTrip(trip, settings) {
   } else {
     const colors = ['1DA1F2', 'F26522', '0d8bd9', 'd9541a'];
     const color = colors[trip.title.length % colors.length];
-    heroBg.style.background = `linear-gradient(135deg, #${color}, #0a1628)`;
+    heroBg.style.background = `linear-gradient(135deg, #${color}, #ffffff)`;
   }
 
   document.getElementById('tourTitle').textContent = trip.title;
   document.getElementById('tourDate').textContent = `📅 ${getTripDatesLabel(trip)}`;
   document.getElementById('tourDuration').textContent = `⏱ ${trip.duration || 'Consultar'}`;
   document.getElementById('tourLocation').textContent = `📍 ${trip.location}`;
-  document.getElementById('tourPrice').textContent = `💰 ${trip.price || 'Consultar'}`;
 
   document.getElementById('tourSubtitle').textContent = trip.title;
   document.getElementById('tourDescription').textContent = trip.description;
 
-  const highlightsEl = document.getElementById('tourHighlights');
-  highlightsEl.innerHTML = (trip.highlights || []).map(h => `<li><span class="check-icon">✓</span>${escapeHtml(h)}</li>`).join('');
+  // Itinerary
+  const itinerary = trip.itinerary || [];
+  const itinerarySection = document.getElementById('itinerarySection');
+  const itineraryEl = document.getElementById('tourItinerary');
+  if (itinerary.length > 0) {
+    itinerarySection.style.display = 'block';
+    itineraryEl.innerHTML = itinerary.map(day => {
+      const dayRaw = day.day != null ? String(day.day) : '';
+      const dayNumber = dayRaw.match(/\d+/) ? dayRaw.match(/\d+/)[0] : dayRaw;
+      const dayLabel = dayNumber ? `Día ${dayNumber}` : 'Día';
+      return `
+        <div class="itinerary-item">
+          <div class="itinerary-marker">
+            <span>${dayNumber || dayRaw}</span>
+          </div>
+          <div class="itinerary-content">
+            <h4>${dayLabel} · ${escapeHtml(day.title)}</h4>
+            <p>${escapeHtml(day.description)}</p>
+          </div>
+        </div>
+      `;
+    }).join('');
+  } else {
+    itinerarySection.style.display = 'none';
+  }
 
+  // Included / Not included
   const includedEl = document.getElementById('tourIncluded');
-  includedEl.innerHTML = (trip.included || []).map(i => `<li>${escapeHtml(i)}</li>`).join('');
+  includedEl.innerHTML = (trip.included || []).map(i => `
+    <li>
+      <span class="include-icon include-yes-icon">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </span>
+      ${escapeHtml(i)}
+    </li>
+  `).join('');
 
   const notIncludedEl = document.getElementById('tourNotIncluded');
-  notIncludedEl.innerHTML = (trip.not_included || []).map(i => `<li>${escapeHtml(i)}</li>`).join('');
+  notIncludedEl.innerHTML = (trip.not_included || []).map(i => `
+    <li>
+      <span class="include-icon include-no-icon">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </span>
+      ${escapeHtml(i)}
+    </li>
+  `).join('');
 
+  // Highlights
+  const highlightsEl = document.getElementById('tourHighlights');
+  highlightsEl.innerHTML = (trip.highlights || []).map(h => `
+    <li>
+      <span class="highlight-icon">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </span>
+      ${escapeHtml(h)}
+    </li>
+  `).join('');
+
+  // Gallery
   const galleryEl = document.getElementById('tourGallery');
   const gallery = trip.gallery || [];
   galleryEl.innerHTML = gallery.map((img, i) => {
@@ -102,6 +151,29 @@ function renderTrip(trip, settings) {
     }
     return `<div class="gallery-placeholder"><span>Imagen ${i+1}</span></div>`;
   }).join('');
+
+  // Sidebar
+  const sidebarPrice = document.getElementById('sidebarPrice');
+  sidebarPrice.textContent = trip.price ? trip.price.replace('$', 'US$') : 'Consultar';
+
+  const sidebarDates = document.getElementById('sidebarDates');
+  const hasDates = (Array.isArray(trip.dates) && trip.dates.length > 0) || (trip.date && trip.date.trim());
+  if (hasDates) {
+    const datesText = Array.isArray(trip.dates) && trip.dates.length > 0
+      ? trip.dates.join(' | ')
+      : trip.date;
+    sidebarDates.innerHTML = `<span class="dates-label">📅 Fechas disponibles</span><span class="dates-value">${escapeHtml(datesText)}</span>`;
+  } else {
+    sidebarDates.innerHTML = `<span class="dates-label">📅 Fechas</span><span class="dates-value">Fechas a coordinar con la agencia</span>`;
+  }
+
+  // WhatsApp button
+  const whatsappBtn = document.getElementById('whatsappBtn');
+  if (settings.whatsapp) {
+    const cleanPhone = settings.whatsapp.replace(/\D/g, '');
+    const message = `Hola, estoy interesado en la excursión *${trip.title}* de Yomilka Tours. Me gustaría recibir más información.`;
+    whatsappBtn.href = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
+  }
 
   document.title = `${trip.title} - Yomilka Tours`;
 }
