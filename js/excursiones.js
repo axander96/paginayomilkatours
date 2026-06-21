@@ -55,7 +55,7 @@ function renderExcursions(data) {
 
 function getTripImage(item) {
   if (item.image && item.image.trim()) return item.image;
-  const colors = ['1DA1F2', 'F26522', '0d8bd9', 'd9541a', '1a3a5c', '2a6db5'];
+  const colors = ['1DA1F2', 'F26522', '0d8bd9', 'd9541a'];
   const color = colors[item.title.length % colors.length];
   const letter = encodeURIComponent(item.title.charAt(0).toUpperCase());
   return `https://placehold.co/600x400/${color}/ffffff?text=${letter}`;
