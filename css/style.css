@@ -212,18 +212,24 @@ body {
 }
 
 .mobile-menu-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: var(--text);
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
   padding: 12px 0;
   border-bottom: 1px solid #eee;
-  text-align: center;
+  text-align: left;
 }
 
-.mobile-menu-darkmode,
-.mobile-menu-login,
-.mobile-menu-email {
+.mobile-menu-arrow {
+  flex-shrink: 0;
+  color: var(--text-light);
+}
+
+.mobile-menu-login {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -234,35 +240,17 @@ body {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 12px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.mobile-menu-darkmode {
-  background: #f0f0f0;
-  color: var(--text);
-  border: none;
-}
-
-.mobile-menu-login {
   background: #1DA1F2;
   color: #fff;
   text-decoration: none;
+  transition: var(--transition);
 }
 
 .mobile-menu-email {
-  background: #fff;
-  color: var(--text);
-  text-decoration: none;
-  border: 1.5px solid #ddd;
-  margin-bottom: 0;
-}
-
-.mobile-menu-email span {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-light);
+  margin: 0;
 }
 
 /* Hero Slider */
@@ -2001,41 +1989,3 @@ body {
   }
 }
 
-/* =============================
-   Dark Mode
-   ============================= */
-
-body.dark-mode {
-  background: #1a1a1a;
-  color: #f5f5f5;
-}
-
-body.dark-mode .header,
-body.dark-mode .mobile-menu,
-body.dark-mode .footer,
-body.dark-mode .header-main {
-  background: #222;
-}
-
-body.dark-mode .main-nav a,
-body.dark-mode .mobile-menu-nav a,
-body.dark-mode .mobile-menu-close,
-body.dark-mode .footer-info p,
-body.dark-mode .footer-slogan,
-body.dark-mode .footer-bottom,
-body.dark-mode .mobile-menu-email {
-  color: #f5f5f5;
-}
-
-body.dark-mode .mobile-menu-nav a {
-  border-color: #444;
-}
-
-body.dark-mode .mobile-menu-email {
-  border-color: #555;
-}
-
-body.dark-mode .mobile-menu-darkmode {
-  background: #333;
-  color: #f5f5f5;
-}
