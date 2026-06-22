@@ -16,7 +16,7 @@ collections:
         file: "data/settings.json"
         fields:
           - { label: "Nombre del Sitio", name: "site_name", widget: "string" }
-          - { label: "Eslogan", name: "slogan", widget: "string" }
+          - { label: "Eslogan", name: "slogan", widget: "text" }
           - { label: "Teléfono 1", name: "phone", widget: "string" }
           - { label: "Teléfono 2", name: "phone2", widget: "string", required: false }
           - { label: "Correo Electrónico", name: "email", widget: "string" }
