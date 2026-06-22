@@ -785,29 +785,37 @@ body {
   color: var(--text-light);
 }
 
-.footer-info h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: var(--blue);
+.footer-info {
+  text-align: right;
 }
 
-.footer-info p {
-  font-size: 15px;
-  margin-bottom: 10px;
-  color: var(--text);
-  display: flex;
+.footer-contact-icons {
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
 }
 
-.footer-info p svg {
+.footer-contact-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--blue-light);
+  color: var(--blue);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.footer-contact-icon:hover {
+  background: var(--orange);
+  color: #fff;
+}
+
+.footer-contact-icon svg {
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
-  color: var(--orange);
-}
-
-.footer-info strong {
-  font-weight: 600;
 }
 
 .social-links {
@@ -861,9 +869,6 @@ body {
   }
   .footer-info {
     text-align: center;
-  }
-  .footer-info p {
-    justify-content: center;
   }
   .social-links {
     justify-content: center;
