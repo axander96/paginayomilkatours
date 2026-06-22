@@ -797,13 +797,14 @@ body {
   margin-bottom: 10px;
   color: var(--text);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
 .footer-info p svg {
   flex-shrink: 0;
   color: var(--orange);
+  margin-top: 2px;
 }
 
 .footer-info strong {
