@@ -783,6 +783,7 @@ body {
   font-size: 18px;
   font-weight: 300;
   color: var(--text-light);
+  white-space: pre-line;
 }
 
 .footer-info h3 {
