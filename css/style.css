@@ -859,16 +859,16 @@ body {
     gap: 32px;
   }
   .footer-brand {
-    align-items: center;
+    align-items: flex-start;
   }
   .footer-info {
-    text-align: center;
+    text-align: left;
   }
   .footer-info p {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .social-links {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
