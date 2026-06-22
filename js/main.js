@@ -56,6 +56,13 @@ function renderSettings(data) {
   document.getElementById('footerEmail').innerHTML = `${emailIcon} ${data.email}`;
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  const mobileMenuEmail = document.getElementById('mobileMenuEmail');
+  if (mobileMenuEmail && data.email) {
+    mobileMenuEmail.href = `mailto:${data.email}`;
+    const span = mobileMenuEmail.querySelector('span');
+    if (span) span.textContent = data.email;
+  }
+
   // Update social links
   const socialContainer = document.getElementById('socialLinks');
   socialContainer.querySelectorAll('a').forEach(link => {
@@ -409,6 +416,20 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// Dark mode
+function initDarkMode() {
+  if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+  }
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+}
+
+initDarkMode();
 
 // Initialize
 loadData();

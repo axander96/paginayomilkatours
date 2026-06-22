@@ -28,6 +28,13 @@ function renderSettings(data) {
   document.getElementById('footerPhone').innerHTML = `${phoneIcon} ${data.phone}${data.phone2 ? ' / ' + data.phone2 : ''}`;
   document.getElementById('footerEmail').innerHTML = `${emailIcon} ${data.email}`;
 
+  const mobileMenuEmail = document.getElementById('mobileMenuEmail');
+  if (mobileMenuEmail && data.email) {
+    mobileMenuEmail.href = `mailto:${data.email}`;
+    const span = mobileMenuEmail.querySelector('span');
+    if (span) span.textContent = data.email;
+  }
+
   // Update contact page info
   const contactAddress = document.getElementById('contactAddress');
   const contactInfoPhone = document.getElementById('contactInfoPhone');
@@ -200,5 +207,19 @@ window.addEventListener('scroll', () => {
     header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.06)';
   }
 });
+
+// Dark mode
+function initDarkMode() {
+  if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+  }
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+}
+
+initDarkMode();
 
 loadContactData();
