@@ -60,7 +60,7 @@ body {
 }
 
 .logo img {
-  height: 56px;
+  height: 68px;
   width: auto;
   display: block;
 }
@@ -250,7 +250,8 @@ body {
 .slide-content h1 {
   font-size: 52px;
   font-weight: 700;
-  margin-bottom: 16px;
+  line-height: 1.1;
+  margin-bottom: 12px;
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
   animation: fadeInUp 0.8s ease;
 }
@@ -1042,7 +1043,7 @@ body {
     font-size: 13px;
   }
   .logo img {
-    height: 44px;
+    height: 52px;
   }
   .section-header h2 {
     font-size: 28px;
