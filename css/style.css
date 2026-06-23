@@ -2033,13 +2033,7 @@ body {
 .departure-date-info {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-}
-
-.departure-date-block {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .departure-date-label {
@@ -2048,7 +2042,7 @@ body {
 }
 
 .departure-date-value {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--text);
 }

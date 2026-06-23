@@ -62,6 +62,30 @@ function renderSettings(data) {
   }
 }
 
+function formatShortDate(dateStr) {
+  if (!dateStr) return '';
+  const match = dateStr.match(/(\d{1,2})\s*(?:[-–]\s*\d{1,2})?\s+(?:de\s+)?([a-zA-Záéíóúñ]+)(?:,?\s+(?:de(?:l)?\s+)?)?(\d{4})/i);
+  if (match) {
+    const day = match[1].padStart(2, '0');
+    const month = match[2].substring(0, 3).toUpperCase();
+    const year = match[3];
+    return `${day}-${month}-${year}`;
+  }
+  return dateStr;
+}
+
+function formatLongDate(dateStr) {
+  if (!dateStr) return '';
+  const match = dateStr.match(/(\d{1,2})\s*(?:[-–]\s*\d{1,2})?\s+(?:de\s+)?([a-zA-Záéíóúñ]+)(?:,?\s+(?:de(?:l)?\s+)?)?(\d{4})/i);
+  if (match) {
+    const day = match[1];
+    const month = match[2].charAt(0).toUpperCase() + match[2].slice(1, 3).toLowerCase();
+    const year = match[3];
+    return `${day} ${month} del ${year}`;
+  }
+  return dateStr;
+}
+
 function normalizeDates(trip) {
   const rawDates = Array.isArray(trip.dates) ? trip.dates : [];
   if (rawDates.length === 0) return [];
@@ -85,15 +109,10 @@ function normalizeDates(trip) {
 function getTripDatesLabel(trip) {
   const dates = normalizeDates(trip);
   if (dates.length > 0) {
-    return dates.map(d => {
-      if (d.departure && d.return && d.departure !== d.return) {
-        return `${d.departure} - ${d.return}`;
-      }
-      return d.departure || d.return;
-    }).join(' | ');
+    return dates.map(d => formatShortDate(d.departure || d.return)).filter(Boolean).join(' | ');
   }
   if (trip.date && trip.date.trim()) {
-    return trip.date;
+    return formatShortDate(trip.date);
   }
   return null;
 }
@@ -172,14 +191,8 @@ function renderTrip(trip, settings) {
     departureDatesGrid.innerHTML = dates.map(d => `
       <div class="departure-date-card">
         <div class="departure-date-info">
-          <div class="departure-date-block">
-            <span class="departure-date-label">Salida</span>
-            <span class="departure-date-value">${escapeHtml(d.departure) || '-'}</span>
-          </div>
-          <div class="departure-date-block">
-            <span class="departure-date-label">Regreso</span>
-            <span class="departure-date-value">${escapeHtml(d.return) || '-'}</span>
-          </div>
+          <span class="departure-date-label">Salida</span>
+          <span class="departure-date-value">${escapeHtml(formatLongDate(d.departure || d.return)) || '-'}</span>
         </div>
         <div class="departure-date-price">
           <span class="departure-date-from">Desde</span>
@@ -218,16 +231,13 @@ function renderTrip(trip, settings) {
   sidebarPrice.textContent = trip.price ? trip.price.replace('$', 'US$') : 'Consultar';
 
   const sidebarDates = document.getElementById('sidebarDates');
+  const sidebarNote = document.getElementById('sidebarNote');
   if (dates.length > 0) {
     sidebarDates.innerHTML = dates.map(d => `
       <div class="sidebar-date-card">
         <div class="sidebar-date-row">
           <span class="sidebar-date-label">Salida</span>
-          <span class="sidebar-date-value">${escapeHtml(d.departure) || '-'}</span>
-        </div>
-        <div class="sidebar-date-row">
-          <span class="sidebar-date-label">Regreso</span>
-          <span class="sidebar-date-value">${escapeHtml(d.return) || '-'}</span>
+          <span class="sidebar-date-value">${escapeHtml(formatShortDate(d.departure || d.return)) || '-'}</span>
         </div>
         <div class="sidebar-date-row sidebar-date-price">
           <span class="sidebar-date-label">Precio</span>
@@ -235,8 +245,10 @@ function renderTrip(trip, settings) {
         </div>
       </div>
     `).join('');
+    if (sidebarNote) sidebarNote.style.display = 'none';
   } else {
     sidebarDates.innerHTML = `<span class="dates-label">📅 Fechas</span><span class="dates-value">Fechas a coordinar con el equipo al contactarnos.</span>`;
+    if (sidebarNote) sidebarNote.style.display = 'block';
   }
 
   // WhatsApp button

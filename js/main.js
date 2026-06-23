@@ -110,18 +110,30 @@ function getTripImage(item) {
   return `https://placehold.co/600x400/${color}/ffffff?text=${letter}`;
 }
 
+function formatShortDate(dateStr) {
+  if (!dateStr) return '';
+  const match = dateStr.match(/(\d{1,2})\s*(?:[-–]\s*\d{1,2})?\s+(?:de\s+)?([a-zA-Záéíóúñ]+)(?:,?\s+(?:de(?:l)?\s+)?)?(\d{4})/i);
+  if (match) {
+    const day = match[1].padStart(2, '0');
+    const month = match[2].substring(0, 3).toUpperCase();
+    const year = match[3];
+    return `${day}-${month}-${year}`;
+  }
+  return dateStr;
+}
+
 function getFirstDate(item) {
+  let raw = '';
   if (Array.isArray(item.dates) && item.dates.length > 0) {
     const first = item.dates[0];
-    if (typeof first === 'object' && first !== null) {
-      return first.departure || first.return || 'Fechas a coordinar';
-    }
-    return first;
+    raw = (typeof first === 'object' && first !== null)
+      ? (first.departure || first.return || '')
+      : first;
+  } else if (item.date && item.date.trim()) {
+    raw = item.date;
   }
-  if (item.date && item.date.trim()) {
-    return item.date;
-  }
-  return 'Fechas a coordinar';
+  if (!raw) return 'Fechas a coordinar';
+  return formatShortDate(raw);
 }
 
 function formatPrice(item) {
