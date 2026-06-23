@@ -68,8 +68,11 @@ collections:
               - label: "Fechas disponibles"
                 name: "dates"
                 widget: "list"
-                field: { label: "Fecha", name: "date", widget: "string" }
                 required: false
+                fields:
+                  - { label: "Salida", name: "departure", widget: "string" }
+                  - { label: "Regreso", name: "return", widget: "string" }
+                  - { label: "Precio", name: "price", widget: "string" }
               - label: "Guía acompañante (opcional)"
                 name: "guide"
                 widget: "object"

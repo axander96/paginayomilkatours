@@ -125,6 +125,13 @@
             </div>
           </div>
 
+          <div class="departure-dates-section" id="departureDatesSection">
+            <h3>Fechas de salida</h3>
+            <div class="departure-dates-grid" id="departureDatesGrid">
+              <!-- JS -->
+            </div>
+          </div>
+
           <div class="highlights-section">
             <h3>Lugares que visitaremos</h3>
             <ul class="highlights-list" id="tourHighlights">
@@ -206,54 +213,52 @@
   <!-- Quote Modal -->
   <div class="modal" id="quoteModal">
     <div class="modal-overlay" onclick="closeQuote()"></div>
-    <div class="modal-content">
+    <div class="modal-content modal-content-v2">
       <button class="modal-close" onclick="closeQuote()">&times;</button>
-      <h2>Cotizar Viaje</h2>
-      <p class="modal-trip" id="modalTripName">Complete el formulario para cotizar</p>
+      <div class="modal-header">
+        <h2 id="modalTitle">Solicitar información</h2>
+        <p class="modal-trip" id="modalTripName">Complete el formulario para solicitar información</p>
+        <p class="modal-subtitle">Te contactaremos en menos de 24 horas con todos los detalles.</p>
+      </div>
       <form id="quoteForm" onsubmit="submitQuote(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="adults">Adultos</label>
-            <input type="number" id="adults" name="adults" min="1" value="1" required>
-          </div>
-          <div class="form-group">
-            <label for="children">Niños (2-12 años)</label>
-            <input type="number" id="children" name="children" min="0" value="0">
-          </div>
+        <div class="form-group">
+          <label for="fullName">Nombre completo</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Tu nombre completo" required>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="firstName">Nombre</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
           </div>
           <div class="form-group">
-            <label for="lastName">Apellidos</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="809-555-1234" required>
           </div>
         </div>
-        <div class="form-group">
-          <label for="email">Correo Electrónico</label>
-          <input type="email" id="email" name="email" required>
+
+        <div class="form-group" id="preferredDateGroup">
+          <label for="preferredDate">Salida preferida</label>
+          <select id="preferredDate" name="preferredDate">
+            <!-- JS -->
+          </select>
         </div>
-        <div class="form-group">
-          <label for="phone">Número de Celular</label>
-          <input type="tel" id="phone" name="phone" placeholder="809-555-1234" required>
-        </div>
-        <div class="form-row">
+
+        <div class="form-row" id="manualDatesGroup">
           <div class="form-group">
-            <label for="checkIn">Fecha de Entrada</label>
-            <input type="date" id="checkIn" name="checkIn" required>
+            <label for="checkIn">Fecha de entrada</label>
+            <input type="date" id="checkIn" name="checkIn">
           </div>
           <div class="form-group">
-            <label for="checkOut">Fecha de Salida</label>
-            <input type="date" id="checkOut" name="checkOut" required>
+            <label for="checkOut">Fecha de salida</label>
+            <input type="date" id="checkOut" name="checkOut">
           </div>
         </div>
+
         <div class="form-group">
-          <label for="notes">Información Adicional</label>
+          <label for="notes">Mensaje <span class="label-optional">(opcional)</span></label>
           <textarea id="notes" name="notes" rows="4" placeholder="¿Alguna solicitud especial?"></textarea>
         </div>
-        <button type="submit" class="btn-submit">Enviar Cotización</button>
+        <button type="submit" class="btn-submit btn-submit-v2">Enviar solicitud</button>
       </form>
     </div>
   </div>

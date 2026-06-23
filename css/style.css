@@ -1989,3 +1989,257 @@ body {
   }
 }
 
+
+/* =============================
+   Departure Dates Section
+   ============================= */
+
+.departure-dates-section {
+  margin-top: 48px;
+}
+
+.departure-dates-section h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+.departure-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.departure-date-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.departure-date-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+  border-color: var(--blue-light);
+}
+
+.departure-date-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.departure-date-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.departure-date-label {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.departure-date-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.departure-date-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.departure-date-from {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
+
+.departure-date-amount {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.departure-date-badge {
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .departure-dates-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =============================
+   Sidebar Date Cards
+   ============================= */
+
+.sidebar-date-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.sidebar-date-card:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-date-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.sidebar-date-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-date-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.sidebar-date-price {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #eee;
+}
+
+.sidebar-date-price .sidebar-date-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+/* =============================
+   Modal V2
+   ============================= */
+
+.modal-content-v2 {
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  max-width: 520px;
+}
+
+.modal-header {
+  background: linear-gradient(135deg, var(--blue-light) 0%, #fff 100%);
+  padding: 32px 32px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-content-v2 h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.modal-content-v2 .modal-trip {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--orange);
+  margin-bottom: 6px;
+}
+
+.modal-subtitle {
+  font-size: 13px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.modal-content-v2 form {
+  padding: 24px 32px 32px;
+}
+
+.modal-content-v2 .form-group {
+  margin-bottom: 18px;
+}
+
+.modal-content-v2 .form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 7px;
+}
+
+.modal-content-v2 .form-group input,
+.modal-content-v2 .form-group textarea,
+.modal-content-v2 .form-group select {
+  padding: 13px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fff;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.modal-content-v2 .form-group input:focus,
+.modal-content-v2 .form-group textarea:focus,
+.modal-content-v2 .form-group select:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 4px rgba(242, 101, 34, 0.12);
+}
+
+.modal-content-v2 .form-group input::placeholder,
+.modal-content-v2 .form-group textarea::placeholder {
+  color: #a0aec0;
+}
+
+.label-optional {
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.btn-submit-v2 {
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: none;
+  box-shadow: 0 6px 18px rgba(242, 101, 34, 0.35);
+}
+
+.btn-submit-v2:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(242, 101, 34, 0.45);
+}
+
+@media (max-width: 576px) {
+  .modal-header {
+    padding: 24px 20px 18px;
+  }
+  .modal-content-v2 form {
+    padding: 20px;
+  }
+}

@@ -5,6 +5,7 @@
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 const quoteModal = document.getElementById('quoteModal');
+const modalTitle = document.getElementById('modalTitle');
 const modalTripName = document.getElementById('modalTripName');
 let currentTrip = null;
 
@@ -61,14 +62,40 @@ function renderSettings(data) {
   }
 }
 
+function normalizeDates(trip) {
+  const rawDates = Array.isArray(trip.dates) ? trip.dates : [];
+  if (rawDates.length === 0) return [];
+
+  return rawDates.map(d => {
+    if (typeof d === 'string') {
+      return {
+        departure: d,
+        return: '',
+        price: trip.price || ''
+      };
+    }
+    return {
+      departure: d.departure || '',
+      return: d.return || '',
+      price: d.price || trip.price || ''
+    };
+  }).filter(d => d.departure || d.return || d.price);
+}
+
 function getTripDatesLabel(trip) {
-  if (Array.isArray(trip.dates) && trip.dates.length > 0) {
-    return trip.dates.join(' | ');
+  const dates = normalizeDates(trip);
+  if (dates.length > 0) {
+    return dates.map(d => {
+      if (d.departure && d.return && d.departure !== d.return) {
+        return `${d.departure} - ${d.return}`;
+      }
+      return d.departure || d.return;
+    }).join(' | ');
   }
   if (trip.date && trip.date.trim()) {
     return trip.date;
   }
-  return '0 Fechas';
+  return null;
 }
 
 function renderTrip(trip, settings) {
@@ -82,7 +109,7 @@ function renderTrip(trip, settings) {
   }
 
   document.getElementById('tourTitle').textContent = trip.title;
-  document.getElementById('tourDate').textContent = `📅 ${getTripDatesLabel(trip)}`;
+  document.getElementById('tourDate').textContent = `📅 ${getTripDatesLabel(trip) || 'Fechas a coordinar con la agencia'}`;
   document.getElementById('tourDuration').textContent = `⏱ ${trip.duration || 'Consultar'}`;
   document.getElementById('tourLocation').textContent = `📍 ${trip.location}`;
 
@@ -136,6 +163,35 @@ function renderTrip(trip, settings) {
     </li>
   `).join('');
 
+  // Departure dates section
+  const dates = normalizeDates(trip);
+  const departureDatesSection = document.getElementById('departureDatesSection');
+  const departureDatesGrid = document.getElementById('departureDatesGrid');
+  if (dates.length > 0) {
+    departureDatesSection.style.display = 'block';
+    departureDatesGrid.innerHTML = dates.map(d => `
+      <div class="departure-date-card">
+        <div class="departure-date-info">
+          <div class="departure-date-block">
+            <span class="departure-date-label">Salida</span>
+            <span class="departure-date-value">${escapeHtml(d.departure) || '-'}</span>
+          </div>
+          <div class="departure-date-block">
+            <span class="departure-date-label">Regreso</span>
+            <span class="departure-date-value">${escapeHtml(d.return) || '-'}</span>
+          </div>
+        </div>
+        <div class="departure-date-price">
+          <span class="departure-date-from">Desde</span>
+          <span class="departure-date-amount">${escapeHtml(d.price) || 'Consultar'}</span>
+          <span class="departure-date-badge">Disponible</span>
+        </div>
+      </div>
+    `).join('');
+  } else {
+    departureDatesSection.style.display = 'none';
+  }
+
   // Highlights
   const highlightsEl = document.getElementById('tourHighlights');
   highlightsEl.innerHTML = (trip.highlights || []).map(h => `
@@ -162,14 +218,25 @@ function renderTrip(trip, settings) {
   sidebarPrice.textContent = trip.price ? trip.price.replace('$', 'US$') : 'Consultar';
 
   const sidebarDates = document.getElementById('sidebarDates');
-  const hasDates = (Array.isArray(trip.dates) && trip.dates.length > 0) || (trip.date && trip.date.trim());
-  if (hasDates) {
-    const datesText = Array.isArray(trip.dates) && trip.dates.length > 0
-      ? trip.dates.join(' | ')
-      : trip.date;
-    sidebarDates.innerHTML = `<span class="dates-label">📅 Fechas disponibles</span><span class="dates-value">${escapeHtml(datesText)}</span>`;
+  if (dates.length > 0) {
+    sidebarDates.innerHTML = dates.map(d => `
+      <div class="sidebar-date-card">
+        <div class="sidebar-date-row">
+          <span class="sidebar-date-label">Salida</span>
+          <span class="sidebar-date-value">${escapeHtml(d.departure) || '-'}</span>
+        </div>
+        <div class="sidebar-date-row">
+          <span class="sidebar-date-label">Regreso</span>
+          <span class="sidebar-date-value">${escapeHtml(d.return) || '-'}</span>
+        </div>
+        <div class="sidebar-date-row sidebar-date-price">
+          <span class="sidebar-date-label">Precio</span>
+          <span class="sidebar-date-value">${escapeHtml(d.price) || 'Consultar'}</span>
+        </div>
+      </div>
+    `).join('');
   } else {
-    sidebarDates.innerHTML = `<span class="dates-label">📅 Fechas</span><span class="dates-value">Fechas a coordinar con la agencia</span>`;
+    sidebarDates.innerHTML = `<span class="dates-label">📅 Fechas</span><span class="dates-value">Fechas a coordinar con el equipo al contactarnos.</span>`;
   }
 
   // WhatsApp button
@@ -196,7 +263,35 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 });
 
 function openQuote() {
-  modalTripName.textContent = currentTrip ? `Estás cotizando: ${currentTrip.title}` : 'Complete el formulario para cotizar';
+  const title = currentTrip ? `Solicitar información: ${currentTrip.title}` : 'Solicitar información';
+  modalTitle.textContent = title;
+  modalTripName.textContent = currentTrip ? currentTrip.title : 'Complete el formulario para solicitar información';
+
+  const dates = currentTrip ? normalizeDates(currentTrip) : [];
+  const preferredDateGroup = document.getElementById('preferredDateGroup');
+  const manualDatesGroup = document.getElementById('manualDatesGroup');
+  const preferredDateSelect = document.getElementById('preferredDate');
+  const checkIn = document.getElementById('checkIn');
+  const checkOut = document.getElementById('checkOut');
+
+  if (dates.length > 0) {
+    preferredDateGroup.style.display = 'block';
+    manualDatesGroup.style.display = 'none';
+    checkIn.required = false;
+    checkOut.required = false;
+    preferredDateSelect.innerHTML = dates.map((d, i) => {
+      const label = d.return && d.departure !== d.return
+        ? `${d.departure} - ${d.return} (${d.price || 'Consultar'})`
+        : `${d.departure} (${d.price || 'Consultar'})`;
+      return `<option value="${i}">${escapeHtml(label)}</option>`;
+    }).join('');
+  } else {
+    preferredDateGroup.style.display = 'none';
+    manualDatesGroup.style.display = 'flex';
+    checkIn.required = true;
+    checkOut.required = true;
+  }
+
   quoteModal.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -216,26 +311,32 @@ function submitQuote(e) {
   const formData = new FormData(form);
 
   const trip = currentTrip ? currentTrip.title : 'Viaje seleccionado';
-  const adults = formData.get('adults');
-  const children = formData.get('children');
-  const firstName = formData.get('firstName');
-  const lastName = formData.get('lastName');
+  const fullName = formData.get('fullName');
   const email = formData.get('email');
   const phone = formData.get('phone');
-  const checkIn = formData.get('checkIn');
-  const checkOut = formData.get('checkOut');
   const notes = formData.get('notes');
 
-  const message = `*Nueva Cotización - Yomilka Tours*%0A%0A` +
+  const dates = currentTrip ? normalizeDates(currentTrip) : [];
+  let dateInfo = '';
+  if (dates.length > 0) {
+    const selectedIndex = parseInt(formData.get('preferredDate') || '0', 10);
+    const selected = dates[selectedIndex] || dates[0];
+    dateInfo = selected
+      ? `Salida: ${selected.departure}${selected.return ? ` - Regreso: ${selected.return}` : ''}${selected.price ? ` | Precio: ${selected.price}` : ''}`
+      : '';
+  } else {
+    const checkIn = formData.get('checkIn');
+    const checkOut = formData.get('checkOut');
+    dateInfo = `Fecha de entrada: ${checkIn || 'No indicada'} | Fecha de salida: ${checkOut || 'No indicada'}`;
+  }
+
+  const message = `*Nueva Solicitud - Yomilka Tours*%0A%0A` +
     `*Viaje:* ${trip}%0A` +
-    `*Nombre:* ${firstName} ${lastName}%0A` +
+    `*Nombre:* ${fullName}%0A` +
     `*Correo:* ${email}%0A` +
-    `*Celular:* ${phone}%0A` +
-    `*Adultos:* ${adults}%0A` +
-    `*Niños (2-12):* ${children}%0A` +
-    `*Entrada:* ${checkIn}%0A` +
-    `*Salida:* ${checkOut}%0A` +
-    (notes ? `*Notas:* ${notes}%0A` : '');
+    `*Teléfono:* ${phone}%0A` +
+    `*${dateInfo}*%0A` +
+    (notes ? `*Mensaje:* ${notes}%0A` : '');
 
   fetch('data/settings.json')
     .then(r => r.json())
