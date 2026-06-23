@@ -112,12 +112,16 @@ function getTripImage(item) {
 
 function getFirstDate(item) {
   if (Array.isArray(item.dates) && item.dates.length > 0) {
-    return item.dates[0];
+    const first = item.dates[0];
+    if (typeof first === 'object' && first !== null) {
+      return first.departure || first.return || 'Fechas a coordinar';
+    }
+    return first;
   }
   if (item.date && item.date.trim()) {
     return item.date;
   }
-  return '0 Fechas';
+  return 'Fechas a coordinar';
 }
 
 function formatPrice(item) {
