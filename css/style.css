@@ -29,6 +29,7 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .container {
@@ -1666,7 +1667,6 @@ body {
   }
   .tour-sidebar {
     position: static;
-    order: -1;
   }
   .highlights-list {
     grid-template-columns: 1fr;
@@ -2270,6 +2270,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
   .mobile-detail-nav {
     display: block;
     position: sticky;
@@ -2284,15 +2288,14 @@ body {
   .mobile-detail-nav-list {
     display: flex;
     gap: 6px;
-    overflow-x: auto;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 6px;
     background: #f8f9fa;
     border: 1px solid #eee;
     border-radius: 30px;
     list-style: none;
     margin: 0;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
   }
 
   .mobile-detail-nav-list::-webkit-scrollbar {
