@@ -92,19 +92,6 @@
     </div>
   </section>
 
-  <!-- Mobile Detail Nav -->
-  <nav class="mobile-detail-nav" aria-label="Navegación del tour">
-    <div class="container">
-      <ul class="mobile-detail-nav-list">
-        <li class="mobile-detail-nav-item active" data-target="itinerarySection">Itinerario</li>
-        <li class="mobile-detail-nav-item" data-target="gallerySection">Fotos</li>
-        <li class="mobile-detail-nav-item" data-target="includesSection">Qué incluye</li>
-        <li class="mobile-detail-nav-item" data-target="departureDatesSection">Fechas</li>
-        <li class="mobile-detail-nav-item" data-target="highlightsSection">Lugares</li>
-      </ul>
-    </div>
-  </nav>
-
   <!-- Tour Content -->
   <section class="tour-content">
     <div class="container">
@@ -113,49 +100,73 @@
           <h2 id="tourSubtitle">Descripción</h2>
           <p id="tourDescription" class="tour-desc">Cargando descripción...</p>
 
-          <div class="itinerary-section" id="itinerarySection" style="display:none;">
-            <h3>Itinerario</h3>
-            <div class="itinerary-timeline" id="tourItinerary">
-              <!-- JS -->
+          <nav class="mobile-detail-nav" aria-label="Navegación del tour">
+            <div class="container">
+              <ul class="mobile-detail-nav-list">
+                <li class="mobile-detail-nav-item active" data-tab="itinerary">Itinerario</li>
+                <li class="mobile-detail-nav-item" data-tab="gallery">Fotos</li>
+                <li class="mobile-detail-nav-item" data-tab="includes">Qué incluye</li>
+                <li class="mobile-detail-nav-item" data-tab="dates">Fechas</li>
+                <li class="mobile-detail-nav-item" data-tab="highlights">Lugares</li>
+              </ul>
             </div>
-          </div>
+          </nav>
 
-          <div class="includes-section" id="includesSection">
-            <h3 class="includes-main-title">Qué incluye</h3>
-            <div class="includes-grid">
-              <div>
-                <h4 class="includes-title include-yes">Incluye</h4>
-                <ul class="includes-list" id="tourIncluded">
+          <div class="mobile-tabs-content">
+            <div class="tab-pane active" data-tab="itinerary">
+              <div class="itinerary-section" id="itinerarySection" style="display:none;">
+                <h3>Itinerario</h3>
+                <div class="itinerary-timeline" id="tourItinerary">
+                  <!-- JS -->
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" data-tab="includes">
+              <div class="includes-section" id="includesSection">
+                <h3 class="includes-main-title">Qué incluye</h3>
+                <div class="includes-grid">
+                  <div>
+                    <h4 class="includes-title include-yes">Incluye</h4>
+                    <ul class="includes-list" id="tourIncluded">
+                      <!-- JS -->
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="includes-title include-no">No incluye</h4>
+                    <ul class="includes-list" id="tourNotIncluded">
+                      <!-- JS -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" data-tab="dates">
+              <div class="departure-dates-section" id="departureDatesSection">
+                <h3>Fechas de salida</h3>
+                <div class="departure-dates-grid" id="departureDatesGrid">
+                  <!-- JS -->
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" data-tab="highlights">
+              <div class="highlights-section" id="highlightsSection">
+                <h3>Lugares que visitaremos</h3>
+                <ul class="highlights-list" id="tourHighlights">
                   <!-- JS -->
                 </ul>
               </div>
-              <div>
-                <h4 class="includes-title include-no">No incluye</h4>
-                <ul class="includes-list" id="tourNotIncluded">
+            </div>
+
+            <div class="tab-pane" data-tab="gallery">
+              <div class="gallery-section" id="gallerySection">
+                <h3>Galería de fotos</h3>
+                <div class="tour-gallery" id="tourGallery">
                   <!-- JS -->
-                </ul>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div class="departure-dates-section" id="departureDatesSection">
-            <h3>Fechas de salida</h3>
-            <div class="departure-dates-grid" id="departureDatesGrid">
-              <!-- JS -->
-            </div>
-          </div>
-
-          <div class="highlights-section" id="highlightsSection">
-            <h3>Lugares que visitaremos</h3>
-            <ul class="highlights-list" id="tourHighlights">
-              <!-- JS -->
-            </ul>
-          </div>
-
-          <div class="gallery-section" id="gallerySection">
-            <h3>Galería de fotos</h3>
-            <div class="tour-gallery" id="tourGallery">
-              <!-- JS -->
             </div>
           </div>
         </div>

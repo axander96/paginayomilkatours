@@ -2265,6 +2265,10 @@ body {
   display: none;
 }
 
+.tab-pane {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .mobile-detail-nav {
     display: block;
@@ -2273,6 +2277,7 @@ body {
     z-index: 100;
     background: #fff;
     padding: 12px 0;
+    margin-bottom: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   }
 
@@ -2311,6 +2316,14 @@ body {
   .mobile-detail-nav-item:active {
     background: var(--blue);
     color: #fff;
+  }
+
+  .tab-pane {
+    display: none;
+  }
+
+  .tab-pane.active {
+    display: block;
   }
 }
 

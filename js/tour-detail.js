@@ -412,36 +412,45 @@ function shareTrip() {
   }
 }
 
-function scrollToDetailSection(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const header = document.getElementById('header');
-  const nav = document.querySelector('.mobile-detail-nav');
-  const headerHeight = header ? header.offsetHeight : 0;
-  const navHeight = nav ? nav.offsetHeight : 0;
-  const y = el.getBoundingClientRect().top + window.scrollY - headerHeight - navHeight - 12;
-  window.scrollTo({ top: y, behavior: 'smooth' });
-}
-
 function initMobileDetailNav() {
   const nav = document.querySelector('.mobile-detail-nav');
   if (!nav) return;
 
   const items = nav.querySelectorAll('.mobile-detail-nav-item');
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      items.forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-      scrollToDetailSection(item.dataset.target);
-    });
-  });
+  const panes = document.querySelectorAll('.tab-pane');
 
-  // Hide tabs whose target section is not visible
+  // Hide tabs whose section has no visible content
   items.forEach(item => {
-    const target = document.getElementById(item.dataset.target);
-    if (target && target.offsetParent === null) {
+    const tab = item.dataset.tab;
+    const pane = document.querySelector(`.tab-pane[data-tab="${tab}"]`);
+    if (!pane) {
+      item.style.display = 'none';
+      return;
+    }
+    const innerSection = pane.querySelector('#itinerarySection, #departureDatesSection');
+    if (innerSection && innerSection.style.display === 'none') {
       item.style.display = 'none';
     }
+  });
+
+  // If active tab was hidden, activate first visible tab and pane
+  const visibleItems = Array.from(items).filter(i => i.style.display !== 'none');
+  if (visibleItems.length && !visibleItems.some(i => i.classList.contains('active'))) {
+    items.forEach(i => i.classList.remove('active'));
+    visibleItems[0].classList.add('active');
+    const tab = visibleItems[0].dataset.tab;
+    panes.forEach(p => p.classList.toggle('active', p.dataset.tab === tab));
+  }
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const tab = item.dataset.tab;
+      items.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      panes.forEach(p => {
+        p.classList.toggle('active', p.dataset.tab === tab);
+      });
+    });
   });
 }
 
