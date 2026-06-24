@@ -1558,6 +1558,9 @@ body {
 }
 
 .dates-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 12px;
   font-weight: 600;
   color: var(--text-light);
@@ -1619,6 +1622,34 @@ body {
 .btn-whatsapp-v2:hover {
   background: #25d366;
   color: #fff;
+}
+
+.btn-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  background: #fff;
+  color: var(--text-light);
+  border: 1.5px solid #ddd;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 16px;
+}
+
+.btn-share:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+.btn-share svg {
+  width: 18px;
+  height: 18px;
 }
 
 .sidebar-note {

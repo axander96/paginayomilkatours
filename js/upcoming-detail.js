@@ -128,7 +128,8 @@ function renderTrip(trip, settings) {
   }
 
   document.getElementById('tourTitle').textContent = trip.title;
-  document.getElementById('tourDate').textContent = `📅 ${getTripDatesLabel(trip) || 'Fechas a coordinar con la agencia'}`;
+  const tripDatesLabel = getTripDatesLabel(trip) || 'Fechas a coordinar con la agencia';
+  document.getElementById('tourDate').innerHTML = `${getCalendarIcon(16)} ${escapeHtml(tripDatesLabel)}`;
   document.getElementById('tourDuration').textContent = `⏱ ${trip.duration || 'Consultar'}`;
   document.getElementById('tourLocation').textContent = `📍 ${trip.location}`;
 
@@ -247,7 +248,7 @@ function renderTrip(trip, settings) {
     `).join('');
     if (sidebarNote) sidebarNote.style.display = 'none';
   } else {
-    sidebarDates.innerHTML = `<span class="dates-label">📅 Fechas</span><span class="dates-value">Fechas a coordinar con el equipo al contactarnos.</span>`;
+    sidebarDates.innerHTML = `<span class="dates-label">${getCalendarIcon(14)} Fechas</span><span class="dates-value">Fechas a coordinar con el equipo al contactarnos.</span>`;
     if (sidebarNote) sidebarNote.style.display = 'block';
   }
 
@@ -384,5 +385,19 @@ window.addEventListener('scroll', () => {
     header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.06)';
   }
 });
+
+function shareTrip() {
+  const url = window.location.href;
+  const title = document.getElementById('tourTitle').textContent;
+  if (navigator.share) {
+    navigator.share({ title, url }).catch(() => {});
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => {
+      alert('Enlace copiado al portapapeles');
+    }).catch(() => {});
+  } else {
+    alert('No se pudo compartir el enlace. Copia la URL de la barra del navegador.');
+  }
+}
 
 loadTripDetail();
