@@ -1670,7 +1670,14 @@ body {
 
 @media (max-width: 992px) {
   .tour-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .tour-main,
+  .tour-sidebar {
+    width: 100%;
+    max-width: 100%;
   }
   .tour-sidebar {
     position: static;
