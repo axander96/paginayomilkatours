@@ -398,11 +398,12 @@ window.addEventListener('scroll', () => {
 
 function shareTrip() {
   const url = window.location.href;
-  const title = document.getElementById('tourTitle').textContent;
+  const title = document.getElementById('tourTitle').textContent.trim();
+  const shareText = `${title} ${url}`;
   if (navigator.share) {
-    navigator.share({ title, url }).catch(() => {});
+    navigator.share({ title, text: shareText, url }).catch(() => {});
   } else if (navigator.clipboard) {
-    navigator.clipboard.writeText(url).then(() => {
+    navigator.clipboard.writeText(shareText).then(() => {
       alert('Enlace copiado al portapapeles');
     }).catch(() => {});
   } else {
