@@ -261,6 +261,7 @@ function renderTrip(trip, settings) {
   }
 
   document.title = `${trip.title} - Yomilka Tours`;
+  initMobileDetailNav();
 }
 
 menuToggle.addEventListener('click', () => {
@@ -399,6 +400,39 @@ function shareTrip() {
   } else {
     alert('No se pudo compartir el enlace. Copia la URL de la barra del navegador.');
   }
+}
+
+function scrollToDetailSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const header = document.getElementById('header');
+  const nav = document.querySelector('.mobile-detail-nav');
+  const headerHeight = header ? header.offsetHeight : 0;
+  const navHeight = nav ? nav.offsetHeight : 0;
+  const y = el.getBoundingClientRect().top + window.scrollY - headerHeight - navHeight - 12;
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
+
+function initMobileDetailNav() {
+  const nav = document.querySelector('.mobile-detail-nav');
+  if (!nav) return;
+
+  const items = nav.querySelectorAll('.mobile-detail-nav-item');
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      items.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      scrollToDetailSection(item.dataset.target);
+    });
+  });
+
+  // Hide tabs whose target section is not visible
+  items.forEach(item => {
+    const target = document.getElementById(item.dataset.target);
+    if (target && target.offsetParent === null) {
+      item.style.display = 'none';
+    }
+  });
 }
 
 loadTripDetail();
