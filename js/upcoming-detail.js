@@ -129,9 +129,9 @@ function renderTrip(trip, settings) {
 
   document.getElementById('tourTitle').textContent = trip.title;
   const tripDatesLabel = getTripDatesLabel(trip) || 'Fechas a coordinar con la agencia';
-  document.getElementById('tourDate').innerHTML = `${getCalendarIcon(16)} ${escapeHtml(tripDatesLabel)}`;
-  document.getElementById('tourDuration').innerHTML = `${getClockIcon(16)} ${escapeHtml(trip.duration || 'Consultar')}`;
-  document.getElementById('tourLocation').innerHTML = `${getLocationIcon(16)} ${escapeHtml(trip.location)}`;
+  document.getElementById('tourDate').innerHTML = `<span class="tour-meta-item">${getCalendarIcon(16)} ${escapeHtml(tripDatesLabel)}</span>`;
+  document.getElementById('tourDuration').innerHTML = `<span class="tour-meta-item">${getClockIcon(16)} ${escapeHtml(trip.duration || 'Consultar')}</span>`;
+  document.getElementById('tourLocation').innerHTML = `<span class="tour-meta-item">${getLocationIcon(16)} ${escapeHtml(trip.location)}</span>`;
 
   document.getElementById('tourSubtitle').textContent = trip.title;
   document.getElementById('tourDescription').textContent = trip.description;

@@ -130,11 +130,11 @@ function renderTour(tour, settings) {
   }
 
   document.getElementById('tourTitle').textContent = tour.title;
-  document.getElementById('tourDuration').innerHTML = `${getClockIcon(16)} ${escapeHtml(tour.duration || 'Consultar')}`;
-  document.getElementById('tourLocation').innerHTML = `${getLocationIcon(16)} ${escapeHtml(tour.location)}`;
+  document.getElementById('tourDuration').innerHTML = `<span class="tour-meta-item">${getClockIcon(16)} ${escapeHtml(tour.duration || 'Consultar')}</span>`;
+  document.getElementById('tourLocation').innerHTML = `<span class="tour-meta-item">${getLocationIcon(16)} ${escapeHtml(tour.location)}</span>`;
 
   const datesLabel = getTourDatesLabel(tour) || 'Fechas a coordinar con la agencia';
-  document.getElementById('tourDate').innerHTML = `${getCalendarIcon(16)} ${escapeHtml(datesLabel)}`;
+  document.getElementById('tourDate').innerHTML = `<span class="tour-meta-item">${getCalendarIcon(16)} ${escapeHtml(datesLabel)}</span>`;
 
   document.getElementById('tourSubtitle').textContent = tour.title;
   document.getElementById('tourDescription').textContent = tour.description;
