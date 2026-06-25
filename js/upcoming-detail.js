@@ -47,7 +47,7 @@ function renderSettings(data) {
 
   const mobileMenuEmail = document.getElementById('mobileMenuEmail');
   if (mobileMenuEmail && data.email) {
-    mobileMenuEmail.textContent = data.email;
+    mobileMenuEmail.innerHTML = `<span class="notranslate">${data.email}</span>`;
   }
   document.getElementById('year').textContent = new Date().getFullYear();
 

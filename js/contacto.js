@@ -31,7 +31,7 @@ function renderSettings(data) {
 
   const mobileMenuEmail = document.getElementById('mobileMenuEmail');
   if (mobileMenuEmail && data.email) {
-    mobileMenuEmail.textContent = data.email;
+    mobileMenuEmail.innerHTML = `<span class="notranslate">${data.email}</span>`;
   }
 
   // Update contact page info
@@ -44,7 +44,7 @@ function renderSettings(data) {
 
   if (contactAddress) contactAddress.textContent = data.address;
   if (contactInfoPhone) contactInfoPhone.textContent = data.phone + (data.phone2 ? ' / ' + data.phone2 : '');
-  if (contactInfoEmail) contactInfoEmail.textContent = data.email;
+  if (contactInfoEmail) contactInfoEmail.innerHTML = `<span class="notranslate">${data.email}</span>`;
   if (contactHours) contactHours.innerHTML = data.hours ? data.hours.replace(/\n/g, '<br>') : '';
   if (contactRnc) contactRnc.textContent = data.rnc || '';
   if (contactMap && data.map_url) {
