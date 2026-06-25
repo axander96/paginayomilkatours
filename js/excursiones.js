@@ -32,11 +32,11 @@ function renderSettings(data) {
 
   document.getElementById('footerAddress').innerHTML = `${locationIcon} ${data.address}`;
   document.getElementById('footerPhone').innerHTML = `${phoneIcon} ${data.phone}${data.phone2 ? ' / ' + data.phone2 : ''}`;
-  document.getElementById('footerEmail').innerHTML = `${emailIcon} <span translate="no">${data.email}</span>`;
+  document.getElementById('footerEmail').innerHTML = `${emailIcon} ${protectEmail(data.email)}`;
 
   const mobileMenuEmail = document.getElementById('mobileMenuEmail');
   if (mobileMenuEmail && data.email) {
-    mobileMenuEmail.innerHTML = `<span translate="no">${data.email}</span>`;
+    mobileMenuEmail.innerHTML = protectEmail(data.email);
   }
 
   const socialContainer = document.getElementById('socialLinks');
