@@ -27,11 +27,11 @@ function renderSettings(data) {
 
   document.getElementById('footerAddress').innerHTML = `${locationIcon} ${data.address}`;
   document.getElementById('footerPhone').innerHTML = `${phoneIcon} ${data.phone}${data.phone2 ? ' / ' + data.phone2 : ''}`;
-  document.getElementById('footerEmail').innerHTML = `${emailIcon} ${protectEmail(data.email)}`;
+  document.getElementById('footerEmail').innerHTML = `${emailIcon} <span translate="no">${escapeHtml(data.email)}</span>`;
 
   const mobileMenuEmail = document.getElementById('mobileMenuEmail');
   if (mobileMenuEmail && data.email) {
-    mobileMenuEmail.innerHTML = protectEmail(data.email);
+    mobileMenuEmail.innerHTML = `<span translate="no">${escapeHtml(data.email)}</span>`;
   }
 
   // Update contact page info
@@ -44,7 +44,7 @@ function renderSettings(data) {
 
   if (contactAddress) contactAddress.textContent = data.address;
   if (contactInfoPhone) contactInfoPhone.textContent = data.phone + (data.phone2 ? ' / ' + data.phone2 : '');
-  if (contactInfoEmail) contactInfoEmail.innerHTML = protectEmail(data.email);
+  if (contactInfoEmail) contactInfoEmail.innerHTML = `<span translate="no">${escapeHtml(data.email)}</span>`;
   if (contactHours) contactHours.innerHTML = data.hours ? data.hours.replace(/\n/g, '<br>') : '';
   if (contactRnc) contactRnc.textContent = data.rnc || '';
   if (contactMap && data.map_url) {

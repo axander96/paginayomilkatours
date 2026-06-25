@@ -44,11 +44,11 @@ function renderSettings(data) {
 
   document.getElementById('footerAddress').innerHTML = `${locationIcon} ${data.address}`;
   document.getElementById('footerPhone').innerHTML = `${phoneIcon} ${data.phone}${data.phone2 ? ' / ' + data.phone2 : ''}`;
-  document.getElementById('footerEmail').innerHTML = `${emailIcon} ${protectEmail(data.email)}`;
+  document.getElementById('footerEmail').innerHTML = `${emailIcon} <span translate="no">${escapeHtml(data.email)}</span>`;
 
   const mobileMenuEmail = document.getElementById('mobileMenuEmail');
   if (mobileMenuEmail && data.email) {
-    mobileMenuEmail.innerHTML = protectEmail(data.email);
+    mobileMenuEmail.innerHTML = `<span translate="no">${escapeHtml(data.email)}</span>`;
   }
   document.getElementById('year').textContent = new Date().getFullYear();
 
