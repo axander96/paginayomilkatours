@@ -12,25 +12,40 @@
     });
   }
 
+  function getDefaultLanguage() {
+    return (window.gtranslateSettings && window.gtranslateSettings.default_language) || 'es';
+  }
+
   function getGTranslateSelect() {
-    return document.querySelector('.gtranslate_wrapper select');
+    return document.querySelector('.gtranslate_wrapper select.gt_selector');
+  }
+
+  function loadGTranslateLibrary() {
+    // The native GTranslate widget loads Google's translation library on hover/focus.
+    // Since our custom trigger is separate, we load it manually when needed.
+    if (!window.gt_translate_script) {
+      window.gt_translate_script = document.createElement('script');
+      window.gt_translate_script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2';
+      document.body.appendChild(window.gt_translate_script);
+    }
   }
 
   function setGTranslateLanguage(lang) {
+    const defaultLang = getDefaultLanguage();
+    const langPair = defaultLang + '|' + lang;
+
     const trySet = () => {
       const select = getGTranslateSelect();
       if (!select) return false;
 
-      const option = select.querySelector(`option[value="${lang}"]`);
-      if (option) {
-        option.selected = true;
-      }
-      select.value = lang;
+      loadGTranslateLibrary();
 
-      // Fire the events GTranslate may be listening to
-      ['focus', 'mousedown', 'click', 'change', 'input', 'blur'].forEach(type => {
-        select.dispatchEvent(new Event(type, { bubbles: true }));
-      });
+      const option = select.querySelector(`option[value="${langPair}"]`);
+      if (option) option.selected = true;
+      select.value = langPair;
+
+      // Trigger the change event GTranslate listens to
+      select.dispatchEvent(new Event('change', { bubbles: true }));
 
       return true;
     };
@@ -46,7 +61,8 @@
   function syncFromGTranslate() {
     const select = getGTranslateSelect();
     if (select && select.value) {
-      updateLangCode(select.value);
+      const targetLang = select.value.split('|')[1];
+      updateLangCode(targetLang);
     }
   }
 
@@ -85,7 +101,10 @@
     const attachSelectListener = () => {
       const select = getGTranslateSelect();
       if (select) {
-        select.addEventListener('change', () => updateLangCode(select.value));
+        select.addEventListener('change', () => {
+          const targetLang = select.value.split('|')[1];
+          updateLangCode(targetLang);
+        });
         syncFromGTranslate();
         return true;
       }
