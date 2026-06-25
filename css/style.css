@@ -819,7 +819,7 @@ body {
   margin-top: 2px;
 }
 
-.contact-page-info-item span {
+.contact-page-info-item .contact-label {
   display: block;
   font-size: 11px;
   color: var(--text-light);
