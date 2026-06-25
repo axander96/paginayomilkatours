@@ -19,19 +19,27 @@
   function setGTranslateLanguage(lang) {
     const trySet = () => {
       const select = getGTranslateSelect();
-      if (select) {
-        select.value = lang;
-        select.dispatchEvent(new Event('change', { bubbles: true }));
-        return true;
+      if (!select) return false;
+
+      const option = select.querySelector(`option[value="${lang}"]`);
+      if (option) {
+        option.selected = true;
       }
-      return false;
+      select.value = lang;
+
+      // Fire the events GTranslate may be listening to
+      ['focus', 'mousedown', 'click', 'change', 'input', 'blur'].forEach(type => {
+        select.dispatchEvent(new Event(type, { bubbles: true }));
+      });
+
+      return true;
     };
 
     if (!trySet()) {
       const interval = setInterval(() => {
         if (trySet()) clearInterval(interval);
-      }, 200);
-      setTimeout(() => clearInterval(interval), 5000);
+      }, 300);
+      setTimeout(() => clearInterval(interval), 8000);
     }
   }
 
@@ -74,20 +82,21 @@
     document.addEventListener('click', closeAllMenus);
 
     // Sync when GTranslate select changes
-    const select = getGTranslateSelect();
-    if (select) {
-      select.addEventListener('change', () => updateLangCode(select.value));
-      syncFromGTranslate();
-    } else {
+    const attachSelectListener = () => {
+      const select = getGTranslateSelect();
+      if (select) {
+        select.addEventListener('change', () => updateLangCode(select.value));
+        syncFromGTranslate();
+        return true;
+      }
+      return false;
+    };
+
+    if (!attachSelectListener()) {
       const interval = setInterval(() => {
-        const s = getGTranslateSelect();
-        if (s) {
-          s.addEventListener('change', () => updateLangCode(s.value));
-          syncFromGTranslate();
-          clearInterval(interval);
-        }
-      }, 200);
-      setTimeout(() => clearInterval(interval), 5000);
+        if (attachSelectListener()) clearInterval(interval);
+      }, 300);
+      setTimeout(() => clearInterval(interval), 8000);
     }
   }
 
