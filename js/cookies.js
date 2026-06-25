@@ -40,7 +40,7 @@
     banner.innerHTML = `
       <div class="cookie-banner-content">
         <div class="cookie-banner-header">
-          <svg class="cookie-icon" width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <svg class="cookie-icon" width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="24" cy="24" r="24" fill="#172135"/>
             <path d="M30.25 25.1c-.7.1-1.42-.07-2.02-.5a3.22 3.22 0 0 1-1.22-1.68 3.27 3.27 0 0 1-3.48-3.47 6.78 6.78 0 1 0 6.72 5.65Z" stroke="#2F80ED" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="21.2" cy="25.3" r="0.75" fill="#2F80ED"/>
