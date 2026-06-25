@@ -40,14 +40,14 @@
     banner.innerHTML = `
       <div class="cookie-banner-content">
         <div class="cookie-banner-header">
-          <svg class="cookie-icon" width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="24" cy="24" r="24" fill="#172135"/>
-            <g transform="scale(1.25) translate(-4.8 -4.8)">
-              <path d="M30.25 25.1c-.7.1-1.42-.07-2.02-.5a3.22 3.22 0 0 1-1.22-1.68 3.27 3.27 0 0 1-3.48-3.47 6.78 6.78 0 1 0 6.72 5.65Z" stroke="#2F80ED" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="21.2" cy="25.3" r="0.75" fill="#2F80ED"/>
-              <circle cx="24.8" cy="29" r="0.75" fill="#2F80ED"/>
-              <circle cx="25.4" cy="24.8" r="0.55" fill="#2F80ED"/>
-              <circle cx="19.1" cy="29" r="0.55" fill="#2F80ED"/>
+          <svg class="cookie-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="20" cy="20" r="13.5" fill="#292638"/>
+            <g transform="translate(-3.7 -5.35)">
+              <path d="M30.25 25.1c-.7.1-1.42-.07-2.02-.5a3.22 3.22 0 0 1-1.22-1.68 3.27 3.27 0 0 1-3.48-3.47 6.78 6.78 0 1 0 6.72 5.65Z" stroke="#2F80ED" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="21.2" cy="25.3" r="0.8" fill="#2F80ED"/>
+              <circle cx="24.8" cy="29" r="0.8" fill="#2F80ED"/>
+              <circle cx="25.4" cy="24.8" r="0.65" fill="#2F80ED"/>
+              <circle cx="19.1" cy="29" r="0.65" fill="#2F80ED"/>
             </g>
           </svg>
           <h3>Tu experiencia nos importa</h3>
