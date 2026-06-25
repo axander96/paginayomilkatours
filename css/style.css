@@ -2478,7 +2478,7 @@ body {
   left: auto;
   max-width: 320px;
   width: calc(100% - 32px);
-  background: rgba(26, 35, 50, 0.92);
+  background: rgba(26, 35, 50, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #fff;

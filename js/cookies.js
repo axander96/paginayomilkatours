@@ -40,17 +40,17 @@
     banner.innerHTML = `
       <div class="cookie-banner-content">
         <div class="cookie-banner-header">
-          <svg class="cookie-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.53.44-2.96 1.19-4.18.26.34.66.56 1.11.56.82 0 1.5-.68 1.5-1.5 0-.41-.17-.79-.44-1.07.6-.49 1.27-.89 2-1.18V10c0 .55.45 1 1 1s1-.45 1-1V7.42c.71.15 1.38.4 2 .72-.12.22-.19.46-.19.72 0 .82.68 1.5 1.5 1.5.55 0 1.03-.3 1.29-.74.62.65 1.12 1.4 1.47 2.22-.45.08-.83.37-1.03.77-.37.76-.06 1.67.7 2.04.21.1.43.15.65.15.13 0 .27-.02.4-.06.03.38.05.77.05 1.16 0 4.41-3.59 8-8 8z"/>
-            <circle cx="9" cy="13" r="1.5"/>
-            <circle cx="15" cy="13" r="1.5"/>
-            <circle cx="12" cy="16" r="1.5"/>
-            <circle cx="10" cy="10" r="1"/>
-            <circle cx="14" cy="10" r="1"/>
+          <svg class="cookie-icon" width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="24" fill="#172135"/>
+            <path d="M30.25 25.1c-.7.1-1.42-.07-2.02-.5a3.22 3.22 0 0 1-1.22-1.68 3.27 3.27 0 0 1-3.48-3.47 6.78 6.78 0 1 0 6.72 5.65Z" stroke="#2F80ED" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="21.2" cy="25.3" r="0.75" fill="#2F80ED"/>
+            <circle cx="24.8" cy="29" r="0.75" fill="#2F80ED"/>
+            <circle cx="25.4" cy="24.8" r="0.55" fill="#2F80ED"/>
+            <circle cx="19.1" cy="29" r="0.55" fill="#2F80ED"/>
           </svg>
-          <h3>Cuidamos tu experiencia</h3>
+          <h3>Tu experiencia nos importa</h3>
         </div>
-        <p>Usamos cookies para mejorar la navegación y mostrarte contenido relevante.</p>
+        <p>Utilizamos cookies para mejorar tu navegación y mostrarte contenido de tu interés. Puedes elegir qué permitir.</p>
         <div class="cookie-banner-actions">
           <button class="cookie-btn cookie-btn-secondary" type="button">Solo esenciales</button>
           <button class="cookie-btn cookie-btn-primary" type="button">Aceptar todo</button>
