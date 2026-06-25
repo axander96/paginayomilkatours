@@ -10,6 +10,21 @@
     document.querySelectorAll('.lang-switcher-code').forEach(el => {
       el.textContent = code;
     });
+    try {
+      localStorage.setItem('yomilka_lang', lang);
+    } catch (e) {}
+  }
+
+  function getSavedLanguage() {
+    // Leer cookie de GTranslate si existe
+    const match = document.cookie.match(/googtrans=\/[^/]+\/([^;]+)/);
+    if (match && match[1]) return match[1];
+    // Fallback a localStorage
+    try {
+      return localStorage.getItem('yomilka_lang');
+    } catch (e) {
+      return null;
+    }
   }
 
   function getDefaultLanguage() {
@@ -118,6 +133,10 @@
       setTimeout(() => clearInterval(interval), 8000);
     }
   }
+
+  // Sincronizar código mostrado con el idioma guardado al cargar la página
+  const savedLang = getSavedLanguage();
+  if (savedLang) updateLangCode(savedLang);
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initSwitchers);
