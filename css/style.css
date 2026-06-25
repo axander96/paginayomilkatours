@@ -2496,27 +2496,27 @@ body {
 .cookie-banner-content {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
-.cookie-banner-header {
+.cookie-banner-top {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .cookie-icon {
   flex-shrink: 0;
-  color: var(--orange);
+  margin-top: 2px;
 }
 
-.cookie-banner-header h3 {
-  margin: 0;
+.cookie-banner-text h3 {
+  margin: 0 0 4px;
   font-size: 15px;
   font-weight: 600;
 }
 
-.cookie-banner-content p {
+.cookie-banner-text p {
   margin: 0;
   font-size: 12px;
   line-height: 1.45;

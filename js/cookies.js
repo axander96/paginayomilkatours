@@ -39,7 +39,7 @@
     banner.className = 'cookie-banner';
     banner.innerHTML = `
       <div class="cookie-banner-content">
-        <div class="cookie-banner-header">
+        <div class="cookie-banner-top">
           <svg class="cookie-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="20" cy="20" r="13.5" fill="#292638"/>
             <g transform="translate(-3.7 -5.35)">
@@ -50,9 +50,11 @@
               <circle cx="19.1" cy="29" r="0.65" fill="#2F80ED"/>
             </g>
           </svg>
-          <h3>Tu experiencia nos importa</h3>
+          <div class="cookie-banner-text">
+            <h3>Tu experiencia nos importa</h3>
+            <p>Utilizamos cookies para mejorar tu navegación y mostrarte contenido de tu interés. Puedes elegir qué permitir.</p>
+          </div>
         </div>
-        <p>Utilizamos cookies para mejorar tu navegación y mostrarte contenido de tu interés. Puedes elegir qué permitir.</p>
         <div class="cookie-banner-actions">
           <button class="cookie-btn cookie-btn-secondary" type="button">Solo esenciales</button>
           <button class="cookie-btn cookie-btn-primary" type="button">Aceptar todo</button>
