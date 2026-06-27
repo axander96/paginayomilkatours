@@ -40,7 +40,6 @@
       "dates": [
         {
           "departure": "15 jun de 2026",
-          "return": "22 jun de 2026",
           "price": "RD$1,299"
         }
       ],
@@ -96,12 +95,10 @@
       "dates": [
         {
           "departure": "10 jul de 2026",
-          "return": "14 jul de 2026",
           "price": "RD$899"
         },
         {
           "departure": "18 jul de 2026",
-          "return": "22 jul de 2026",
           "price": "RD$950"
         }
       ],
@@ -159,7 +156,6 @@
       "dates": [
         {
           "departure": "5 ago de 2026",
-          "return": "12 ago de 2026",
           "price": "RD$1,599"
         }
       ],
@@ -216,7 +212,6 @@
       "dates": [
         {
           "departure": "15 sep de 2026",
-          "return": "25 sep de 2026",
           "price": "RD$2,499"
         }
       ],
@@ -274,7 +269,6 @@
       "dates": [
         {
           "departure": "1 oct de 2026",
-          "return": "8 oct de 2026",
           "price": "RD$1,199"
         }
       ],
@@ -331,7 +325,6 @@
       "dates": [
         {
           "departure": "Todos los fines de semana",
-          "return": "Todos los fines de semana",
           "price": "RD$99"
         }
       ],

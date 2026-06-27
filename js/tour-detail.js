@@ -112,7 +112,7 @@ function normalizeDates(tour) {
 function getTourDatesLabel(tour) {
   const dates = normalizeDates(tour);
   if (dates.length > 0) {
-    return dates.map(d => formatShortDate(d.departure || d.return)).filter(Boolean).join(' | ');
+    return dates.map(d => formatShortDate(d.departure)).filter(Boolean).join(' | ');
   }
   if (tour.date && tour.date.trim()) {
     return formatShortDate(tour.date);
@@ -197,7 +197,7 @@ function renderTour(tour, settings) {
       <div class="departure-date-card">
         <div class="departure-date-info">
           <span class="departure-date-label">Salida</span>
-          <span class="departure-date-value">${escapeHtml(formatLongDate(d.departure || d.return)) || '-'}</span>
+          <span class="departure-date-value">${escapeHtml(formatLongDate(d.departure)) || '-'}</span>
         </div>
         <div class="departure-date-price">
           <span class="departure-date-from">Desde</span>
@@ -233,7 +233,7 @@ function renderTour(tour, settings) {
 
   // Sidebar
   const sidebarPrice = document.getElementById('sidebarPrice');
-  sidebarPrice.textContent = tour.price ? tour.price.replace('$', 'US$') : 'Consultar';
+  sidebarPrice.textContent = tour.price || 'Consultar';
 
   const sidebarDates = document.getElementById('sidebarDates');
   const sidebarNote = document.getElementById('sidebarNote');
@@ -242,7 +242,7 @@ function renderTour(tour, settings) {
       <div class="sidebar-date-card">
         <div class="sidebar-date-row">
           <span class="sidebar-date-label">Salida</span>
-          <span class="sidebar-date-value">${escapeHtml(formatShortDate(d.departure || d.return)) || '-'}</span>
+          <span class="sidebar-date-value">${escapeHtml(formatShortDate(d.departure)) || '-'}</span>
         </div>
         <div class="sidebar-date-row sidebar-date-price">
           <span class="sidebar-date-label">Precio</span>
@@ -304,9 +304,7 @@ function openQuote() {
     checkIn.required = false;
     checkOut.required = false;
     preferredDateSelect.innerHTML = dates.map((d, i) => {
-      const label = d.return && d.departure !== d.return
-        ? `${d.departure} - ${d.return} (${d.price || 'Consultar'})`
-        : `${d.departure} (${d.price || 'Consultar'})`;
+      const label = `${d.departure} (${d.price || 'Consultar'})`;
       return `<option value="${i}">${escapeHtml(label)}</option>`;
     }).join('');
   } else {
@@ -346,7 +344,7 @@ function submitQuote(e) {
     const selectedIndex = parseInt(formData.get('preferredDate') || '0', 10);
     const selected = dates[selectedIndex] || dates[0];
     dateInfo = selected
-      ? `Salida: ${selected.departure}${selected.return ? ` - Regreso: ${selected.return}` : ''}${selected.price ? ` | Precio: ${selected.price}` : ''}`
+      ? `Salida: ${selected.departure}${selected.price ? ` | Precio: ${selected.price}` : ''}`
       : '';
   } else {
     const checkIn = formData.get('checkIn');

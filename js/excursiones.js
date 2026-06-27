@@ -84,7 +84,7 @@ function getFirstDate(item) {
   if (Array.isArray(item.dates) && item.dates.length > 0) {
     const first = item.dates[0];
     raw = (typeof first === 'object' && first !== null)
-      ? (first.departure || first.return || '')
+      ? (first.departure || '')
       : first;
   } else if (item.date && item.date.trim()) {
     raw = item.date;

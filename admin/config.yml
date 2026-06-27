@@ -68,10 +68,8 @@ collections:
               - label: "Fechas disponibles"
                 name: "dates"
                 widget: "list"
-                required: false
                 fields:
-                  - { label: "Salida", name: "departure", widget: "string" }
-                  - { label: "Regreso", name: "return", widget: "string" }
+                  - { label: "Salida", name: "departure", widget: "string", hint: "Ej: 15.jun-26 o Todos los fines de semana" }
                   - { label: "Precio", name: "price", widget: "string" }
               - label: "Guía acompañante (opcional)"
                 name: "guide"
