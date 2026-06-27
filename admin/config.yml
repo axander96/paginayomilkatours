@@ -5,7 +5,7 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-site_url: https://paginayomilkatours.netlify.app
+site_url: https://yomilkatours.com
 
 collections:
   - name: "settings"
