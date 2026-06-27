@@ -58,16 +58,17 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - { label: "Imagen principal", name: "image", widget: "image" }
+              - { label: "Imagen principal", name: "image", widget: "image", required: false }
               - { label: "Título", name: "title", widget: "string" }
-              - { label: "Fecha", name: "date", widget: "string" }
-              - { label: "Ubicación", name: "location", widget: "string" }
-              - { label: "Duración (ej: 7 días / 6 noches)", name: "duration", widget: "string" }
-              - { label: "Precio", name: "price", widget: "string" }
-              - { label: "Categoría", name: "category", widget: "string", hint: "Ej: América, Europa, Caribe, Nacional" }
+              - { label: "Fecha", name: "date", widget: "string", required: false }
+              - { label: "Ubicación", name: "location", widget: "string", required: false }
+              - { label: "Duración (ej: 7 días / 6 noches)", name: "duration", widget: "string", required: false }
+              - { label: "Precio", name: "price", widget: "string", required: false }
+              - { label: "Categoría", name: "category", widget: "string", required: false, hint: "Ej: América, Europa, Caribe, Nacional" }
               - label: "Fechas disponibles"
                 name: "dates"
                 widget: "list"
+                required: false
                 fields:
                   - { label: "Salida", name: "departure", widget: "string", hint: "Ej: 15.jun-26 o Todos los fines de semana" }
                   - { label: "Precio", name: "price", widget: "string" }
@@ -79,31 +80,35 @@ collections:
                   - { label: "Nombre del guía", name: "name", widget: "string", required: false }
                   - { label: "Foto del guía", name: "image", widget: "image", required: false }
                   - { label: "Texto del badge", name: "badge_text", widget: "string", required: false, hint: "Ej: Acompañados del padre Juan" }
-              - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "Descripción", name: "description", widget: "text", required: false }
               - label: "Itinerario (día a día)"
                 name: "itinerary"
                 widget: "list"
                 required: false
                 fields:
-                  - { label: "Día", name: "day", widget: "number" }
-                  - { label: "Título", name: "title", widget: "string" }
-                  - { label: "Descripción", name: "description", widget: "text" }
+                  - { label: "Día", name: "day", widget: "number", required: false }
+                  - { label: "Título", name: "title", widget: "string", required: false }
+                  - { label: "Descripción", name: "description", widget: "text", required: false }
               - label: "Lugares que visitamos"
                 name: "highlights"
                 widget: "list"
-                field: { label: "Lugar", name: "highlight", widget: "string" }
+                required: false
+                field: { label: "Lugar", name: "highlight", widget: "string", required: false }
               - label: "Qué incluye"
                 name: "included"
                 widget: "list"
-                field: { label: "Item", name: "item", widget: "string" }
+                required: false
+                field: { label: "Item", name: "item", widget: "string", required: false }
               - label: "No incluye"
                 name: "not_included"
                 widget: "list"
-                field: { label: "Item", name: "item", widget: "string" }
+                required: false
+                field: { label: "Item", name: "item", widget: "string", required: false }
               - label: "Galería de imágenes (6 fotos)"
                 name: "gallery"
                 widget: "list"
-                field: { label: "Imagen", name: "image", widget: "image" }
+                required: false
+                field: { label: "Imagen", name: "image", widget: "image", required: false }
 
   - name: "services"
     label: "Servicios"
