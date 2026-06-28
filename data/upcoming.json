@@ -465,57 +465,108 @@
     {
       "dates": [
         {
-          "departure": "Todos los fines de semana",
-          "price": "RD$99"
+          "departure": "8-18 sep 26",
+          "price": "US$2,900"
+        },
+        {
+          "departure": "7- 18 nov 26",
+          "price": "US$2,900"
         }
       ],
       "not_included": [
-        "Bebidas",
-        "Propinas",
-        "Souvenirs"
+        "Equipaje no facturado",
+        "Gastos personales",
+        "Comidas no especificadas en el itinerario",
+        "Excursiones o actividades opcionales, como paseo en globo"
       ],
-      "price": "$99",
+      "price": "US$2,900",
       "itinerary": [
         {
           "day": 1,
-          "title": "Llegada a Santo Domingo",
-          "description": "Bienvenida a Santo Domingo. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+          "title": "Llegada a Estambul",
+          "description": "Llegada al aeropuerto de Estambul, recibimiento y traslado al hotel. Tiempo para instalarse, descansar y prepararse para iniciar esta experiencia por Turquía."
         },
         {
           "day": 2,
-          "title": "Tour panorámico",
-          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+          "title": "Estambul",
+          "description": "Después del desayuno, se realizará una visita panorámica por Estambul, recorriendo zonas importantes como las costas del Mar de Mármara, la Península Histórica, las Murallas de Constantinopla, el Acueducto Romano, el Puente de Unkapani y la Plaza Taksim."
+        },
+        {
+          "day": 3,
+          "title": "Estambul",
+          "description": "Desayuno en el hotel y día libre para disfrutar la ciudad o tomar la excursión opcional Las Joyas Otomanas, visitando lugares como Sultanahmet, la Mezquita Azul, el Hipódromo Romano, el exterior de Santa Sofía y el Gran Bazar."
+        },
+        {
+          "day": 4,
+          "title": "Estambul, Ankara y Capadocia",
+          "description": "Salida desde Estambul rumbo a Capadocia, realizando una parada en Ankara para visitar el Mausoleo de Ataturk y luego conocer el impresionante Lago de Sal. Llegada a Capadocia, cena y alojamiento."
+        },
+        {
+          "day": 5,
+          "title": "Capadocia",
+          "description": "Día dedicado a conocer los paisajes más famosos de Capadocia, incluyendo el Valle de Guevercinlik, el Castillo de Uchisar, el Valle de Devrent y el Valle de Avcilar. También se visitarán talleres tradicionales de alfombras y ónix. Cena y alojamiento."
+        },
+        {
+          "day": 6,
+          "title": "Capadocia y Pamukkale",
+          "description": "Salida hacia Pamukkale para visitar Hierápolis, el Teatro Romano, la Puerta de Domiciano y las piscinas termales de Cleopatra. También habrá tiempo para disfrutar del Castillo de Algodón y relajarse en el hotel con piscinas termales."
+        },
+        {
+          "day": 7,
+          "title": "Pamukkale, Éfeso y Kusadasi",
+          "description": "Visita a Éfeso, una de las ciudades antiguas más importantes de Turquía, donde se conocerán el Teatro, la Biblioteca de Celso y los vestigios del Templo de Artemisa. También se visitará la Casa de la Virgen María y un centro de producción de cuero."
+        },
+        {
+          "day": 8,
+          "title": "Izmir, día libre",
+          "description": "Día libre para descansar o disfrutar una excursión opcional a la Isla Griega de Chios, una experiencia ideal para conocer paisajes, playas, aldeas tradicionales, cultura local y gastronomía."
+        },
+        {
+          "day": 9,
+          "title": "Kusadasi, Bursa y Estambul",
+          "description": "Salida hacia Bursa, conocida como la ciudad verde de Turquía. Durante el recorrido se visitará la Casa de Seda y la Mezquita Verde. Luego, regreso a Estambul para pasar la última noche del viaje."
+        },
+        {
+          "day": 10,
+          "title": "Estambul y salida al aeropuerto",
+          "description": "Desayuno en el hotel y traslado hacia el aeropuerto de Estambul para tomar el vuelo de regreso. Finalizan los servicios del tour después de una experiencia llena de historia, cultura y paisajes únicos."
         }
       ],
-      "date": "Todos los fines de semana",
+      "date": "",
       "gallery": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://prd-webrepository.firabarcelona.com/wp-content/uploads/sites/69/2024/10/08182347/istock-475460738-ok.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCFCRLEuydgw_1W2KDIh1oixHuJPSXqRmvF1fewAQWu7kdLpalC6Y4XH0&s=10",
+        "https://images.trvl-media.com/place/4533/05dc0b17-9e3d-4103-bb17-9aa4b4388161.jpg",
+        "https://www.onenationtravel.com/wp-content/uploads/2026/01/pamukkale-thermal-pools-sunset-turkey.webp",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RKZsKa5Uqup4rbD6K0VTd1bgn3rGRGJBA9LHx8RVmMQRs4kZ2GTpbFqQ&s=10",
+        "https://images.trvl-media.com/place/4227/6cf0e1f0-8c36-4cac-94fa-62b0f37555e6.jpg"
       ],
-      "duration": "1 día",
-      "location": "Santo Domingo, RD",
-      "title": "Santo Domingo Colonial",
+      "duration": "10 días / 9 noches ",
+      "location": "Turquía, Europa Oriental",
+      "title": "Exploremos Turquía",
       "image": "",
       "included": [
-        "Transporte",
-        "Guía turístico especializado",
-        "Almuerzo típico",
-        "Entradas a museos",
-        "Degustación de chocolate"
+        "Boletos aéreos",
+        "Todos los desayunos",
+        "5 cenas ",
+        "4 noches de alojamiento con desayuno en Estambul",
+        "5 noches de alojamiento en media pensión durante el circuito",
+        "Traslados incluidos según el itinerario",
+        "Guía profesional de habla hispana",
+        "Entradas y visitas según el itinerario",
+        "Visita panorámica en Estambul"
       ],
       "guide": null,
-      "description": "Tour guiado por la zona colonial de Santo Domingo, la ciudad más antigua de América. Historia, cultura y gastronomía dominicana.",
-      "category": "Nacional",
+      "description": "Lo mejor de Turquía entre historia, cultura, paisajes únicos y ciudades llenas de encanto. Vive la magia de Estambul, los paisajes de Capadocia, las aguas termales de Pamukkale, la historia de Éfeso y la belleza de Bursa en una experiencia completa e inolvidable.",
+      "category": "Oriente Medio",
       "highlights": [
-        "Catedral Primada de América",
-        "Alcázar de Colón",
-        "Calle Las Damas",
-        "Parque Colón",
-        "Museo de las Casas Reales"
+        "Estambul",
+        "Capadocia",
+        "Selçuk",
+        "Pamukkale",
+        "Ankara",
+        "Kuşadası",
+        "Bursa"
       ]
     }
   ]
