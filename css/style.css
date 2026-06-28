@@ -616,8 +616,8 @@ body {
 }
 
 .service-icon {
-  width: 72px;
-  height: 72px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 20px;
   color: var(--blue);
 }
