@@ -86,59 +86,102 @@
         }
       ],
       "not_included": [
-        "Almuerzos y cenas",
+        "Gastos personales",
         "Bebidas alcohólicas",
-        "Entradas adicionales"
+        "Comidas no especificadas en el itinerario",
+        "Excursiones o actividades opcionales no mencionadas"
       ],
       "price": "US$1,850",
       "itinerary": [
         {
           "day": 1,
           "title": "Salida hacia Lima",
-          "description": "Bienvenida a Cancún. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+          "description": "Los viajeros iniciarán esta experiencia con salida hacia Lima, Perú, una ciudad llena de historia, cultura y encanto frente al océano Pacífico. A la llegada, se realizará el traslado hacia el hotel correspondiente, donde podrán instalarse, descansar y disfrutar de tiempo libre para aclimatarse y prepararse para el inicio de los recorridos."
         },
         {
           "day": 2,
-          "title": "Tour panorámico",
-          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+          "title": "City tour por Lima",
+          "description": "Día 2 · City tour por Lima\nEl día inicia con desayuno en el hotel. Luego, se realizará un city tour por Lima, recorriendo algunos de los lugares más representativos de la capital peruana. Durante la visita, se conocerá el Centro Histórico de Lima, la Plaza Mayor, la Catedral de Lima y el tradicional Distrito de Barranco, reconocido por su ambiente cultural, sus calles llenas de historia y su encanto artístico."
         },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
+        {
+          "day": 3,
+          "title": "Islas Ballestas y Huacachina",
+          "description": "Después del desayuno, los viajeros disfrutarán de una excursión hacia las Islas Ballestas, donde podrán observar fauna marina y paisajes naturales únicos de la costa peruana. Más adelante, la experiencia continúa hacia el desierto de Huacachina, uno de los destinos más impresionantes del país, famoso por su oasis rodeado de dunas. Durante el recorrido, se podrá disfrutar de paseo en buggies y sandboarding, una aventura ideal para vivir el desierto de una forma emocionante."
+        },
+        {
+          "day": 4,
+          "title": "Larcomar y vuelo a Juliaca",
+          "description": "La jornada inicia con una visita a Larcomar, uno de los espacios más conocidos de Lima, ubicado frente al océano Pacífico. Los viajeros tendrán tiempo para compras, fotografías y para disfrutar de la vista al mar desde una de las zonas más modernas de la ciudad. Posteriormente, se realizará el traslado al aeropuerto para tomar el vuelo hacia Juliaca. A la llegada, traslado al hotel en la zona del lago, donde podrán descansar y prepararse para las experiencias culturales del día siguiente."
+        },
+        {
+          "day": 5,
+          "title": "Islas Uros y Taquile",
+          "description": "Después del desayuno, se realizará el tour hacia las Islas Uros y Taquile, una experiencia cultural única en el Lago Titicaca. Durante el recorrido, los viajeros podrán conocer las tradiciones locales, apreciar los paisajes del lago navegable más alto del mundo y descubrir parte de la vida de sus comunidades. Este día incluye almuerzo, permitiendo disfrutar de la gastronomía local dentro de la experiencia."
+        },
+        {
+          "day": 6,
+          "title": "Día libre",
+          "description": "Luego del desayuno, los viajeros tendrán el día libre para descansar, disfrutar del entorno, realizar actividades personales o recorrer la zona por cuenta propia. Este día es ideal para relajarse, tomar fotografías, comprar recuerdos o simplemente disfrutar con calma de la experiencia en Perú antes de continuar hacia la próxima etapa del viaje."
+        },
+        {
+          "day": 7,
+          "title": "Llegada a Machu Picchu y Aguas Calientes",
+          "description": "El día inicia con desayuno y salida hacia la zona de Machu Picchu. Durante el recorrido, los viajeros vivirán una experiencia llena de paisajes andinos, historia y cultura, acercándose a uno de los destinos más esperados del viaje. A la llegada, se realizará el traslado hacia Aguas Calientes, pueblo ubicado al pie de Machu Picchu, donde pasarán la noche para descansar antes de la visita a la antigua ciudadela inca."
+        },
+        {
+          "day": 8,
+          "title": "Visita a la ciudadela de Machu Picchu",
+          "description": "Después del desayuno, se realizará la visita a la antigua ciudadela inca de Machu Picchu, uno de los lugares más impresionantes y reconocidos del mundo. Durante el recorrido, los viajeros podrán conocer sus construcciones, terrazas, templos y paisajes rodeados de montañas, viviendo una experiencia inolvidable en uno de los principales tesoros arqueológicos de Perú."
+        },
+        {
+          "day": 9,
+          "title": "Vuelo a Lima y regreso a República Dominicana",
+          "description": "El último día inicia con desayuno y traslado correspondiente para tomar el vuelo hacia Lima. Posteriormente, se realizará la conexión de regreso a República Dominicana. Con este traslado finalizan los servicios del tour, después de disfrutar una experiencia llena de historia, paisajes naturales, cultura andina y momentos memorables en Perú."
+        }
       ],
       "date": "",
       "gallery": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://puertoplatanoticias.com/wp-content/uploads/2022/04/Machu-Picchu.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvtuwDakAaKx3ZffqlqKA1or24pLkHzXLTY_KhYEI8ze4gdDPOOH_6uCg8&s=10",
+        "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/22/7f/17.jpg",
+        "https://images.ecestaticos.com/Lspp-Y3UVUE5TQrRS0x2Bc5n28E=/0x0:2121x1413/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F747%2Faab%2F7bd%2F747aab7bd65b35189e444fe37d3fd389.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTODwuSPWYW3AA8FYsV7rvk6dMrmZVJ2WM_Y4Oa4zNL4GbWpG8LPGSnz9_R&s=10",
+        "https://picchutravel.com/wp-content/uploads/que-hacer-en-aguas-calientes-cusco.jpg"
       ],
       "duration": "9 días / 8 noches",
       "location": "Perú",
       "title": "Vive la experiencia de Perú",
-      "image": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVbXsAGniZZONI4eJuQu6YCCg6iZYjlSQY-IZ9TC7tdJZCeaq5Ims_Me4&s=10",
       "included": [
-        "Vuelo ida y vuelta",
-        "Alojamiento 3 noches",
-        "Desayunos",
-        "Tour a Chichén Itzá",
-        "Traslados"
+        "Boletos aéreos",
+        "Desayunos diarios",
+        "Alojamientos ",
+        "5 tours",
+        "3 almuerzos",
+        "Transporte incluido",
+        "Seguro de viaje",
+        "Guía especializado",
+        "Maleta de mano y bulto"
       ],
       "guide": null,
       "description": "9 días descubriendo lo mejor de Perú entre historia, cultura y paisajes impresionantes. Vive la magia de Lima, el encanto del Lago Titicaca, las Islas Uros y Taquile, y la experiencia inolvidable de conocer Machu Picchu, una de las maravillas más importantes del mundo.\n",
       "category": "América del Sur",
       "highlights": [
-        "Zona Arqueológica de Chichén Itzá",
-        "Playa Delfines",
-        "Cenote Sagrado",
-        "Zona Hotelera"
+        "Centro Histórico de Lima",
+        "Plaza Mayor",
+        "Catedral de Lima",
+        "Distrito de Barranco",
+        "Islas Ballestas",
+        "Desierto de Huacachina",
+        "Larcomar",
+        "Juliaca",
+        "Lago Titicaca",
+        "Islas Uros",
+        "Isla Taquile",
+        "Aguas Calientes",
+        "Machu Picchu",
+        "Cusco",
+        "Ruta del Sol"
       ]
     },
     {
