@@ -1298,9 +1298,9 @@ body {
 .tour-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   opacity: 0.95;
 }
@@ -1309,6 +1309,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding-right: 4px;
 }
 
 .tour-content {
@@ -1813,8 +1814,8 @@ body {
     font-size: 32px;
   }
   .tour-meta {
-    gap: 12px;
-    font-size: 14px;
+    gap: 14px;
+    font-size: 12px;
   }
   .includes-grid {
     grid-template-columns: 1fr;
