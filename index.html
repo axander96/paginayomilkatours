@@ -238,10 +238,13 @@
   <!-- Quote Modal -->
   <div class="modal" id="quoteModal">
     <div class="modal-overlay" onclick="closeQuote()"></div>
-    <div class="modal-content">
+    <div class="modal-content modal-content-v2">
       <button class="modal-close" onclick="closeQuote()">&times;</button>
-      <h2>Cotizar Viaje</h2>
-      <p class="modal-trip" id="modalTripName">Complete el formulario para cotizar</p>
+      <div class="modal-header">
+        <h2 id="modalTitle">Cotizar Viaje</h2>
+        <p class="modal-trip" id="modalTripName">Complete el formulario para cotizar</p>
+        <p class="modal-subtitle">Te contactaremos en menos de 24 horas con todos los detalles.</p>
+      </div>
       <form id="quoteForm" onsubmit="submitQuote(event)">
         <div class="form-row">
           <div class="form-group">
@@ -256,16 +259,16 @@
         <div class="form-row">
           <div class="form-group">
             <label for="firstName">Nombre</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <input type="text" id="firstName" name="firstName" placeholder="Tu nombre" required>
           </div>
           <div class="form-group">
             <label for="lastName">Apellidos</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Tu apellido" required>
           </div>
         </div>
         <div class="form-group">
           <label for="email">Correo Electrónico</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required>
         </div>
         <div class="form-group">
           <label for="phone">Número de Celular</label>
@@ -282,10 +285,10 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="notes">Información Adicional</label>
+          <label for="notes">Información Adicional <span class="label-optional">(opcional)</span></label>
           <textarea id="notes" name="notes" rows="4" placeholder="¿Alguna solicitud especial?"></textarea>
         </div>
-        <button type="submit" class="btn-submit">Enviar Cotización</button>
+        <button type="submit" class="btn-submit btn-submit-v2">Enviar Cotización</button>
       </form>
     </div>
   </div>

@@ -350,6 +350,10 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 // =============================
 
 function openQuote(tripName = '') {
+  const modalTitle = document.getElementById('modalTitle');
+  if (modalTitle) {
+    modalTitle.textContent = tripName ? 'Cotizar Viaje' : 'Cotizar Viaje';
+  }
   modalTripName.textContent = tripName 
     ? `Estás cotizando: ${tripName}` 
     : 'Complete el formulario para cotizar';
