@@ -372,58 +372,94 @@
     {
       "dates": [
         {
-          "departure": "1 oct de 2026",
-          "price": "RD$1,199"
+          "departure": "8-13 ago de 2026",
+          "price": "US$1,050"
+        },
+        {
+          "departure": "10-16 dic de 2026",
+          "price": "US$1,050"
         }
       ],
       "not_included": [
-        "Vuelo al puerto de salida",
-        "Excursiones premium",
-        "Servicio de spa",
-        "Bebidas premium"
+        "Equipaje facturado",
+        "Gastos personales",
+        "Comidas no especificadas en el itinerario",
+        "Excursiones o actividades opcionales no mencionadas"
       ],
-      "price": "$1,199",
+      "price": "US$1,050",
       "itinerary": [
         {
           "day": 1,
-          "title": "Llegada a Caribe",
-          "description": "Bienvenida a Caribe. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+          "title": "Llegada a El Salvador",
+          "description": "Los viajeros iniciarán esta experiencia con salida hacia El Salvador. A la llegada al aeropuerto, serán recibidos por el equipo local para realizar el traslado hacia el hotel correspondiente. Luego del check-in, tendrán tiempo libre para descansar, instalarse cómodamente y comenzar a disfrutar del ambiente de la ciudad."
         },
         {
           "day": 2,
-          "title": "Tour panorámico",
-          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+          "title": "Volcanes, miradores, café y Centro Histórico",
+          "description": "El día inicia con desayuno en el hotel. Luego, se realizará una excursión hacia el Parque Nacional El Boquerón, ubicado en la cima del Volcán de San Salvador, donde los viajeros podrán disfrutar de senderos, vistas naturales y paisajes impresionantes. Más adelante, se visitará la Puerta del Diablo, uno de los miradores más conocidos del país, ideal para fotografías y vistas panorámicas.\n\nDurante el recorrido, también se realizará una parada en Café Santa Cruz, reconocido por sus vistas y ambiente acogedor. Posteriormente, se visitará Millennium Plaza, una zona moderna y comercial de San Salvador. La jornada continua con un recorrido por el Centro Histórico, visitando lugares representativos como la Catedral Metropolitana, el Palacio Nacional, el Teatro Nacional y la Biblioteca Nacional. Al finalizar, regreso al hotel."
+        },
+        {
+          "day": 3,
+          "title": "Día libre en San Salvador",
+          "description": "Después del desayuno, los viajeros tendrán el día libre para disfrutar la ciudad a su propio ritmo. Este día será ideal para descansar, realizar compras en centros comerciales, visitar cafés y restaurantes, conocer lugares emblemáticos o disfrutar de actividades opcionales disponibles en destino.\n\nTambién podrán aprovechar la jornada para degustar la gastronomía salvadoreña, recorrer espacios culturales o relajarse antes de continuar con las excursiones programadas del viaje.\n"
+        },
+        {
+          "day": 4,
+          "title": "Ruta de las Flores, Ataco y Termales de Santa Teresa",
+          "description": "El día comienza con desayuno en el hotel y salida hacia la famosa Ruta de las Flores, una de las zonas más pintorescas de El Salvador. Durante el recorrido, los viajeros podrán disfrutar de paisajes montañosos, cafetales, pueblos llenos de color y un ambiente tradicional.\n\nLa experiencia incluye visita al colorido pueblo de Ataco, reconocido por sus murales, artesanías, cafés y gastronomía típica. Luego, el recorrido continúa hacia los Termales de Santa Teresa, donde los viajeros tendrán tiempo para relajarse en sus piscinas termales y áreas recreativas. Este día incluye almuerzo y regreso al hotel al finalizar la jornada."
+        },
+        {
+          "day": 5,
+          "title": "Lago Coatepeque, Los Chorros y relajación",
+          "description": "Luego del desayuno, se realizará una excursión hacia el Lago Coatepeque, considerado uno de los lagos más hermosos de Centroamérica. Durante la visita, los viajeros podrán disfrutar de sus paisajes naturales, tomar fotografías y vivir un momento de descanso frente a sus aguas.\n\nMás adelante, se visitará Los Chorros, un espacio natural ideal para disfrutar de la naturaleza, sus aguas refrescantes y un ambiente de relajación. Este día incluye almuerzo y regreso al hotel al finalizar el recorrido."
+        },
+        {
+          "day": 6,
+          "title": "Regreso a casa",
+          "description": "El último día inicia con desayuno en el hotel y preparación para el check-out. Posteriormente, se realizará el traslado al aeropuerto para tomar el vuelo de regreso. Con este traslado finalizan los servicios del tour, después de disfrutar una experiencia llena de naturaleza, cultura, gastronomía, paisajes y momentos inolvidables en El Salvador."
         }
       ],
-      "date": "1-8 de Octubre, 2026",
+      "date": "",
       "gallery": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1FVVoUHRFJxvuN4Hf4Y3ccFoyqwP7jYjRBm2ycEEkQAHFuE6PfmgOijTt&s=10",
+        "https://www.civitatis.com/f/el-salvador/san-salvador/galeria/panoramica-diablo.jpg",
+        "https://static.where-e.com/United_States/Texas/Collin_County/Caf-Santa-Cruz_edd324a18d1df801173021fe4d829372.jpg",
+        "https://centrohistorico.gob.sv/wp-content/uploads/2025/08/chistorico-2-1536x1152-1.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGJLVhpC6kwCe6xnMnr_tAJY5pyrO3urXaRJiZBKpUKxGqj2-kszzE0YHB&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_doXYqNKUUCt4NSkubut0SqWIo8OZ58k2UVAxrZv7ufBj5Choe2nWNAQ&s=10"
       ],
-      "duration": "7 días / 7 noches",
-      "location": "Caribe",
-      "title": "Crucero por el Caribe",
-      "image": "",
+      "duration": "6 días / 5 noches",
+      "location": "El Salvador",
+      "title": "Disfrutemos a lo grande El Salvador",
+      "image": "https://i.natgeofe.com/n/dabe409e-9975-430f-a599-c2065e2143d1/ElSalv_5.jpg?w=2880&h=1920",
       "included": [
-        "Crucero 7 noches",
-        "Todas las comidas a bordo",
-        "Entretenimiento",
-        "Excursiones en puerto",
-        "Bebidas seleccionadas"
+        "Boletos aéreos",
+        "Hospedaje",
+        "Desayunos diarios",
+        "3 almuerzos",
+        "Transportes",
+        "3 excursiones",
+        "Guía turístico "
       ],
       "guide": null,
-      "description": "Navega por las aguas cristalinas del Caribe en un crucero de lujo. Visita múltiples islas, disfruta de entretenimiento a bordo y todo incluido.",
-      "category": "Caribe",
+      "description": "Disfrutando lo mejor de El Salvador entre naturaleza, cultura y diversión. Vive la experiencia de conocer volcanes, miradores, pueblos coloridos, aguas termales, lagos y espacios naturales, con hospedaje, desayunos, excursiones y almuerzos incluidos.",
+      "category": "América Central",
       "highlights": [
-        "San Juan, Puerto Rico",
-        "St. Thomas",
-        "Bahamas",
-        "Cena formal en alta mar",
-        "Spa y entretenimiento"
+        "Parque Nacional El Boquerón",
+        "Volcán de San Salvador",
+        "Puerta del Diablo",
+        "Café Santa Cruz",
+        "Millennium Plaza",
+        "Centro Histórico de San Salvador",
+        "Catedral Metropolitana",
+        "Palacio Nacional",
+        "Teatro Nacional",
+        "Biblioteca Nacional",
+        "Ruta de las Flores",
+        "Ataco",
+        "Termales de Santa Teresa",
+        "Lago Coatepeque",
+        "Los Chorros"
       ]
     },
     {
