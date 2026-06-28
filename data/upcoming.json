@@ -3,95 +3,78 @@
   "subtitle": "No te pierdas nuestras próximas aventuras",
   "items": [
     {
-      "image": "",
-      "title": "Punta Cana Todo Incluido",
-      "date": "15-22 de Junio, 2026",
-      "location": "Punta Cana, RD",
-      "duration": "7 días / 6 noches",
-      "price": "$1,299",
-      "description": "7 días de playa paradisíaca en los mejores resorts de Punta Cana. Disfruta de arenas blancas, aguas cristalinas y todo incluido en un ambiente de lujo y relajación total.",
-      "highlights": [
-        "Playa Bávaro",
-        "Isla Saona",
-        "Cenote Indígena",
-        "Show nocturno típico"
-      ],
-      "included": [
-        "Vuelo ida y vuelta",
-        "Alojamiento 6 noches todo incluido",
-        "Traslados aeropuerto-hotel",
-        "Excursión a Isla Saona",
-        "Bebidas ilimitadas"
+      "dates": [
+        {
+          "departure": "4 jul de 2026",
+          "price": "RD$7,900"
+        },
+        {
+          "departure": "25 jul de 2026",
+          "price": "RD$7,900"
+        }
       ],
       "not_included": [
         "Tours adicionales",
-        "Propinas",
-        "Gastos personales"
+        "Bebidas",
+        "Gastos personales",
+        "Entre otros.."
       ],
-      "gallery": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "category": "Caribe",
-      "dates": [
-        {
-          "departure": "15 jun de 2026",
-          "price": "RD$1,299"
-        }
-      ],
-      "guide": null,
+      "price": "$7,900",
       "itinerary": [
         {
           "day": 1,
-          "title": "Llegada a Punta Cana",
-          "description": "Bienvenida a Punta Cana. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+          "title": "Sur Profundo y Bahía de las Águilas",
+          "description": "La experiencia inicia con salida en autobús confortable y climatizado hacia el Sur Profundo. Durante el recorrido, se realizarán paradas en el Malecón de Barahona, Balneario San Rafael, Los Patos, Pocito de Barahona, Playa Quemaito, Parque Eólico Los Cocos y Cabo Rojo.\n\nMás adelante, los viajeros disfrutarán de Bahía de las Águilas, con transporte marítimo incluido, entrada al parque, almuerzo tipo buffet y tiempo libre para disfrutar de sus aguas cristalinas. Al finalizar, traslado al hotel en Pedernales, cena incluida y actividad nocturna organizada por el equipo."
         },
         {
           "day": 2,
-          "title": "Tour panorámico",
-          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+          "title": "Los Patos, Pozos Romeo y Arroyo Salado",
+          "description": "El segundo día inicia con desayuno en el hotel. Luego, se continuará el recorrido visitando atractivos naturales de la zona, con almuerzo especial en Los Patos, visita a Pozos Romeo y parada en Arroyo Salado, en Oviedo.\n\nDespués de disfrutar de estos espacios naturales, se iniciará el regreso, cerrando una experiencia llena de playas, ríos, paisajes, aventura y momentos inolvidables en el Sur Profundo."
         }
+      ],
+      "date": "",
+      "gallery": [
+        "https://pbs.twimg.com/media/EDJ4ioiWsAAc-NA.jpg",
+        "https://ayuntamientolacienaga.gob.do/wp-content/uploads/2018/08/rio-san-rafael.jpg",
+        "https://pbs.twimg.com/media/EqcyhhaXYAAgArh.jpg",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/b6/5e/d0/img-20180420-wa0025-largejpg.jpg?w=900&h=-1&s=1",
+        "https://www.dominicantours.com.do/images/camino-rocosos.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnpYPg2sE83sy_HI34jTF3bi-tSSwfUP_5uHISD8DUcX-b5J-6CLHFD9U&s=10",
+        "https://larimarecotour.com/wp-content/uploads/2023/03/Arroyodo-salado-pedernales-gallery2.jpg"
+      ],
+      "duration": "2 días / 1 noche",
+      "location": "Pedernales, RD",
+      "title": "Sur Profundo y Bahía de las Águilas",
+      "image": "https://dominicancarrental.com/wp-content/uploads/2021/01/clear-blue-sea-164041-1024x768-1.jpg",
+      "included": [
+        "Transporte ida y vuelta",
+        "Desayunos",
+        "Almuerzo tipo buffet",
+        "Cena incluida",
+        "Hospedaje en hotel",
+        "Transporte marítimo",
+        "Entrada e impuestos del Parque Bahía de las Águilas",
+        "Chalecos salvavidas",
+        "Equipo de primeros auxilios",
+        "Seguro de viaje"
+      ],
+      "guide": null,
+      "description": "2 días de aventura por el Sur Profundo y Bahía de las Águilas. Disfruta de playas vírgenes, ríos naturales, paisajes impresionantes y una experiencia completa con transporte, alimentación, hospedaje, visitas guiadas y momentos inolvidables frente al mar.",
+      "category": "Caribe",
+      "highlights": [
+        "Malecón de Barahona",
+        "Balneario San Rafael",
+        "Los Patos de Barahona",
+        "Pocito de Barahona",
+        "Playa Quemaito",
+        "Parque Eólico Los Cocos",
+        "Cabo Rojo",
+        "Bahía de las Águilas",
+        "Pozos Romeo",
+        "Arroyo Salado, Oviedo"
       ]
     },
     {
-      "image": "",
-      "title": "Cancún Express",
-      "date": "10-14 de Julio, 2026",
-      "location": "Cancún, México",
-      "duration": "4 días / 3 noches",
-      "price": "$899",
-      "description": "4 días explorando las playas y ruinas mayas de Cancún. La combinación perfecta de historia, cultura y diversión en el Caribe mexicano.",
-      "highlights": [
-        "Zona Arqueológica de Chichén Itzá",
-        "Playa Delfines",
-        "Cenote Sagrado",
-        "Zona Hotelera"
-      ],
-      "included": [
-        "Vuelo ida y vuelta",
-        "Alojamiento 3 noches",
-        "Desayunos",
-        "Tour a Chichén Itzá",
-        "Traslados"
-      ],
-      "not_included": [
-        "Almuerzos y cenas",
-        "Bebidas alcohólicas",
-        "Entradas adicionales"
-      ],
-      "gallery": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "category": "Norteamérica",
       "dates": [
         {
           "departure": "10 jul de 2026",
@@ -102,7 +85,12 @@
           "price": "RD$950"
         }
       ],
-      "guide": null,
+      "not_included": [
+        "Almuerzos y cenas",
+        "Bebidas alcohólicas",
+        "Entradas adicionales"
+      ],
+      "price": "$899",
       "itinerary": [
         {
           "day": 1,
@@ -114,36 +102,8 @@
           "title": "Tour panorámico",
           "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
         }
-      ]
-    },
-    {
-      "image": "",
-      "title": "New York City",
-      "date": "5-12 de Agosto, 2026",
-      "location": "Nueva York, USA",
-      "duration": "7 días / 6 noches",
-      "price": "$1,599",
-      "description": "La ciudad que nunca duerme te espera. Recorre Times Square, Central Park, el Empire State y vive la experiencia neoyorquina al máximo.",
-      "highlights": [
-        "Times Square",
-        "Central Park",
-        "Estatua de la Libertad",
-        "Empire State Building",
-        "Broadway Show"
       ],
-      "included": [
-        "Vuelo ida y vuelta",
-        "Alojamiento 6 noches",
-        "City tour guiado",
-        "Entrada al Empire State",
-        "Traslados"
-      ],
-      "not_included": [
-        "Comidas",
-        "Visa ESTA",
-        "Seguro de viaje",
-        "Entradas a Broadway"
-      ],
+      "date": "10-14 de Julio, 2026",
       "gallery": [
         "",
         "",
@@ -152,14 +112,41 @@
         "",
         ""
       ],
-      "category": "Europa",
+      "duration": "4 días / 3 noches",
+      "location": "Cancún, México",
+      "title": "Cancún Express",
+      "image": "",
+      "included": [
+        "Vuelo ida y vuelta",
+        "Alojamiento 3 noches",
+        "Desayunos",
+        "Tour a Chichén Itzá",
+        "Traslados"
+      ],
+      "guide": null,
+      "description": "4 días explorando las playas y ruinas mayas de Cancún. La combinación perfecta de historia, cultura y diversión en el Caribe mexicano.",
+      "category": "Norteamérica",
+      "highlights": [
+        "Zona Arqueológica de Chichén Itzá",
+        "Playa Delfines",
+        "Cenote Sagrado",
+        "Zona Hotelera"
+      ]
+    },
+    {
       "dates": [
         {
           "departure": "5 ago de 2026",
           "price": "RD$1,599"
         }
       ],
-      "guide": null,
+      "not_included": [
+        "Comidas",
+        "Visa ESTA",
+        "Seguro de viaje",
+        "Entradas a Broadway"
+      ],
+      "price": "$1,599",
       "itinerary": [
         {
           "day": 1,
@@ -171,35 +158,8 @@
           "title": "Tour panorámico",
           "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
         }
-      ]
-    },
-    {
-      "image": "",
-      "title": "Europa Mágica",
-      "date": "15-25 de Septiembre, 2026",
-      "location": "París, Roma, Madrid",
-      "duration": "10 días / 9 noches",
-      "price": "$2,499",
-      "description": "10 días recorriendo París, Roma y Madrid. Los destinos más románticos y culturales de Europa en un solo viaje inolvidable.",
-      "highlights": [
-        "Torre Eiffel y Museo Louvre",
-        "Coliseo Romano y Vaticano",
-        "Puerta del Sol y Palacio Real",
-        "Paseo en barco por el Sena"
       ],
-      "included": [
-        "Vuelo ida y vuelta",
-        "Alojamiento 9 noches",
-        "Desayunos",
-        "Tours guiados por ciudad",
-        "Traslados entre ciudades"
-      ],
-      "not_included": [
-        "Almuerzos y cenas",
-        "Entradas a museos",
-        "Visa Schengen",
-        "Seguro de viaje"
-      ],
+      "date": "5-12 de Agosto, 2026",
       "gallery": [
         "",
         "",
@@ -208,14 +168,42 @@
         "",
         ""
       ],
+      "duration": "7 días / 6 noches",
+      "location": "Nueva York, USA",
+      "title": "New York City",
+      "image": "",
+      "included": [
+        "Vuelo ida y vuelta",
+        "Alojamiento 6 noches",
+        "City tour guiado",
+        "Entrada al Empire State",
+        "Traslados"
+      ],
+      "guide": null,
+      "description": "La ciudad que nunca duerme te espera. Recorre Times Square, Central Park, el Empire State y vive la experiencia neoyorquina al máximo.",
       "category": "Europa",
+      "highlights": [
+        "Times Square",
+        "Central Park",
+        "Estatua de la Libertad",
+        "Empire State Building",
+        "Broadway Show"
+      ]
+    },
+    {
       "dates": [
         {
           "departure": "15 sep de 2026",
           "price": "RD$2,499"
         }
       ],
-      "guide": null,
+      "not_included": [
+        "Almuerzos y cenas",
+        "Entradas a museos",
+        "Visa Schengen",
+        "Seguro de viaje"
+      ],
+      "price": "$2,499",
       "itinerary": [
         {
           "day": 1,
@@ -227,36 +215,8 @@
           "title": "Tour panorámico",
           "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
         }
-      ]
-    },
-    {
-      "image": "",
-      "title": "Crucero por el Caribe",
-      "date": "1-8 de Octubre, 2026",
-      "location": "Caribe",
-      "duration": "7 días / 7 noches",
-      "price": "$1,199",
-      "description": "Navega por las aguas cristalinas del Caribe en un crucero de lujo. Visita múltiples islas, disfruta de entretenimiento a bordo y todo incluido.",
-      "highlights": [
-        "San Juan, Puerto Rico",
-        "St. Thomas",
-        "Bahamas",
-        "Cena formal en alta mar",
-        "Spa y entretenimiento"
       ],
-      "included": [
-        "Crucero 7 noches",
-        "Todas las comidas a bordo",
-        "Entretenimiento",
-        "Excursiones en puerto",
-        "Bebidas seleccionadas"
-      ],
-      "not_included": [
-        "Vuelo al puerto de salida",
-        "Excursiones premium",
-        "Servicio de spa",
-        "Bebidas premium"
-      ],
+      "date": "15-25 de Septiembre, 2026",
       "gallery": [
         "",
         "",
@@ -265,14 +225,41 @@
         "",
         ""
       ],
-      "category": "Caribe",
+      "duration": "10 días / 9 noches",
+      "location": "París, Roma, Madrid",
+      "title": "Europa Mágica",
+      "image": "",
+      "included": [
+        "Vuelo ida y vuelta",
+        "Alojamiento 9 noches",
+        "Desayunos",
+        "Tours guiados por ciudad",
+        "Traslados entre ciudades"
+      ],
+      "guide": null,
+      "description": "10 días recorriendo París, Roma y Madrid. Los destinos más románticos y culturales de Europa en un solo viaje inolvidable.",
+      "category": "Europa",
+      "highlights": [
+        "Torre Eiffel y Museo Louvre",
+        "Coliseo Romano y Vaticano",
+        "Puerta del Sol y Palacio Real",
+        "Paseo en barco por el Sena"
+      ]
+    },
+    {
       "dates": [
         {
           "departure": "1 oct de 2026",
           "price": "RD$1,199"
         }
       ],
-      "guide": null,
+      "not_included": [
+        "Vuelo al puerto de salida",
+        "Excursiones premium",
+        "Servicio de spa",
+        "Bebidas premium"
+      ],
+      "price": "$1,199",
       "itinerary": [
         {
           "day": 1,
@@ -284,35 +271,8 @@
           "title": "Tour panorámico",
           "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
         }
-      ]
-    },
-    {
-      "image": "",
-      "title": "Santo Domingo Colonial",
-      "date": "Todos los fines de semana",
-      "location": "Santo Domingo, RD",
-      "duration": "1 día",
-      "price": "$99",
-      "description": "Tour guiado por la zona colonial de Santo Domingo, la ciudad más antigua de América. Historia, cultura y gastronomía dominicana.",
-      "highlights": [
-        "Catedral Primada de América",
-        "Alcázar de Colón",
-        "Calle Las Damas",
-        "Parque Colón",
-        "Museo de las Casas Reales"
       ],
-      "included": [
-        "Transporte",
-        "Guía turístico especializado",
-        "Almuerzo típico",
-        "Entradas a museos",
-        "Degustación de chocolate"
-      ],
-      "not_included": [
-        "Bebidas",
-        "Propinas",
-        "Souvenirs"
-      ],
+      "date": "1-8 de Octubre, 2026",
       "gallery": [
         "",
         "",
@@ -321,14 +281,41 @@
         "",
         ""
       ],
-      "category": "Nacional",
+      "duration": "7 días / 7 noches",
+      "location": "Caribe",
+      "title": "Crucero por el Caribe",
+      "image": "",
+      "included": [
+        "Crucero 7 noches",
+        "Todas las comidas a bordo",
+        "Entretenimiento",
+        "Excursiones en puerto",
+        "Bebidas seleccionadas"
+      ],
+      "guide": null,
+      "description": "Navega por las aguas cristalinas del Caribe en un crucero de lujo. Visita múltiples islas, disfruta de entretenimiento a bordo y todo incluido.",
+      "category": "Caribe",
+      "highlights": [
+        "San Juan, Puerto Rico",
+        "St. Thomas",
+        "Bahamas",
+        "Cena formal en alta mar",
+        "Spa y entretenimiento"
+      ]
+    },
+    {
       "dates": [
         {
           "departure": "Todos los fines de semana",
           "price": "RD$99"
         }
       ],
-      "guide": null,
+      "not_included": [
+        "Bebidas",
+        "Propinas",
+        "Souvenirs"
+      ],
+      "price": "$99",
       "itinerary": [
         {
           "day": 1,
@@ -340,6 +327,36 @@
           "title": "Tour panorámico",
           "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
         }
+      ],
+      "date": "Todos los fines de semana",
+      "gallery": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "duration": "1 día",
+      "location": "Santo Domingo, RD",
+      "title": "Santo Domingo Colonial",
+      "image": "",
+      "included": [
+        "Transporte",
+        "Guía turístico especializado",
+        "Almuerzo típico",
+        "Entradas a museos",
+        "Degustación de chocolate"
+      ],
+      "guide": null,
+      "description": "Tour guiado por la zona colonial de Santo Domingo, la ciudad más antigua de América. Historia, cultura y gastronomía dominicana.",
+      "category": "Nacional",
+      "highlights": [
+        "Catedral Primada de América",
+        "Alcázar de Colón",
+        "Calle Las Damas",
+        "Parque Colón",
+        "Museo de las Casas Reales"
       ]
     }
   ]
