@@ -235,17 +235,19 @@ function renderServices(data) {
   document.getElementById('servicesTitle').textContent = data.title;
   document.getElementById('servicesSubtitle').textContent = data.subtitle;
 
-  const icons = {
-    visa: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M7 15h.01M12 15h.01"/></svg>`,
-    hotel: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h2v6M13 21v-6h2v6"/></svg>`,
-    tour: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
-    excursion: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 12.414a2 2 0 0 0-2.828 0L6.343 16.657"/><path d="M2 21h20M5 21v-8l7-7 7 7v8"/></svg>`
+  const iconPaths = {
+    visa: 'Iconos%20servicios/Visados.svg',
+    hotel: 'Iconos%20servicios/Hoteles.svg',
+    tour: 'Iconos%20servicios/Tours.svg',
+    excursion: 'Iconos%20servicios/Excursiones.svg'
   };
 
   const grid = document.getElementById('servicesGrid');
   grid.innerHTML = data.items.map(item => `
     <div class="service-item">
-      <div class="service-icon">${icons[item.icon] || icons.tour}</div>
+      <div class="service-icon">
+        <img src="${iconPaths[item.icon] || iconPaths.tour}" alt="${escapeHtml(item.title)}" loading="lazy">
+      </div>
       <h3>${escapeHtml(item.title)}</h3>
       <p>${escapeHtml(item.description)}</p>
     </div>
