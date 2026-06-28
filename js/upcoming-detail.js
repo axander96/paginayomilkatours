@@ -69,7 +69,7 @@ function formatShortDate(dateStr) {
   if (match) {
     const day = match[1].padStart(2, '0');
     const month = match[2].substring(0, 3).toUpperCase();
-    const year = match[3];
+    const year = match[3].slice(-2);
     return `${day}-${month}-${year}`;
   }
   return dateStr;
@@ -81,7 +81,7 @@ function formatLongDate(dateStr) {
   if (match) {
     const day = match[1];
     const month = match[2].charAt(0).toUpperCase() + match[2].slice(1, 3).toLowerCase();
-    const year = match[3];
+    const year = match[3].slice(-2);
     return `${day} ${month} del ${year}`;
   }
   return dateStr;
@@ -107,13 +107,18 @@ function normalizeDates(trip) {
   }).filter(d => d.departure || d.return || d.price);
 }
 
-function getTripDatesLabel(trip) {
+function getTripDatesHTML(trip) {
   const dates = normalizeDates(trip);
   if (dates.length > 0) {
-    return dates.map(d => formatShortDate(d.departure)).filter(Boolean).join(' | ');
+    const items = dates.map(d => {
+      const formatted = formatShortDate(d.departure);
+      if (!formatted) return '';
+      return `<span class="tour-meta-item">${getCalendarIcon(16)} ${escapeHtml(formatted)}</span>`;
+    }).filter(Boolean);
+    if (items.length > 0) return items.join('');
   }
   if (trip.date && trip.date.trim()) {
-    return formatShortDate(trip.date);
+    return `<span class="tour-meta-item">${getCalendarIcon(16)} ${escapeHtml(formatShortDate(trip.date))}</span>`;
   }
   return null;
 }
@@ -129,8 +134,8 @@ function renderTrip(trip, settings) {
   }
 
   document.getElementById('tourTitle').textContent = trip.title;
-  const tripDatesLabel = getTripDatesLabel(trip) || 'Fechas a coordinar con la agencia';
-  document.getElementById('tourDate').innerHTML = `<span class="tour-meta-item">${getCalendarIcon(16)} ${escapeHtml(tripDatesLabel)}</span>`;
+  const tripDatesHTML = getTripDatesHTML(trip) || `<span class="tour-meta-item">${getCalendarIcon(16)} Fechas a coordinar con la agencia</span>`;
+  document.getElementById('tourDate').innerHTML = tripDatesHTML;
   document.getElementById('tourDuration').innerHTML = `<span class="tour-meta-item">${getClockIcon(16)} ${escapeHtml(trip.duration || 'Consultar')}</span>`;
   document.getElementById('tourLocation').innerHTML = `<span class="tour-meta-item">${getLocationIcon(16)} ${escapeHtml(trip.location)}</span>`;
 

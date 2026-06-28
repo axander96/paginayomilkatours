@@ -1967,13 +1967,20 @@ body {
   margin-bottom: 14px;
 }
 
+.trip-card-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 18px;
+}
+
 .trip-card-date {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 14px;
   color: var(--text-light);
-  margin-bottom: 18px;
+  white-space: nowrap;
 }
 
 .trip-card-footer {

@@ -117,7 +117,7 @@ function formatShortDate(dateStr) {
   if (match) {
     const day = match[1].padStart(2, '0');
     const month = match[2].substring(0, 3).toUpperCase();
-    const year = match[3];
+    const year = match[3].slice(-2);
     return `${day}-${month}-${year}`;
   }
   return dateStr;
@@ -137,6 +137,25 @@ function getFirstDate(item) {
   return formatShortDate(raw);
 }
 
+function getTripDatesHTML(item) {
+  const dates = Array.isArray(item.dates) ? item.dates : [];
+  if (dates.length > 0) {
+    const items = dates.map(d => {
+      const raw = (typeof d === 'object' && d !== null) ? (d.departure || '') : d;
+      const formatted = formatShortDate(raw);
+      if (!formatted) return '';
+      return `<span class="trip-card-date">${getCalendarIcon(14)} ${escapeHtml(formatted)}</span>`;
+    }).filter(Boolean);
+    if (items.length > 0) {
+      return `<div class="trip-card-dates">${items.join('')}</div>`;
+    }
+  }
+  if (item.date && item.date.trim()) {
+    return `<div class="trip-card-dates"><span class="trip-card-date">${getCalendarIcon(14)} ${escapeHtml(formatShortDate(item.date))}</span></div>`;
+  }
+  return `<div class="trip-card-dates"><span class="trip-card-date">${getCalendarIcon(14)} Fechas a coordinar</span></div>`;
+}
+
 function formatPrice(item) {
   if (item.price && item.price.trim()) return item.price;
   return 'Consultar';
@@ -149,7 +168,6 @@ function buildTripCard(item, index, type) {
   const location = escapeHtml(item.location || '');
   const category = escapeHtml(item.category || 'Excursión');
   const duration = escapeHtml(item.duration || '');
-  const firstDate = escapeHtml(getFirstDate(item));
   const price = escapeHtml(formatPrice(item));
 
   const guide = item.guide;
@@ -179,10 +197,7 @@ function buildTripCard(item, index, type) {
           <span class="trip-card-category">${category}</span>
         </div>
         <h3 class="trip-card-title">${title}</h3>
-        <div class="trip-card-date">
-          ${getCalendarIcon(14)}
-          ${firstDate}
-        </div>
+        ${getTripDatesHTML(item)}
         <div class="trip-card-footer">
           <div class="trip-card-price">
             <small>DESDE</small>
