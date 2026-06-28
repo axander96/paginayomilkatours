@@ -77,12 +77,12 @@
     {
       "dates": [
         {
-          "departure": "10 jul de 2026",
-          "price": "RD$899"
+          "departure": "8-16 jul de 2026",
+          "price": "US$1,850"
         },
         {
-          "departure": "18 jul de 2026",
-          "price": "RD$950"
+          "departure": "1-9 dic de 2026",
+          "price": "US$1,850"
         }
       ],
       "not_included": [
@@ -90,20 +90,28 @@
         "Bebidas alcohólicas",
         "Entradas adicionales"
       ],
-      "price": "$899",
+      "price": "US$1,850",
       "itinerary": [
         {
           "day": 1,
-          "title": "Llegada a Cancún",
+          "title": "Salida hacia Lima",
           "description": "Bienvenida a Cancún. Traslado privado al hotel y tiempo libre para explorar los alrededores."
         },
         {
           "day": 2,
           "title": "Tour panorámico",
           "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
-        }
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
       ],
-      "date": "10-14 de Julio, 2026",
+      "date": "",
       "gallery": [
         "",
         "",
@@ -112,9 +120,9 @@
         "",
         ""
       ],
-      "duration": "4 días / 3 noches",
-      "location": "Cancún, México",
-      "title": "Cancún Express",
+      "duration": "9 días / 8 noches",
+      "location": "Perú",
+      "title": "Vive la experiencia de Perú",
       "image": "",
       "included": [
         "Vuelo ida y vuelta",
@@ -124,8 +132,8 @@
         "Traslados"
       ],
       "guide": null,
-      "description": "4 días explorando las playas y ruinas mayas de Cancún. La combinación perfecta de historia, cultura y diversión en el Caribe mexicano.",
-      "category": "Norteamérica",
+      "description": "9 días descubriendo lo mejor de Perú entre historia, cultura y paisajes impresionantes. Vive la magia de Lima, el encanto del Lago Titicaca, las Islas Uros y Taquile, y la experiencia inolvidable de conocer Machu Picchu, una de las maravillas más importantes del mundo.\n",
+      "category": "América del Sur",
       "highlights": [
         "Zona Arqueológica de Chichén Itzá",
         "Playa Delfines",
