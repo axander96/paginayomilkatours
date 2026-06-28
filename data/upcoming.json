@@ -187,58 +187,103 @@
     {
       "dates": [
         {
-          "departure": "5 ago de 2026",
-          "price": "RD$1,599"
+          "departure": "8-16 jul de 2026",
+          "price": "US$1,150"
         }
       ],
       "not_included": [
-        "Comidas",
-        "Visa ESTA",
-        "Seguro de viaje",
-        "Entradas a Broadway"
+        "Equipaje no facturado",
+        "Gastos personales",
+        "Comidas no especificadas en el itinerario",
+        "Excursiones o actividades opcionales no mencionadas"
       ],
-      "price": "$1,599",
+      "price": "US$1,150",
       "itinerary": [
         {
           "day": 1,
-          "title": "Llegada a Nueva York",
-          "description": "Bienvenida a Nueva York. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+          "title": "Salida hacia Lima",
+          "description": "Los viajeros iniciarán esta experiencia con salida hacia Lima, Perú, una ciudad llena de historia, cultura y encanto frente al océano Pacífico. A la llegada, se realizará el traslado hacia el hotel correspondiente, donde podrán realizar el check-in, descansar y disfrutar de tiempo libre para prepararse para los recorridos de los próximos días."
         },
         {
           "day": 2,
-          "title": "Tour panorámico",
-          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+          "title": "City tour por Lima y Barranco",
+          "description": "El día inicia con desayuno en el hotel. Luego, se realizará un city tour por Lima, recorriendo algunos de los lugares más representativos de la capital peruana. Durante la visita, se conocerá el Centro Histórico de Lima, la Plaza Mayor, la Catedral de Lima y el Distrito de Barranco, una zona reconocida por su ambiente artístico, sus calles tradicionales y su encanto cultural."
+        },
+        {
+          "day": 3,
+          "title": "Islas Ballestas y Desierto de Huacachina",
+          "description": "Después del desayuno, los viajeros disfrutarán de una excursión hacia las Islas Ballestas, uno de los atractivos naturales más visitados de la costa peruana, donde podrán observar fauna marina y paisajes únicos. Más adelante, la experiencia continúa hacia el Desierto de Huacachina, famoso por su oasis rodeado de dunas. Durante la visita, se podrá disfrutar de paseo en buggies y sandboarding, una actividad ideal para vivir una aventura en el desierto."
+        },
+        {
+          "day": 4,
+          "title": "Larcomar y vista al océano Pacífico",
+          "description": "La jornada inicia con una visita a Larcomar, uno de los espacios más modernos y visitados de Lima, ubicado frente al océano Pacífico. Los viajeros tendrán tiempo para compras, fotografías, actividades personales y para disfrutar de la vista al mar desde una de las zonas más atractivas de la ciudad. Este día será ideal para relajarse y disfrutar con calma del ambiente limeño."
+        },
+        {
+          "day": 5,
+          "title": "Vuelo hacia Medellín",
+          "description": "Después del desayuno, se realizará el traslado al aeropuerto para tomar el vuelo hacia Medellín, Colombia, conocida como la ciudad de la eterna primavera. A la llegada, los viajeros serán trasladados al hotel para realizar el check-in. Luego, tendrán tiempo libre para descansar o realizar un recorrido por cuenta propia y comenzar a disfrutar del ambiente de la ciudad."
+        },
+        {
+          "day": 6,
+          "title": " Tour Comuna 13",
+          "description": "El día inicia con desayuno en el hotel. Luego, se realizará el tour por la Comuna 13, uno de los lugares más representativos de Medellín por su transformación social, arte urbano y cultura local. Durante el recorrido, los viajeros podrán apreciar murales, escaleras eléctricas, presentaciones culturales y espacios llenos de historia, color y creatividad."
+        },
+        {
+          "day": 7,
+          "title": "Guatapé y Piedra del Peñol",
+          "description": "Después del desayuno, se realizará la excursión hacia Guatapé y la Piedra del Peñol, uno de los destinos más famosos de Antioquia. Durante el recorrido, los viajeros podrán disfrutar de paisajes naturales, vistas panorámicas y el encanto colorido del pueblo de Guatapé. Esta experiencia combina naturaleza, cultura y fotografía en uno de los lugares más icónicos de Colombia."
+        },
+        {
+          "day": 8,
+          "title": "Día libre en Medellín",
+          "description": "Luego del desayuno, los viajeros tendrán el día libre para realizar compras, descansar, recorrer la ciudad por cuenta propia o disfrutar de actividades personales. Este día es ideal para conocer más de Medellín a su ritmo, visitar centros comerciales, probar la gastronomía local o aprovechar los últimos momentos del viaje."
+        },
+        {
+          "day": 9,
+          "title": "Regreso a República Dominicana",
+          "description": "El último día inicia con desayuno y preparación para el check-out del hotel. Posteriormente, se realizará el traslado al aeropuerto para tomar el vuelo de regreso a República Dominicana. Con este traslado finalizan los servicios del tour, después de vivir una experiencia combinada entre Lima, Perú y Medellín, Colombia."
         }
       ],
-      "date": "5-12 de Agosto, 2026",
+      "date": "",
       "gallery": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://andinoperu.b-cdn.net/wp-content/uploads/2024/03/tour-por-lima-colonial-y-moderna-lima-peru-andino-peru-tours-1.webp",
+        "https://images.myguide-cdn.com/md/common/large/5dc03c01474cc-631133.jpg",
+        "https://islasballestas.net/wp-content/uploads/2023/09/islas-ballestas-paracas-1.jpg",
+        "https://i.revistalternativa.com/cms/2024/03/08124341/Pachamama.jpg?r=16_9&w=412&d=2.625",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcjl908t_JwCbMEwpml0xbHbM06vZRnIamkJ2Y-dstZXvPXy8gB5GKjvQu&s=10",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/8e/0a/63/colombia-and-experience.jpg?w=900&h=500&s=1"
       ],
-      "duration": "7 días / 6 noches",
-      "location": "Nueva York, USA",
-      "title": "New York City",
-      "image": "",
+      "duration": "9 días / 8 noches",
+      "location": "Lima (Perú) y Medellín",
+      "title": "Lima, Perú y Medellín 2x1",
+      "image": "https://images.squarespace-cdn.com/content/v1/600ecc2f276d9d4dbba5f712/1692051452261-A9ZPS6A5LRECSXM8N378/Medellin_Colombia_SouthAmerica-02.JPG",
       "included": [
-        "Vuelo ida y vuelta",
-        "Alojamiento 6 noches",
-        "City tour guiado",
-        "Entrada al Empire State",
-        "Traslados"
+        "Boletos aéreos ida y vuelta",
+        "Transporte",
+        "Hospedaje",
+        "Desayunos diarios",
+        "4 tours incluidos",
+        "City Tour Lima y Barranco",
+        "Tour Islas Ballestas y Desierto de Huacachina",
+        "Tour Comuna 13",
+        "Tour Guatapé y Piedra del Peñol"
       ],
       "guide": null,
-      "description": "La ciudad que nunca duerme te espera. Recorre Times Square, Central Park, el Empire State y vive la experiencia neoyorquina al máximo.",
-      "category": "Europa",
+      "description": "Dos destinos increíbles en un solo viaje. Vive la historia y cultura de Lima, la aventura en Islas Ballestas y Huacachina, y el encanto de Medellín con sus paisajes, arte urbano, Guatapé y la imponente Piedra del Peñol.",
+      "category": "América Latina",
       "highlights": [
-        "Times Square",
-        "Central Park",
-        "Estatua de la Libertad",
-        "Empire State Building",
-        "Broadway Show"
+        "Centro Histórico de Lima",
+        "Plaza Mayor",
+        "Catedral de Lima",
+        "Distrito de Barranco",
+        "Islas Ballestas",
+        "Desierto de Huacachina",
+        "Larcomar",
+        "Medellín",
+        "Comuna 13",
+        "Guatapé",
+        "Piedra del Peñol"
       ]
     },
     {
