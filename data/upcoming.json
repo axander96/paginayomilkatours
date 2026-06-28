@@ -287,57 +287,86 @@
     {
       "dates": [
         {
-          "departure": "15 sep de 2026",
-          "price": "RD$2,499"
+          "departure": "23-29 jul de 2026",
+          "price": "US$1,050"
         }
       ],
       "not_included": [
-        "Almuerzos y cenas",
-        "Entradas a museos",
-        "Visa Schengen",
-        "Seguro de viaje"
+        "Equipaje no facturado",
+        "Gastos personales",
+        "Comidas no especificadas en el itinerario",
+        "Excursiones o actividades opcionales no mencionadas"
       ],
-      "price": "$2,499",
+      "price": "US$1,050",
       "itinerary": [
         {
           "day": 1,
-          "title": "Llegada a París",
-          "description": "Bienvenida a París. Traslado privado al hotel y tiempo libre para explorar los alrededores."
+          "title": "Llegada a Bogotá",
+          "description": "A la llegada a Bogotá, los viajeros serán recibidos para iniciar esta experiencia por Colombia. Posteriormente, se realizará el traslado hacia el hotel correspondiente, donde podrán realizar el check-in, descansar y prepararse para comenzar el recorrido por una de las ciudades más importantes y representativas del país."
         },
         {
           "day": 2,
-          "title": "Tour panorámico",
-          "description": "Desayuno en el hotel y salida para un tour guiado por los principales puntos de interés del destino."
+          "title": "City tour en Bogotá y Monserrate",
+          "description": "El día inicia con desayuno en el hotel. Luego, se realizará un city tour por Bogotá, recorriendo algunos de sus lugares más emblemáticos y conociendo parte de su historia, cultura y ambiente urbano. Durante la experiencia, se visitará Monserrate, uno de los puntos más icónicos de la ciudad, reconocido por sus impresionantes vistas panorámicas y su valor turístico y religioso."
+        },
+        {
+          "day": 3,
+          "title": "Medio día libre y vuelo a Cartagena",
+          "description": "Después del desayuno, los viajeros tendrán medio día libre para descansar, disfrutar de las instalaciones del hotel o realizar actividades personales en Bogotá. En horas de la tarde, se realizará el traslado al aeropuerto para tomar el vuelo hacia Cartagena, una de las ciudades más coloridas y encantadoras del Caribe colombiano. A la llegada, traslado al hotel y alojamiento."
+        },
+        {
+          "day": 4,
+          "title": "City tour en Cartagena y zona amurallada",
+          "description": "El día comienza con desayuno en el hotel. Luego, se realizará un city tour por Cartagena, recorriendo sus principales atractivos turísticos y disfrutando del encanto colonial de la ciudad. Durante el recorrido, se visitará la zona amurallada, famosa por sus calles coloridas, balcones tradicionales, plazas históricas y ambiente caribeño. Esta experiencia permitirá conocer una de las ciudades más icónicas y visitadas de Colombia."
+        },
+        {
+          "day": 5,
+          "title": "Vuelo a Medellín y descanso",
+          "description": "Luego del desayuno, se realizará el traslado temprano al aeropuerto para tomar el vuelo hacia Medellín, conocida como la ciudad de la eterna primavera. A la llegada, los viajeros serán trasladados al hotel para realizar el check-in y disfrutar de un tiempo de descanso, ideal para relajarse antes de continuar con las excursiones programadas."
+        },
+        {
+          "day": 6,
+          "title": "City tour en Medellín y El Peñol",
+          "description": "El día inicia con desayuno en el hotel. Luego, se realizará un city tour por Medellín, recorriendo algunos de sus lugares más representativos y conociendo parte de su transformación urbana, cultura local y ambiente moderno. Durante la jornada, también se visitará El Peñol, uno de los destinos más famosos de la región, reconocido por sus paisajes naturales y vistas espectaculares."
+        },
+        {
+          "day": 7,
+          "title": "Medellín y vuelo de regreso",
+          "description": "Después del desayuno, los viajeros tendrán tiempo para prepararse y realizar el check-out del hotel. Posteriormente, se efectuará el traslado al aeropuerto de Medellín para tomar el vuelo de regreso. Con este traslado finalizan los servicios del tour, después de disfrutar una experiencia recorriendo Bogotá, Cartagena y Medellín, tres de las ciudades más icónicas de Colombia."
         }
       ],
-      "date": "15-25 de Septiembre, 2026",
+      "date": "",
       "gallery": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "https://www.bogotraveltours.com/wp-content/uploads/Tours-Monserrate-Bogota-Bogotravel-tours-1.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ34DOd7YV7vDQGd_quoSZRLAqZVgudeGsM40FhoqWtQDGfbZDUcY_JpoTY&s=10",
+        "https://las5dedaniel.mx/wp-content/uploads/2022/03/gopr1844.jpg?w=1568",
+        "https://gbraksqisloocydjskdt.supabase.co/storage/v1/object/public/media/destinations/1759862983704_360_F_645114310_7oD7eWitOgAUJaq4fQJQGAkf35GAHuS4.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEAt39-8d4yrslTqz0DKoG6BbX8-p6ikdCJoe3Yy69O-hr4VVmu19n2ks&s=10",
+        "https://foodandpleasure.com/wp-content/uploads/2023/10/guatape-shutterstock.jpg"
       ],
-      "duration": "10 días / 9 noches",
-      "location": "París, Roma, Madrid",
-      "title": "Europa Mágica",
-      "image": "",
+      "duration": "7 días / 6 noches",
+      "location": "Colombia: Bogotá, Cartagena y Medellín",
+      "title": "Tres destinos inolvidables de Colombia",
+      "image": "https://prensaunica.com/wp-content/uploads/2025/12/Colombia.jpg",
       "included": [
-        "Vuelo ida y vuelta",
-        "Alojamiento 9 noches",
+        "Boletos aéreos",
+        "Hospedajes",
         "Desayunos",
-        "Tours guiados por ciudad",
-        "Traslados entre ciudades"
+        "3 excursiones",
+        "3 almuerzos",
+        "Transporte"
       ],
       "guide": null,
-      "description": "10 días recorriendo París, Roma y Madrid. Los destinos más románticos y culturales de Europa en un solo viaje inolvidable.",
-      "category": "Europa",
+      "description": "Recorriendo tres destinos inolvidables de Colombia en un solo viaje. Disfruta la historia y las vistas de Bogotá, el encanto colonial de Cartagena y la energía moderna de Medellín, con excursiones, hospedaje, desayunos y experiencias únicas incluidas.",
+      "category": "América del Sur",
       "highlights": [
-        "Torre Eiffel y Museo Louvre",
-        "Coliseo Romano y Vaticano",
-        "Puerta del Sol y Palacio Real",
-        "Paseo en barco por el Sena"
+        "Bogotá",
+        "Monserrate",
+        "Cartagena",
+        "Zona Amurallada de Cartagena",
+        "Medellín",
+        "El Peñol",
+        "Guatapé"
       ]
     },
     {
