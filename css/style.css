@@ -1674,12 +1674,12 @@ body {
 .sidebar-dates {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 10px;
+  gap: 2px;
+  padding: 8px;
   background: #f8f9fa;
   border: 1px dashed #ddd;
   border-radius: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .dates-label {
@@ -2183,11 +2183,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   background: #fff;
   border: 1px solid #eee;
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: 14px;
+  padding: 12px 14px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
   transition: var(--transition);
 }
@@ -2258,9 +2258,9 @@ body {
 .sidebar-date-card {
   background: #fff;
   border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 12px;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
 }
 
 .sidebar-date-card:last-child {
@@ -2271,7 +2271,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 0;
+  padding: 2px 0;
 }
 
 .sidebar-date-label {
@@ -2322,7 +2322,7 @@ body {
 
 .modal-header {
   background: linear-gradient(135deg, var(--blue-light) 0%, #fff 100%);
-  padding: 24px 32px 16px;
+  padding: 18px 32px 12px;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -2330,14 +2330,14 @@ body {
   font-size: 22px;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .modal-content-v2 .modal-trip {
   font-size: 15px;
   font-weight: 600;
   color: var(--orange);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .modal-subtitle {
@@ -2347,18 +2347,18 @@ body {
 }
 
 .modal-content-v2 form {
-  padding: 16px 32px 28px;
+  padding: 12px 32px 20px;
 }
 
 .modal-content-v2 .form-group {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .modal-content-v2 .form-group label {
   font-size: 13px;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .modal-content-v2 .form-group input,
@@ -2482,10 +2482,10 @@ body {
 
 @media (max-width: 576px) {
   .modal-header {
-    padding: 20px 20px 14px;
+    padding: 16px 20px 10px;
   }
   .modal-content-v2 form {
-    padding: 14px 20px 20px;
+    padding: 10px 20px 16px;
   }
   .modal-content-v2 {
     max-height: 85vh;
