@@ -372,11 +372,15 @@
     {
       "dates": [
         {
-          "departure": "8-13 ago de 2026",
+          "departure": "08-13 ago de 2026",
           "price": "US$1,050"
         },
         {
           "departure": "10-16 dic de 2026",
+          "price": "US$1,050"
+        },
+        {
+          "departure": "01-06 ago de 2026",
           "price": "US$1,050"
         }
       ],
