@@ -296,6 +296,12 @@ function openQuote() {
   modalTitle.textContent = title;
   modalTripName.textContent = currentTour ? currentTour.title : 'Complete el formulario para solicitar información';
 
+  // Actualizar asunto del correo con el nombre del tour
+  const subjectInput = document.querySelector('input[name="_subject"]');
+  if (subjectInput && currentTour) {
+    subjectInput.value = `Nueva solicitud: ${currentTour.title} - Yomilka Tours`;
+  }
+
   const dates = currentTour ? normalizeDates(currentTour) : [];
   const preferredDateGroup = document.getElementById('preferredDateGroup');
   const manualDatesGroup = document.getElementById('manualDatesGroup');
@@ -308,15 +314,22 @@ function openQuote() {
     manualDatesGroup.style.display = 'none';
     checkIn.required = false;
     checkOut.required = false;
-    preferredDateSelect.innerHTML = dates.map((d, i) => {
-      const label = `${d.departure} (${d.price || 'Consultar'})`;
-      return `<option value="${i}">${escapeHtml(label)}</option>`;
+    checkIn.disabled = true;
+    checkOut.disabled = true;
+    preferredDateSelect.innerHTML = dates.map(d => {
+      const label = d.return && d.departure !== d.return
+        ? `${d.departure} - ${d.return} (${d.price || 'Consultar'})`
+        : `${d.departure} (${d.price || 'Consultar'})`;
+      const value = escapeHtml(label);
+      return `<option value="${value}">${value}</option>`;
     }).join('');
   } else {
     preferredDateGroup.style.display = 'none';
     manualDatesGroup.style.display = 'flex';
     checkIn.required = true;
     checkOut.required = true;
+    checkIn.disabled = false;
+    checkOut.disabled = false;
   }
 
   quoteModal.classList.add('open');
