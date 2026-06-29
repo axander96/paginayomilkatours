@@ -681,28 +681,27 @@ body {
   height: 52px;
   width: auto;
   max-width: 100%;
-  opacity: 0.7;
-  filter: grayscale(100%);
-  transition: var(--transition);
-  transform: translateY(20px);
   opacity: 0;
+  filter: grayscale(100%);
+  transform: translateY(20px) scale(0.95);
+  transition: opacity 0.6s ease, filter 0.6s ease, transform 0.6s ease;
 }
 
 .partners-logos.is-visible .partner-logo {
-  opacity: 0.7;
-  transform: translateY(0);
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: translateY(0) scale(1);
 }
 
 .partners-logos.is-visible .partner-logo:nth-child(1) { transition-delay: 0ms; }
-.partners-logos.is-visible .partner-logo:nth-child(2) { transition-delay: 80ms; }
-.partners-logos.is-visible .partner-logo:nth-child(3) { transition-delay: 160ms; }
-.partners-logos.is-visible .partner-logo:nth-child(4) { transition-delay: 240ms; }
-.partners-logos.is-visible .partner-logo:nth-child(5) { transition-delay: 320ms; }
-.partners-logos.is-visible .partner-logo:nth-child(6) { transition-delay: 400ms; }
+.partners-logos.is-visible .partner-logo:nth-child(2) { transition-delay: 100ms; }
+.partners-logos.is-visible .partner-logo:nth-child(3) { transition-delay: 200ms; }
+.partners-logos.is-visible .partner-logo:nth-child(4) { transition-delay: 300ms; }
+.partners-logos.is-visible .partner-logo:nth-child(5) { transition-delay: 400ms; }
+.partners-logos.is-visible .partner-logo:nth-child(6) { transition-delay: 500ms; }
 
 .partner-logo:hover {
-  opacity: 1 !important;
-  filter: grayscale(0%);
+  transform: translateY(0) scale(1.08);
 }
 
 @media (max-width: 992px) {
@@ -714,7 +713,7 @@ body {
 
 @media (max-width: 576px) {
   .partners-logos {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   .partner-logo {
