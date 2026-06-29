@@ -2322,7 +2322,7 @@ body {
 
 .modal-header {
   background: linear-gradient(135deg, var(--blue-light) 0%, #fff 100%);
-  padding: 32px 32px 20px;
+  padding: 24px 32px 16px;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -2347,18 +2347,18 @@ body {
 }
 
 .modal-content-v2 form {
-  padding: 24px 32px 32px;
+  padding: 16px 32px 28px;
 }
 
 .modal-content-v2 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .modal-content-v2 .form-group label {
   font-size: 13px;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .modal-content-v2 .form-group input,
@@ -2482,10 +2482,10 @@ body {
 
 @media (max-width: 576px) {
   .modal-header {
-    padding: 24px 20px 18px;
+    padding: 20px 20px 14px;
   }
   .modal-content-v2 form {
-    padding: 20px;
+    padding: 14px 20px 20px;
   }
   .modal-content-v2 {
     max-height: 85vh;
