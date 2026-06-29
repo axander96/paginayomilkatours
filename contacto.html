@@ -129,30 +129,35 @@
         <div class="contact-page-form">
           <h2>Cuéntanos sobre tu viaje</h2>
           <p>Mientras más detalles nos compartas, mejor podremos ayudarte.</p>
-          <form id="contactForm" onsubmit="submitContact(event)">
+          <form id="contactForm" action="https://formsubmit.co/Contacto@yomilkatours.com" method="POST">
+            <input type="hidden" name="_subject" value="Nuevo mensaje de contacto - Yomilka Tours">
+            <input type="hidden" name="_next" value="https://yomilkatours.com/gracias.html">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
             <div class="form-row">
               <div class="form-group">
                 <label for="contactName">Nombre completo</label>
-                <input type="text" id="contactName" name="contactName" required>
+                <input type="text" id="contactName" name="Nombre" required>
               </div>
               <div class="form-group">
                 <label for="contactEmail">Correo electrónico</label>
-                <input type="email" id="contactEmail" name="contactEmail" required>
+                <input type="email" id="contactEmail" name="Correo" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="contactPhone">Teléfono</label>
-                <input type="tel" id="contactPhone" name="contactPhone" required>
+                <input type="tel" id="contactPhone" name="Teléfono" required>
               </div>
               <div class="form-group">
                 <label for="contactSubject">Asunto</label>
-                <input type="text" id="contactSubject" name="contactSubject" placeholder="Quiero cotizar un viaje..." required>
+                <input type="text" id="contactSubject" name="Asunto" placeholder="Quiero cotizar un viaje..." required>
               </div>
             </div>
             <div class="form-group">
               <label for="contactMessage">Mensaje</label>
-              <textarea id="contactMessage" name="contactMessage" rows="5" placeholder="Cuéntanos cuándo te gustaría viajar, con quién, qué te interesa..." required></textarea>
+              <textarea id="contactMessage" name="Mensaje" rows="5" placeholder="Cuéntanos cuándo te gustaría viajar, con quién, qué te interesa..." required></textarea>
             </div>
             <button type="submit" class="btn-contact-page-submit">Enviar mensaje</button>
           </form>

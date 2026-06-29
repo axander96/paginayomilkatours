@@ -285,25 +285,30 @@
         <p class="modal-trip" id="modalTripName">Complete el formulario para solicitar información</p>
         <p class="modal-subtitle">Te contactaremos en menos de 24 horas con todos los detalles.</p>
       </div>
-      <form id="quoteForm" onsubmit="submitQuote(event)">
+      <form id="quoteForm" action="https://formsubmit.co/Contacto@yomilkatours.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva solicitud de información - Yomilka Tours">
+        <input type="hidden" name="_next" value="https://yomilkatours.com/gracias.html">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
         <div class="form-group">
           <label for="fullName">Nombre completo</label>
-          <input type="text" id="fullName" name="fullName" placeholder="Tu nombre completo" required>
+          <input type="text" id="fullName" name="Nombre completo" placeholder="Tu nombre completo" required>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            <input type="email" id="email" name="Correo" placeholder="tu@email.com" required>
           </div>
           <div class="form-group">
             <label for="phone">Teléfono</label>
-            <input type="tel" id="phone" name="phone" placeholder="809-555-1234" required>
+            <input type="tel" id="phone" name="Celular" placeholder="809-555-1234" required>
           </div>
         </div>
 
         <div class="form-group" id="preferredDateGroup">
           <label for="preferredDate">Salida preferida</label>
-          <select id="preferredDate" name="preferredDate">
+          <select id="preferredDate" name="Fecha preferida">
             <!-- JS -->
           </select>
         </div>
@@ -311,17 +316,17 @@
         <div class="form-row" id="manualDatesGroup">
           <div class="form-group">
             <label for="checkIn">Fecha de entrada</label>
-            <input type="date" id="checkIn" name="checkIn">
+            <input type="date" id="checkIn" name="Fecha de entrada">
           </div>
           <div class="form-group">
             <label for="checkOut">Fecha de salida</label>
-            <input type="date" id="checkOut" name="checkOut">
+            <input type="date" id="checkOut" name="Fecha de salida">
           </div>
         </div>
 
         <div class="form-group">
           <label for="notes">Mensaje <span class="label-optional">(opcional)</span></label>
-          <textarea id="notes" name="notes" rows="4" placeholder="¿Alguna solicitud especial?"></textarea>
+          <textarea id="notes" name="Mensaje" rows="4" placeholder="¿Alguna solicitud especial?"></textarea>
         </div>
         <button type="submit" class="btn-submit btn-submit-v2">Enviar solicitud</button>
       </form>

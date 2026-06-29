@@ -2498,6 +2498,133 @@ body {
   }
 }
 
+/* =============================
+   Gracias Page
+   ============================= */
+
+.gracias-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 24px 80px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e6f5ff 100%);
+  text-align: center;
+}
+
+.gracias-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 48px 40px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  animation: graciasIn 0.6s ease;
+}
+
+@keyframes graciasIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.gracias-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 28px;
+}
+
+.gracias-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gracias-circle {
+  stroke-dasharray: 340;
+  stroke-dashoffset: 340;
+  animation: drawCircle 0.8s ease forwards 0.3s;
+}
+
+@keyframes drawCircle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.gracias-check {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawCheck 0.6s ease forwards 0.9s;
+}
+
+@keyframes drawCheck {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.gracias-card h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.gracias-card p {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.gracias-sub {
+  font-size: 14px !important;
+  color: var(--text-light);
+  margin-bottom: 28px;
+}
+
+.btn-gracias {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: var(--orange);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 6px 18px rgba(242,101,34,0.3);
+}
+
+.btn-gracias:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(242,101,34,0.4);
+}
+
+@media (max-width: 576px) {
+  .gracias-hero {
+    padding: 120px 20px 60px;
+  }
+  .gracias-card {
+    padding: 36px 24px;
+  }
+  .gracias-card h1 {
+    font-size: 26px;
+  }
+  .gracias-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 /* Cookie Banner */
 .cookie-banner {
   position: fixed;
