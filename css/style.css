@@ -2307,8 +2307,17 @@ body {
 .modal-content-v2 {
   border-radius: 20px;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   max-width: 520px;
+  max-height: 90vh;
+  width: 100%;
+}
+
+.modal-content-v2 * {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .modal-header {
@@ -2477,6 +2486,15 @@ body {
   }
   .modal-content-v2 form {
     padding: 20px;
+  }
+  .modal-content-v2 {
+    max-height: 85vh;
+    border-radius: 16px;
+  }
+  .modal {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 40px;
   }
 }
 
