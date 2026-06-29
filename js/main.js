@@ -287,9 +287,27 @@ function renderPartners(data) {
   document.getElementById('partnersTitle').textContent = data.title;
 
   const grid = document.getElementById('partnersGrid');
-  grid.innerHTML = data.items.map(item => `
-    <img src="${item.logo}" alt="${escapeHtml(item.name)}" class="partner-logo" loading="lazy">
+  grid.innerHTML = data.items.map((item, i) => `
+    <img src="${item.logo}" alt="${escapeHtml(item.name)}" class="partner-logo" data-index="${i}" loading="lazy">
   `).join('');
+
+  observePartners(grid);
+}
+
+function observePartners(grid) {
+  if (!('IntersectionObserver' in window)) {
+    grid.classList.add('is-visible');
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  observer.observe(grid);
 }
 
 // =============================
