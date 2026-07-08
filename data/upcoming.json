@@ -3,12 +3,7 @@
   "subtitle": "No te pierdas nuestras próximas aventuras",
   "items": [
     {
-      "dates": [
-        {
-          "departure": "25 jul de 2026",
-          "price": "RD$7,900"
-        }
-      ],
+      "dates": [],
       "not_included": [
         "Tours adicionales",
         "Bebidas",
@@ -72,10 +67,6 @@
     },
     {
       "dates": [
-        {
-          "departure": "8-16 jul de 2026",
-          "price": "US$1,850"
-        },
         {
           "departure": "1-9 dic de 2026",
           "price": "US$1,850"
@@ -181,12 +172,7 @@
       ]
     },
     {
-      "dates": [
-        {
-          "departure": "8-16 jul de 2026",
-          "price": "US$1,150"
-        }
-      ],
+      "dates": [],
       "not_included": [
         "Equipaje no facturado",
         "Gastos personales",
