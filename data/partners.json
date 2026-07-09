@@ -3,11 +3,11 @@
   "items": [
     {
       "name": "Europa mundo",
-      "logo": "/images/uploads/images.png"
+      "logo": "/images/uploads/3.png"
     },
     {
       "name": "Royal Caribbean",
-      "logo": "/images/uploads/royal_caribbean_cruises_rand_weiß_logo.svg.png"
+      "logo": "/images/uploads/4.png"
     },
     {
       "name": "Celebrity Cruises",
@@ -15,7 +15,7 @@
     },
     {
       "name": "Suplitur",
-      "logo": "/images/uploads/suplitur-nuevo-logo.jpg"
+      "logo": "/images/uploads/1.png"
     },
     {
       "name": "Air Europa",
@@ -23,7 +23,7 @@
     },
     {
       "name": "Princess Cruises",
-      "logo": "/images/uploads/princess-cruises-vector-logo.png"
+      "logo": "/images/uploads/2.png"
     }
   ]
 }
