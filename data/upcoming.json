@@ -267,12 +267,7 @@
       ]
     },
     {
-      "dates": [
-        {
-          "departure": "23-29 jul de 2026",
-          "price": "US$1,050"
-        }
-      ],
+      "dates": [],
       "not_included": [
         "Equipaje no facturado",
         "Gastos personales",
@@ -326,7 +321,7 @@
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEAt39-8d4yrslTqz0DKoG6BbX8-p6ikdCJoe3Yy69O-hr4VVmu19n2ks&s=10",
         "https://foodandpleasure.com/wp-content/uploads/2023/10/guatape-shutterstock.jpg"
       ],
-      "duration": "7 días / 6 noches",
+      "duration": "",
       "location": "Colombia: Bogotá, Cartagena y Medellín",
       "title": "Tres destinos inolvidables de Colombia",
       "image": "https://prensaunica.com/wp-content/uploads/2025/12/Colombia.jpg",
