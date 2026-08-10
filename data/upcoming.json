@@ -431,16 +431,7 @@
       ]
     },
     {
-      "dates": [
-        {
-          "departure": "8-18 sep 26",
-          "price": "US$2,900"
-        },
-        {
-          "departure": "7- 18 nov 26",
-          "price": "US$2,900"
-        }
-      ],
+      "dates": [],
       "not_included": [
         "Equipaje no facturado",
         "Gastos personales",
