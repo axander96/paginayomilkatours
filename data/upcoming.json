@@ -347,12 +347,7 @@
       ]
     },
     {
-      "dates": [
-        {
-          "departure": "01-8 ago de 2026",
-          "price": "US$1,050"
-        }
-      ],
+      "dates": [],
       "not_included": [
         "Equipaje facturado",
         "Gastos personales",
